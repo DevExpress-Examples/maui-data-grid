@@ -46,6 +46,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui" Version="6.0.100-preview.5.794" />
+		<PackageReference Include="DevExpress.Maui.DataGrid" Version="21.2.1-pre-21182" />
 	</ItemGroup>
 
 	<PropertyGroup>
@@ -56,20 +57,6 @@
 	</PropertyGroup>
 	<ItemGroup Condition="$(TargetFramework.Contains('-android'))">
 		<AndroidEnvironment Include="Android\AndroidEnvironment.txt" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Reference Include="DevExpress.Maui.Core">
-	    <HintPath>..\..\..\dlls\DevExpress.Maui.Core.dll</HintPath>
-	  </Reference>
-	  <Reference Include="DevExpress.Maui.DataGrid">
-	    <HintPath>..\..\..\dlls\DevExpress.Maui.DataGrid.dll</HintPath>
-	  </Reference>
-	  <Reference Include="DevExpress.Xamarin.Android.Editors">
-	    <HintPath>..\..\..\dlls\DevExpress.Xamarin.Android.Editors.dll</HintPath>
-	  </Reference>
-	  <Reference Include="DevExpress.Xamarin.Android.Grid">
-	    <HintPath>..\..\..\dlls\DevExpress.Xamarin.Android.Grid.dll</HintPath>
-	  </Reference>
 	</ItemGroup>
 	<ItemGroup>
 	  <EmbeddedResource Include="Images\Andrew_Fuller.jpg" />
