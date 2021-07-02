@@ -46,7 +46,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui" Version="[6.0.100-preview.5.794]" />
-		<PackageReference Include="DevExpress.Maui.DataGrid" Version="[21.2.1-pre-21182]" />
+		<PackageReference Include="DevExpress.Maui.DataGrid" Version="[21.2.1-pre-21183]" />
 	</ItemGroup>
 
 	<PropertyGroup>
