@@ -1,8 +1,15 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Startup.cs](./CS/DataGridExample/DataGridExample/Startup.cs)
+* [MainPage.xaml](./CS/DataGridExample/DataGridExample/MainPage.xaml)
+* [Model.cs](./CS/DataGridExample/DataGridExample/Model.cs)
+* [ViewModel.cs](./CS/DataGridExample/DataGridExample/ViewModel.cs)
+<!-- default file list end -->
+
 # DevExpress Data Grid for .NET MAUI
 
-The DevExpress Data Grid for .NET MAUI Preview 5 supports the following column types: 
-- **TemplateColumn** - allows you to define a custom template for column cells.
-- **ImageColumn** - displays images. 
+The DevExpress Data Grid for .NET MAUI Preview 5 is a data-aware control designed to present and manage data in a tabular format.
 
 This example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
 
