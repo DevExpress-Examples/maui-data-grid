@@ -19,7 +19,7 @@ This example allows you to get started with the DataGridView component - bind it
 4. Register the DevExpress NuGet feed as a package source.
 5. Restore all NuGet packages for the solution.  
 6. Run the application on an Android device or emulator.  
-	If the appliaction starts and then stops in a few seconds, disable the Hot Reload option (the *Options* | *Debugging* | *Hot Reload* | *Enable XAML Hot Reload* checkbox in Visual Studio).
+	If the application starts and then stops in a few seconds, disable the Hot Reload option (the *Options* | *Debugging* | *Hot Reload* | *Enable XAML Hot Reload* checkbox in Visual Studio).
 
 <img src="./img/devexpress-maui-data-grid.png"/>
 
