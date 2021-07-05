@@ -13,13 +13,13 @@ The DevExpress Data Grid for .NET MAUI Preview 5 is a data-aware control designe
 
 This example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
 
-Open the solution in Visual Studio 16.11 Preview 2 and restore NuGet packages to run the application:
-
-1. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
-2. Register the DevExpress NuGet feed as a package source.
-3. Restore all NuGet packages for the solution.
-
-Run the application on an Android device or emulator.
+1. Ensure you have installed [environment required for .NET MAUI development](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation) and open the solution in Visual Studio 16.11 Preview 2.
+2. Get your free copy of DevExpress Xamarin.Forms and MAUI Controls at https://www.devexpress.com/xamarin-free.
+3. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
+4. Register the DevExpress NuGet feed as a package source.
+5. Restore all NuGet packages for the solution.  
+6. Run the application on an Android device or emulator.  
+	If the appliaction starts and then stops in a few seconds, disable the Hot Reload option (the *Options* | *Debugging* | *Hot Reload* | *Enable XAML Hot Reload* checkbox in Visual Studio).
 
 <img src="./img/devexpress-maui-data-grid.png"/>
 
