@@ -13,8 +13,8 @@ The DevExpress Data Grid for .NET MAUI Preview 5 is a data-aware control designe
 
 This example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
 
-1. Ensure you have installed [environment required for .NET MAUI development](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation) and open the solution in Visual Studio 16.11 Preview 2.
-2. Get your free copy of DevExpress Xamarin.Forms and MAUI Controls at https://www.devexpress.com/xamarin-free.
+1. Install a [.NET MAUI development](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation) environment and open the solution in Visual Studio 16.11 Preview 2.
+2. Download a free copy of DevExpress Xamarin.Forms and MAUI Controls from https://www.devexpress.com/xamarin-free.
 3. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
 4. Register the DevExpress NuGet feed as a package source.
 5. Restore all NuGet packages for the solution.  
@@ -31,9 +31,10 @@ Create a new .NET MAUI solution in Visual Studio 16.11 Preview 2.
 Refer to the following Microsoft documentation for more information on how to get started with .NET MAUI: [.NET Multi-platform App UI](https://docs.microsoft.com/en-gb/dotnet/maui/).
 
 Add the DevExpress Data Grid component to your solution as follows: 
-1. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
-2. Register the DevExpress NuGet feed as a package source. 
-3. Install the **DevExpress.MAUI.DataGrid** package from the DevExpress NuGet feed.
+1. Download a free copy of DevExpress Xamarin.Forms and MAUI Controls from https://www.devexpress.com/xamarin-free.
+2. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
+3. Register the DevExpress NuGet feed as a package source. 
+4. Install the **DevExpress.MAUI.DataGrid** package from the DevExpress NuGet feed.
 
 In the *Startup.cs* file, register a handler for the DevExpress DataGridView:
 
