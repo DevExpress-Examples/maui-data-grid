@@ -34,7 +34,7 @@ Add the DevExpress Data Grid component to your solution as follows:
 1. Download a free copy of DevExpress Xamarin.Forms and MAUI Controls from https://www.devexpress.com/xamarin-free.
 2. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
 3. Register the DevExpress NuGet feed as a package source. 
-4. Install the **DevExpress.MAUI.DataGrid** package from the DevExpress NuGet feed.
+4. Install the **DevExpress.Maui.DataGrid** package from the DevExpress NuGet feed.
 
 In the *Startup.cs* file, register a handler for the DevExpress DataGridView:
 
