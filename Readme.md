@@ -1,25 +1,23 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Startup.cs](./CS/DataGridExample/DataGridExample/Startup.cs)
-* [MainPage.xaml](./CS/DataGridExample/DataGridExample/MainPage.xaml)
-* [Model.cs](./CS/DataGridExample/DataGridExample/Model.cs)
-* [ViewModel.cs](./CS/DataGridExample/DataGridExample/ViewModel.cs)
+* [Startup.cs](./CS/DataGridExample/Startup.cs)
+* [MainPage.xaml](./CS/DataGridExample/MainPage.xaml)
+* [Model.cs](./CS/DataGridExample/Model.cs)
+* [ViewModel.cs](./CS/DataGridExample/ViewModel.cs)
 <!-- default file list end -->
 
 # DevExpress Data Grid for .NET MAUI
 
-The DevExpress Data Grid for .NET MAUI Preview 5 is a data-aware control designed to present and manage data in a tabular format.
+The DevExpress Data Grid for .NET MAUI Preview 6 is a data-aware control designed to present and manage data in a tabular format.
 
 This example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
 
-1. Install a [.NET MAUI development](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation) environment and open the solution in Visual Studio 16.11 Preview 2.
-2. Download a free copy of DevExpress Xamarin.Forms and MAUI Controls from https://www.devexpress.com/xamarin-free.
-3. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
-4. Register the DevExpress NuGet feed as a package source.
-5. Restore all NuGet packages for the solution.  
-6. Run the application on an Android device or emulator.  
-	If the application starts and then stops in a few seconds, disable the Hot Reload option (the *Options* | *Debugging* | *Hot Reload* | *Enable XAML Hot Reload* checkbox in Visual Studio).
+1. Install a [.NET MAUI development](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation) environment and open the solution in Visual Studio 22 Preview.
+2. Register the following NuGet feed in Visual Studio: https://nuget.devexpress.com/free/api.  
+	If you are an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/), this MAUI preview will be available in your personal NuGet feed automatically.
+3. Restore NuGet packages.  
+4. Run the application on an Android device or emulator.  
 
 <img src="./img/devexpress-maui-data-grid.png"/>
 
@@ -27,14 +25,12 @@ The following step-by-step instructions describe how to create the same applicat
 
 ## Create a New MAUI Application and Add a Data Grid
 
-Create a new .NET MAUI solution in Visual Studio 16.11 Preview 2.  
+Create a new .NET MAUI solution in Visual Studio 22 Preview.   
 Refer to the following Microsoft documentation for more information on how to get started with .NET MAUI: [.NET Multi-platform App UI](https://docs.microsoft.com/en-gb/dotnet/maui/).
 
-Add the DevExpress Data Grid component to your solution as follows: 
-1. Download a free copy of DevExpress Xamarin.Forms and MAUI Controls from https://www.devexpress.com/xamarin-free.
-2. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
-3. Register the DevExpress NuGet feed as a package source. 
-4. Install the **DevExpress.Maui.DataGrid** package from the DevExpress NuGet feed.
+Register https://nuget.devexpress.com/free/api as a package source in Visual Studio, if you are not an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have not yet registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/).
+
+Install the **DevExpress.Maui.DataGrid** package from your NuGet feed.
 
 In the *Startup.cs* file, register a handler for the DevExpress DataGridView:
 
@@ -59,7 +55,7 @@ namespace DataGridExample {
 }
 ```
 
-In the *MainPage.xaml* file, use the *dxg* prefix to declare the **DevExpress.Maui.DataGrid** namespace and add a **DataGridView** instance to the ContentPage:
+In the *MainPage.xaml* file, use the *dxg* prefix to declare the **DevExpress.Maui.DataGrid** namespace and add a [DataGridView](http://docs.devexpress.devx/MAUI/DevExpress.Maui.DataGrid.DataGridView) object to the ContentPage:
 
 ```xaml
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -212,7 +208,7 @@ namespace DataGridExample {
 ## Bind the Grid to Data
 In the *MainPage.xaml* file:
 1. Assign an **EmployeeDataViewModel** object to the **ContentPage.BindingContext** property.
-2. Bind the **DataGridView.ItemsSource** property to the employee collection object that the **EmployeeDataViewModel.Employees** property returns.
+2. Bind the [DataGridView.ItemsSource](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.ItemsSource) property to the employee collection object that the **EmployeeDataViewModel.Employees** property returns.
 
 ```xaml
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -231,20 +227,20 @@ In the *MainPage.xaml* file:
 ## Specify Grid Columns
 
 Do the following to specify a collection of grid columns:
-1. Create column objects and use the **FieldName** property to bind each column to a data source field.
-2. Add columns to the **DataGridView.Columns** collection in the order you want them to be displayed in the grid.
+1. Create column objects and use the [FieldName](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.GridColumn.FieldName) property to bind each column to a data source field.
+2. Add columns to the [DataGridView.Columns](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.Columns) collection in the order you want them to be displayed in the grid.
 
 In this example, the grid contains the following columns:
 
-- Photo (**ImageColumn**) - displays photos of employees. Add images to a project as embedded resources.
+- **Photo** ([ImageColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.ImageColumn)) - displays photos of employees. Add images to a project as embedded resources.
 
-- Employee (**TemplateColumn**) - displays names, positions, and hire dates of employees. 
+- **Employee** ([TemplateColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.TemplateColumn)) - displays names, positions, and hire dates of employees. 
 
     Assign a template to the **TemplateColumn.DisplayTemplate** property to define the appearance of column cells. Each cell contains a *Microsoft.Maui.Controls.Grid* with three *Microsoft.Maui.Controls.Label* elements bound to the *Name*, *Position*, and *HireDate* properties of the *Employee* class.
     
     The **CellData** object specifies a binding context for a cell template. Its **CellData.Value** property returns a value of a data field assigned to the column’s **FieldName** property. In this example, a column cell displays not only this field value but also the values of two more fields. Use the **CellData.Item** property to access the whole data row object (*Employee*) and bind its properties to properties of labels defined in the template.
 
-- Access Level (**TemplateColumn**) - displays employee access level.  
+- **Access Level** ([TemplateColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.TemplateColumn)) - displays employee access level.  
 
     Set the **TemplateColumn.DisplayTemplate** property to a data template with a *Microsoft.Maui.Controls.Label*. Use the **Value** property of the template's binding context to bind the label to the *Employee.Access* property assigned to the column's **FieldName**.
     
@@ -286,7 +282,7 @@ In this example, the grid contains the following columns:
 ## Enable Drag-and-Drop
 The DataGridView supports drag-and-drop operations and allows users to reorder rows. Users should touch and hold a data row and then drag and drop the row to another position.
 
-To enable drag-and-drop operations, set the **AllowDragDropRows** property to **True**.
+To enable drag-and-drop operations, set the [AllowDragDropRows](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.AllowDragDropRows) property to **True**.
 ```xaml
 <dxg:DataGridView ItemsSource="{Binding Employees}" AllowDragDropRows="True"/>
 ```
