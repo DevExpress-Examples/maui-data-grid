@@ -9,7 +9,7 @@
 
 # DevExpress Data Grid for .NET MAUI
 
-The DevExpress Data Grid for .NET MAUI Preview 6 is a data-aware control designed to present and manage data in a tabular format.
+The DevExpress Data Grid for .NET MAUI Preview 7 is a data-aware control designed to present and manage data in a tabular format.
 
 This example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
 
