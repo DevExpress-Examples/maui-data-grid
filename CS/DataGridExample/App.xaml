@@ -4,5 +4,6 @@
              xmlns:local="clr-namespace:DataGridExample"
              x:Class="DataGridExample.App"
              windows:Application.ImageDirectory="Assets">
-
+    <Application.Resources>
+    </Application.Resources>
 </Application>

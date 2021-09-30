@@ -1,12 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<!-- Android -->
-		<TargetFrameworks>net6.0-android</TargetFrameworks>
+		<TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
 		<OutputType>Exe</OutputType>
+		<RootNamespace>DataGridExample</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
-		<RootNamespace>DataGridExample</RootNamespace>
+		<EnablePreviewMsixTooling>true</EnablePreviewMsixTooling>
 
 		<!-- Display name -->
 		<ApplicationTitle>DataGridExample</ApplicationTitle>
@@ -17,6 +17,9 @@
 		<!-- Versions -->
 		<ApplicationVersion>1.0</ApplicationVersion>
 		<AndroidVersionCode>1</AndroidVersionCode>
+
+		<!-- Required for C# Hot Reload -->
+		<UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -33,6 +36,30 @@
 		<MauiFont Include="Resources\Fonts\*" />
 	</ItemGroup>
 
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
+	  <PackageReference Include="DevExpress.Maui.DataGrid">
+	    <Version>21.2.1-pre-21272</Version>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
+	  <PackageReference Include="DevExpress.Maui.DataGrid">
+	    <Version>21.2.1-pre-21272</Version>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Images\Andrew_Fuller.jpg" />
+	  <None Remove="Images\Anne_Dodsworth.jpg" />
+	  <None Remove="Images\Janet_Leverling.jpg" />
+	  <None Remove="Images\Laura_Callahan.jpg" />
+	  <None Remove="Images\Margaret_Peacock.jpg" />
+	  <None Remove="Images\Michael_Suyama.jpg" />
+	  <None Remove="Images\Nancy_Davolio.jpg" />
+	  <None Remove="Images\Robert_King.jpg" />
+	  <None Remove="Images\Steven_Buchanan.jpg" />
+	</ItemGroup>
+
 	<ItemGroup>
 	  <EmbeddedResource Include="Images\Andrew_Fuller.jpg" />
 	  <EmbeddedResource Include="Images\Anne_Dodsworth.jpg" />
@@ -44,16 +71,5 @@
 	  <EmbeddedResource Include="Images\Robert_King.jpg" />
 	  <EmbeddedResource Include="Images\Steven_Buchanan.jpg" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="DevExpress.Maui.DataGrid" Version="21.2.1-pre-21231" />
-	</ItemGroup>
-
-	<PropertyGroup>
-		<InvariantGlobalization Condition="$(TargetFramework.Contains('-maccatalyst'))">true</InvariantGlobalization>
-		<RuntimeIdentifier Condition="$(TargetFramework.Contains('-ios'))">iossimulator-x64</RuntimeIdentifier>
-		<RuntimeIdentifier Condition="$(TargetFramework.Contains('-maccatalyst'))">maccatalyst-x64</RuntimeIdentifier>
-		<UseInterpreter Condition="$(TargetFramework.Contains('-android'))">False</UseInterpreter>
-	</PropertyGroup>
 
 </Project>

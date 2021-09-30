@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31521.260
+VisualStudioVersion = 17.0.31710.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGridExample", "DataGridExample\DataGridExample.csproj", "{64998071-DA7E-4D0E-BEF7-A71A0D4234B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridExample", "DataGridExample\DataGridExample.csproj", "{47C222FE-1FD9-4D41-8085-97C5355E3EDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,17 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64998071-DA7E-4D0E-BEF7-A71A0D4234B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{64998071-DA7E-4D0E-BEF7-A71A0D4234B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{64998071-DA7E-4D0E-BEF7-A71A0D4234B8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{64998071-DA7E-4D0E-BEF7-A71A0D4234B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{64998071-DA7E-4D0E-BEF7-A71A0D4234B8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{64998071-DA7E-4D0E-BEF7-A71A0D4234B8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C222FE-1FD9-4D41-8085-97C5355E3EDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+		SolutionGuid = {C4463F5D-AB9F-4B33-B649-29231BB2348A}
 	EndGlobalSection
 EndGlobal

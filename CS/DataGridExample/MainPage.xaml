@@ -6,35 +6,37 @@
     <ContentPage.BindingContext>
         <local:EmployeeDataViewModel/>
     </ContentPage.BindingContext>
-    <dxg:DataGridView ItemsSource="{Binding Employees}"
-                      AllowDragDropRows="True">
-        <dxg:DataGridView.Columns>
-            <dxg:ImageColumn FieldName="Photo" Width="100"/>
+<dxg:DataGridView ItemsSource="{Binding Employees}"
+                  EditorShowMode="DoubleTap"
+                  AllowDragDropRows="True">
+    <dxg:DataGridView.Columns>
+        <dxg:ImageColumn FieldName="Photo" Width="100"/>
             <dxg:TemplateColumn FieldName="Name" Caption="Employee" MinWidth="200">
                 <dxg:TemplateColumn.DisplayTemplate>
                     <DataTemplate>
                         <Grid VerticalOptions="Center" Padding="15, 0, 0, 0" RowDefinitions="Auto, Auto, Auto">
                             <Label Text="{Binding Item.Name}" FontSize="18" FontAttributes="Bold"
-                               TextColor="{DynamicResource GridCellFontColor}" Grid.Row="0" />
+                            TextColor="{DynamicResource GridCellFontColor}" Grid.Row="0" />
                             <Label Text="{Binding Item.Position, StringFormat = 'Job Title: {0}'}"
-                               FontSize="Small" TextColor="{DynamicResource GridCellFontColor}" 
-                               Grid.Row="1"/>
+                            FontSize="Small" TextColor="{DynamicResource GridCellFontColor}" 
+                            Grid.Row="1"/>
                             <Label Text="{Binding Item.HireDate, StringFormat = 'Hire Date: {0:d}'}"
-                               FontSize="Small" TextColor="{DynamicResource GridCellFontColor}" 
-                               Grid.Row="2" />
+                            FontSize="Small" TextColor="{DynamicResource GridCellFontColor}" 
+                            Grid.Row="2" />
                         </Grid>
                     </DataTemplate>
                 </dxg:TemplateColumn.DisplayTemplate>
             </dxg:TemplateColumn>
-
-            <dxg:TemplateColumn FieldName="Access" Caption="Access Level" Width="90">
-                <dxg:TemplateColumn.DisplayTemplate>
-                    <DataTemplate>
-                        <Label Text="{Binding Value}" TextColor="{DynamicResource GridCellFontColor}"
-                           Grid.Row="0" Padding="14, 21, 14, 21" VerticalOptions="Center"/>
-                    </DataTemplate>
-                </dxg:TemplateColumn.DisplayTemplate>
-            </dxg:TemplateColumn>
+        <dxg:TextColumn FieldName="Phone" 
+                        MinWidth="130" VerticalContentAlignment="Center" />
+        <dxg:TextColumn FieldName="Address" 
+                        MinWidth="150" VerticalContentAlignment="Center" />
+        <dxg:DateColumn FieldName="BirthDate" 
+                        MinWidth="120" DisplayFormat="d" VerticalContentAlignment="Center"/>
+        <dxg:ComboBoxColumn FieldName="Access" Caption="Access Level" 
+                            MinWidth="140" VerticalContentAlignment="Center"/>
+        <dxg:CheckBoxColumn FieldName="OnVacation" 
+                            MinWidth="130" VerticalContentAlignment="Center"/>
         </dxg:DataGridView.Columns>
-    </dxg:DataGridView>
+</dxg:DataGridView>
 </ContentPage>

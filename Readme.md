@@ -6,7 +6,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Startup.cs](./CS/DataGridExample/Startup.cs)
+* [MauiProgram.cs](./CS/DataGridExample/MauiProgram.cs)
 * [MainPage.xaml](./CS/DataGridExample/MainPage.xaml)
 * [Model.cs](./CS/DataGridExample/Model.cs)
 * [ViewModel.cs](./CS/DataGridExample/ViewModel.cs)
@@ -14,7 +14,7 @@
 
 # DevExpress Data Grid for .NET MAUI
 
-The DevExpress Data Grid for .NET MAUI Preview 7 is a data-aware control designed to present and manage data in a tabular format.
+The DevExpress Data Grid for .NET MAUI is a data-aware control designed to present and manage data in a tabular format.
 
 This example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
 
@@ -22,7 +22,7 @@ This example allows you to get started with the DataGridView component - bind it
 2. Register the following NuGet feed in Visual Studio: https://nuget.devexpress.com/free/api.  
 	If you are an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/), this MAUI preview will be available in your personal NuGet feed automatically.
 3. Restore NuGet packages.  
-4. Run the application on an Android device or emulator.  
+4. Run the application on an iOS or Android emulator.  
 
 <img src="./img/devexpress-maui-data-grid.png"/>
 
@@ -37,26 +37,35 @@ Register https://nuget.devexpress.com/free/api as a package source in Visual Stu
 
 Install the **DevExpress.Maui.DataGrid** package from your NuGet feed.
 
-In the *Startup.cs* file, register a handler for the DevExpress DataGridView:
+In the *MauiProgram.cs* file, register the following handlers:
 
 ```cs
 using Microsoft.Maui;
-using Microsoft.Maui.Hosting;
 using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Hosting;
 using DevExpress.Maui.DataGrid;
+using DevExpress.Maui.Editors;
 
 namespace DataGridExample {
-	public class Startup : IStartup {
-		public void Configure(IAppHostBuilder appBuilder) {
-			appBuilder
-				.ConfigureMauiHandlers((_, handlers) => 
-                                        handlers.AddHandler<DataGridView, DataGridViewHandler>())
-				.UseMauiApp<App>()
-				.ConfigureFonts(fonts => {
-					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				});
-		}
-	}
+    public static class MauiProgram {
+        public static MauiApp CreateMauiApp() {
+            var builder = MauiApp.CreateBuilder();
+            builder
+                .ConfigureMauiHandlers((handlers) => {
+                    handlers.AddHandler<DataGridView, DataGridViewHandler>();
+                    handlers.AddHandler<TextEdit, TextEditHandler>();
+                    handlers.AddHandler<MultilineEdit, MultilineEditHandler>();
+                    handlers.AddHandler<DateEdit, DateEditHandler>();
+                    handlers.AddHandler<ComboBoxEdit, ComboBoxEditHandler>();
+                    handlers.AddHandler<CheckEdit, CheckEditHandler>();
+                })
+                .UseMauiApp<App>()
+                .ConfigureFonts(fonts => {
+                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                });
+            return builder.Build();
+        }
+    }
 }
 ```
 
@@ -76,111 +85,155 @@ In the *MainPage.xaml* file, use the *dxg* prefix to declare the **DevExpress.Ma
 In this example, the grid is bound to a collection of *Employee* objects - *EmployeeData*. Create a *Model.cs* file with the following classes:
 
 ```cs
-public enum AccessLevel {
-    Admin,
-    User
-}
+using System.Collections.ObjectModel;
+using Microsoft.Maui.Controls;
+using System;
 
-public class Employee {
-    string name;
-    string resourceName;
+namespace DataGridExample {
+    public enum AccessLevel {
+        Admin,
+        User
+    }
 
-    public string Name {
-        get { return name; }
-        set {
-            name = value;
-            if (Photo == null) {
-                resourceName = "DataGridExample.Images." + value.Replace(" ", "_") + ".jpg";
-                if (!String.IsNullOrEmpty(resourceName))
-                    Photo = ImageSource.FromResource(resourceName);
+    public class Employee {
+        string name;
+        string resourceName;
+
+        public string Name {
+            get { return name; }
+            set {
+                name = value;
+                if (Photo == null) {
+                    resourceName = "DataGridExample.Images." + value.Replace(" ", "_") + ".jpg";
+                    if (!String.IsNullOrEmpty(resourceName))
+                        Photo = ImageSource.FromResource(resourceName);
+                }
             }
         }
+
+        public Employee(string name) {
+            this.Name = name;
+        }
+        public ImageSource Photo { get; set; }
+        public DateTime BirthDate { get; set; }
+        public DateTime HireDate { get; set; }
+        public string Position { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public AccessLevel Access { get; set; }
+        public bool OnVacation { get; set; }
     }
 
-    public Employee(string name) {
-        this.Name = name;
-    }
+    public class EmployeeData {
+        void GenerateEmployees() {
+            ObservableCollection<Employee> result = new ObservableCollection<Employee>();
+            result.Add(
+                new Employee("Nancy Davolio") {
+                    BirthDate = new DateTime(1978, 12, 8),
+                    HireDate = new DateTime(2005, 5, 1),
+                    Position = "Sales Representative",
+                    Address = "98122, 507 - 20th Ave. E. Apt. 2A, Seattle WA, USA",
+                    Phone = "(206) 555-9857",
+                    Access = AccessLevel.User,
+                    OnVacation = false
+                }
+            );
+            result.Add(
+                new Employee("Andrew Fuller") {
+                    BirthDate = new DateTime(1965, 2, 19),
+                    HireDate = new DateTime(1992, 8, 14),
+                    Position = "Vice President, Sales",
+                    Address = "98401, 908 W. Capital Way, Tacoma WA, USA",
+                    Phone = "(206) 555-9482",
+                    Access = AccessLevel.Admin,
+                    OnVacation = false
+                }
+            );
+            result.Add(
+                new Employee("Janet Leverling") {
+                    BirthDate = new DateTime(1985, 8, 30),
+                    HireDate = new DateTime(2002, 4, 1),
+                    Position = "Sales Representative",
+                    Address = "98033, 722 Moss Bay Blvd., Kirkland WA, USA",
+                    Phone = "(206) 555-3412",
+                    Access = AccessLevel.User,
+                    OnVacation = false
+                }
+            );
+            result.Add(
+                new Employee("Margaret Peacock") {
+                    BirthDate = new DateTime(1973, 9, 19),
+                    HireDate = new DateTime(1993, 5, 3),
+                    Position = "Sales Representative",
+                    Address = "98052, 4110 Old Redmond Rd., Redmond WA, USA",
+                    Phone = "(206) 555-8122",
+                    Access = AccessLevel.User,
+                    OnVacation = false
+                }
+            );
+            result.Add(
+                new Employee("Steven Buchanan") {
+                    BirthDate = new DateTime(1955, 3, 4),
+                    HireDate = new DateTime(1993, 10, 17),
+                    Position = "Sales Manager",
+                    Address = "SW1 8JR, 14 Garrett Hill, London, UK",
+                    Phone = "(71) 555-4848",
+                    Access = AccessLevel.User,
+                    OnVacation = true
+                }
+            );
+            result.Add(
+                new Employee("Michael Suyama") {
+                    BirthDate = new DateTime(1981, 7, 2),
+                    HireDate = new DateTime(1999, 10, 17),
+                    Position = "Sales Representative",
+                    Address = "EC2 7JR, Coventry House Miner Rd., London, UK",
+                    Phone = "(71) 555-7773",
+                    Access = AccessLevel.User,
+                    OnVacation = false
+                }
+            );
+            result.Add(
+                new Employee("Robert King") {
+                    BirthDate = new DateTime(1960, 5, 29),
+                    HireDate = new DateTime(1994, 1, 2),
+                    Position = "Sales Representative",
+                    Address = "RG1 9SP, Edgeham Hollow Winchester Way, London, UK",
+                    Phone = "(71) 555-5598",
+                    Access = AccessLevel.User,
+                    OnVacation = false
+                }
+            );
+            result.Add(
+                new Employee("Laura Callahan") {
+                    BirthDate = new DateTime(1985, 1, 9),
+                    HireDate = new DateTime(2004, 3, 5),
+                    Position = "Inside Sales Coordinator",
+                    Address = "98105, 4726 - 11th Ave. N.E., Seattle WA, USA",
+                    Phone = "(206) 555-1189",
+                    Access = AccessLevel.User,
+                    OnVacation = true
+                }
+            );
+            result.Add(
+                new Employee("Anne Dodsworth") {
+                    BirthDate = new DateTime(1980, 1, 27),
+                    HireDate = new DateTime(2004, 11, 15),
+                    Position = "Sales Representative",
+                    Address = "WG2 7LT, 7 Houndstooth Rd., London, UK",
+                    Phone = "(71) 555-4444",
+                    Access = AccessLevel.User,
+                    OnVacation = false
+                }
+            );
+            Employees = result;
+        }
 
-    public ImageSource Photo { get; set; }
-    public DateTime HireDate { get; set; }
-    public string Position { get; set; }
-    public string Phone { get; set; }
-    public AccessLevel Access { get; set; }
-}
+        public ObservableCollection<Employee> Employees { get; private set; }
 
-public class EmployeeData {
-    void GenerateEmployees() {
-        ObservableCollection<Employee> result = new ObservableCollection<Employee>();
-        result.Add(
-            new Employee("Nancy Davolio") {
-                HireDate = new DateTime(2005, 5, 1),
-                Position = "Sales Representative",
-                Access = AccessLevel.User
-            }
-        );
-        result.Add(
-            new Employee("Andrew Fuller") {
-                HireDate = new DateTime(1992, 8, 14),
-                Position = "Vice President, Sales",
-                Access = AccessLevel.Admin
-            }
-        );
-        result.Add(
-            new Employee("Janet Leverling") {
-                HireDate = new DateTime(2002, 4, 1),
-                Position = "Sales Representative",
-                Access = AccessLevel.User
-            }
-        );
-        result.Add(
-            new Employee("Margaret Peacock") {
-                HireDate = new DateTime(1993, 5, 3),
-                Position = "Sales Representative",
-                Access = AccessLevel.User
-            }
-        );
-        result.Add(
-            new Employee("Steven Buchanan") {
-                HireDate = new DateTime(1993, 10, 17),
-                Position = "Sales Manager",
-                Access = AccessLevel.User
-            }
-        );
-        result.Add(
-            new Employee("Michael Suyama") {
-                HireDate = new DateTime(1999, 10, 17),
-                Position = "Sales Representative",
-                Access = AccessLevel.User
-            }
-        );
-        result.Add(
-            new Employee("Robert King") {
-                HireDate = new DateTime(1994, 1, 2),
-                Position = "Sales Representative",
-                Access = AccessLevel.User
-            }
-        );
-        result.Add(
-            new Employee("Laura Callahan") {
-                HireDate = new DateTime(2004, 3, 5),
-                Position = "Inside Sales Coordinator",
-                Access = AccessLevel.User
-            }
-        );
-        result.Add(
-            new Employee("Anne Dodsworth") {
-                HireDate = new DateTime(2004, 11, 15),
-                Position = "Sales Representative",
-                Access = AccessLevel.User
-            }
-        );
-        Employees = result;
-    }
-
-    public ObservableCollection<Employee> Employees { get; private set; }
-
-    public EmployeeData() {
-        GenerateEmployees();
+        public EmployeeData() {
+            GenerateEmployees();
+        }
     }
 }
 ```
@@ -245,41 +298,48 @@ In this example, the grid contains the following columns:
     
     The **CellData** object specifies a binding context for a cell template. Its **CellData.Value** property returns a value of a data field assigned to the column’s **FieldName** property. In this example, a column cell displays not only this field value but also the values of two more fields. Use the **CellData.Item** property to access the whole data row object (*Employee*) and bind its properties to properties of labels defined in the template.
 
-- **Access Level** ([TemplateColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.TemplateColumn)) - displays employee access level.  
+- **Phone** and **Address** ([TextColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.TextColumn)) - display phones and addresses of employees. The keyboard for text input appears when a user activates a cell to edit an employee’s phone or address.  
 
-    Set the **TemplateColumn.DisplayTemplate** property to a data template with a *Microsoft.Maui.Controls.Label*. Use the **Value** property of the template's binding context to bind the label to the *Employee.Access* property assigned to the column's **FieldName**.
+- **Birth Date** ([DateColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DateColumn)) -  displays birth days of employees and allows users to edit dates.  
+
+- **Access Level** ([ComboBoxColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.ComboBoxColumn)) - displays employee access level and allows a user to select between predefined values (*Admin* or *User*) to change a cell value.  
+
+- **On Vacation** ([CheckBoxColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.CheckBoxColumn)) - specifies whether an employee is on leave. This column displays checkboxes in cells to display and manage Boolean values.
+
+Use the [DataGridView.EditorShowMode](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.EditorShowMode) property to specify a gesture that invokes an in-place editor for a cell. 
+The grid automatically defines an editor type depending on the type of a column to which a cell belongs (except for [TemplateColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.TemplateColumn)).
     
 ```xaml
-<dxg:DataGridView ItemsSource="{Binding Employees}">
-
+<dxg:DataGridView ItemsSource="{Binding Employees}"
+                  EditorShowMode="DoubleTap">
     <dxg:DataGridView.Columns>
-        <dxg:ImageColumn FieldName="Photo"
-                            Width="100"/>
+        <dxg:ImageColumn FieldName="Photo" Width="100"/>
         <dxg:TemplateColumn FieldName="Name" Caption="Employee" MinWidth="200">
             <dxg:TemplateColumn.DisplayTemplate>
                 <DataTemplate>
                     <Grid VerticalOptions="Center" Padding="15, 0, 0, 0" RowDefinitions="Auto, Auto, Auto">
                         <Label Text="{Binding Item.Name}" FontSize="18" FontAttributes="Bold"
-                               TextColor="{DynamicResource GridCellFontColor}" Grid.Row="0" />
+                            TextColor="{DynamicResource GridCellFontColor}" Grid.Row="0" />
                         <Label Text="{Binding Item.Position, StringFormat = 'Job Title: {0}'}"
-                               FontSize="Small" TextColor="{DynamicResource GridCellFontColor}" 
-                               Grid.Row="1"/>
+                            FontSize="Small" TextColor="{DynamicResource GridCellFontColor}" 
+                            Grid.Row="1"/>
                         <Label Text="{Binding Item.HireDate, StringFormat = 'Hire Date: {0:d}'}"
-                               FontSize="Small" TextColor="{DynamicResource GridCellFontColor}" 
-                               Grid.Row="2" />
+                            FontSize="Small" TextColor="{DynamicResource GridCellFontColor}" 
+                            Grid.Row="2" />
                     </Grid>
                 </DataTemplate>
             </dxg:TemplateColumn.DisplayTemplate>
         </dxg:TemplateColumn>
-
-        <dxg:TemplateColumn FieldName="Access" Caption="Access Level" Width="90">
-            <dxg:TemplateColumn.DisplayTemplate>
-                <DataTemplate>
-                    <Label Text="{Binding Value}" TextColor="{DynamicResource GridCellFontColor}"
-                            Grid.Row="0" Padding="14, 21, 14, 21" VerticalOptions="Center"/>
-                </DataTemplate>
-            </dxg:TemplateColumn.DisplayTemplate>
-        </dxg:TemplateColumn>
+        <dxg:TextColumn FieldName="Phone" 
+                        MinWidth="130" VerticalContentAlignment="Center" />
+        <dxg:TextColumn FieldName="Address" 
+                        MinWidth="150" VerticalContentAlignment="Center" />
+        <dxg:DateColumn FieldName="BirthDate" 
+                        MinWidth="120" DisplayFormat="d" VerticalContentAlignment="Center"/>
+        <dxg:ComboBoxColumn FieldName="Access" Caption="Access Level" 
+                            MinWidth="140" VerticalContentAlignment="Center"/>
+        <dxg:CheckBoxColumn FieldName="OnVacation" 
+                            MinWidth="130" VerticalContentAlignment="Center"/>
     </dxg:DataGridView.Columns>
 </dxg:DataGridView>
 ```
@@ -289,5 +349,5 @@ The DataGridView supports drag-and-drop operations and allows users to reorder r
 
 To enable drag-and-drop operations, set the [AllowDragDropRows](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.AllowDragDropRows) property to **True**.
 ```xaml
-<dxg:DataGridView ItemsSource="{Binding Employees}" AllowDragDropRows="True"/>
+<dxg:DataGridView ItemsSource="{Binding Employees}" EditorShowMode="DoubleTap" AllowDragDropRows="True"/>
 ```
