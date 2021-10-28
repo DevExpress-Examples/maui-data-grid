@@ -24,7 +24,7 @@ This example allows you to get started with the DataGridView component - bind it
 3. Restore NuGet packages.  
 4. Run the application on an iOS or Android emulator.  
 
-<img src="./img/devexpress-maui-data-grid.png"/>
+![MAUI Data Grid](./img/devexpress-maui-data-grid.png)
 
 The following step-by-step instructions describe how to create the same application.
 
