@@ -3,6 +3,7 @@ using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
 using DevExpress.Maui.DataGrid;
 using DevExpress.Maui.Editors;
+using DevExpress.Maui.CollectionView;
 
 namespace DataGridExample {
     public static class MauiProgram {
@@ -16,6 +17,7 @@ namespace DataGridExample {
                     handlers.AddHandler<DateEdit, DateEditHandler>();
                     handlers.AddHandler<ComboBoxEdit, ComboBoxEditHandler>();
                     handlers.AddHandler<CheckEdit, CheckEditHandler>();
+                    handlers.AddHandler<DXCollectionView, DXCollectionViewHandler>();
                 })
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts => {

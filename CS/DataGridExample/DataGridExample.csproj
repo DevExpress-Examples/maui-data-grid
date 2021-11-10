@@ -15,11 +15,13 @@
 		<ApplicationId>com.companyname.DataGridExample</ApplicationId>
 
 		<!-- Versions -->
-		<ApplicationVersion>1.0</ApplicationVersion>
-		<AndroidVersionCode>1</AndroidVersionCode>
+		<ApplicationVersion>1</ApplicationVersion>
 
 		<!-- Required for C# Hot Reload -->
 		<UseInterpreter Condition="'$(Configuration)' == 'Debug'">True</UseInterpreter>
+
+		<SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="'$(TargetFramework)' == 'net6.0-android'">21.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -38,13 +40,13 @@
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
 	  <PackageReference Include="DevExpress.Maui.DataGrid">
-	    <Version>21.2.1-pre-21272</Version>
+	    <Version>22.1.1-pre-21314</Version>
 	  </PackageReference>
 	</ItemGroup>
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
 	  <PackageReference Include="DevExpress.Maui.DataGrid">
-	    <Version>21.2.1-pre-21272</Version>
+	    <Version>22.1.1-pre-21314</Version>
 	  </PackageReference>
 	</ItemGroup>
 
