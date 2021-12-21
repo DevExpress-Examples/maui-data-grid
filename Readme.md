@@ -26,7 +26,7 @@ Please register the DevExpress NuGet Gallery in Visual Studio to restore the NuG
 
 ## More Examples
 
-* [Data Grid](https://github.com/DevExpress-Examples/maui-data-grid-get-started)
+* [Stocks App](https://github.com/DevExpress-Examples/maui-stocks-mini)
 * [Data Form](https://github.com/DevExpress-Examples/maui-data-form-get-started)
 * [Data Editors](https://github.com/DevExpress-Examples/maui-editors-get-started)
 * [Pie Chart](https://github.com/DevExpress-Examples/maui-pie-chart-get-started)
