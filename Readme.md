@@ -39,26 +39,28 @@ Please register the DevExpress NuGet Gallery in Visual Studio to restore the NuG
 
 ## What's in This Repository
 
-<!-- default file list -->
-*Files to look at*:
+The DevExpress Data Grid for .NET MAUI is a data-aware control designed to present and manage data in a tabular format.
 
+![MAUI Data Grid](./img/devexpress-maui-data-grid.png)
+
+This example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
+
+### Files to Look At
+
+<!-- default file list -->
 * [MauiProgram.cs](./CS/DataGridExample/MauiProgram.cs)
 * [MainPage.xaml](./CS/DataGridExample/MainPage.xaml)
 * [Model.cs](./CS/DataGridExample/Model.cs)
 * [ViewModel.cs](./CS/DataGridExample/ViewModel.cs)
 <!-- default file list end -->
 
-The DevExpress Data Grid for .NET MAUI is a data-aware control designed to present and manage data in a tabular format.
-
-This example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
+## How to Run This Application
 
 1. Install a [.NET MAUI development](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation) environment and open the solution in Visual Studio 22 Preview.
 2. Register the following NuGet feed in Visual Studio: https://nuget.devexpress.com/free/api.  
 	If you are an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/), this MAUI preview will be available in your personal NuGet feed automatically.
 3. Restore NuGet packages.  
 4. Run the application on an iOS or Android emulator.  
-
-![MAUI Data Grid](./img/devexpress-maui-data-grid.png)
 
 ## How to Reproduce This Application
 
