@@ -3,6 +3,42 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1011038)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
+# DevExpress Data Grid for .NET MAUI
+
+[DevExpress Mobile UI](https://www.devexpress.com/maui/) allows you to use a .NET cross-platform UI toolkit and C# to build native apps for iOS and Android.
+
+![DevExpress Mobile UI for .NET MAUI](./img/maui.png)
+
+The **DevExpress Mobile UI for Xamarin.Forms and .NET MAUI** is free of charge. To learn more about our offer and to reserve your copy, visit [Free DevExpress Mobile UI for Xamarin.Forms and .NET MAUI](https://www.devexpress.com/xamarin-free).
+
+## Requirements
+
+Please register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for more information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
+
+## Documentation
+
+- [Data Grid](https://docs.devexpress.com/MAUI/403255/data-grid/data-grid)
+- [Charts](https://docs.devexpress.com/MAUI/403300/charts/charts)
+- [Data Form](https://docs.devexpress.com/MAUI/403640/data-form)
+- [Navigation](https://docs.devexpress.com/MAUI/403297/navigation/index)
+- [Data Editors](https://docs.devexpress.com/MAUI/403427/editors/index)
+- [Collection View](https://docs.devexpress.com/MAUI/403324/collection-view/index)
+
+## More Examples
+
+* [Data Grid](https://github.com/DevExpress-Examples/maui-data-grid-get-started)
+* [Data Form](https://github.com/DevExpress-Examples/maui-data-form-get-started)
+* [Data Editors](https://github.com/DevExpress-Examples/maui-editors-get-started)
+* [Pie Chart](https://github.com/DevExpress-Examples/maui-pie-chart-get-started)
+* [Scatter Chart](https://github.com/DevExpress-Examples/maui-scatter-chart-get-started)
+* [Tab Page](https://github.com/DevExpress-Examples/maui-tab-page-get-started)
+* [Tab View](https://github.com/DevExpress-Examples/maui-tab-view-get-started)
+* [Drawer Page](https://github.com/DevExpress-Examples/maui-drawer-page-get-started)
+* [Drawer View](https://github.com/DevExpress-Examples/maui-drawer-view-get-started)
+* [Collection View](https://github.com/DevExpress-Examples/maui-collection-view-get-started)
+
+## What's in This Repository
+
 <!-- default file list -->
 *Files to look at*:
 
@@ -11,8 +47,6 @@
 * [Model.cs](./CS/DataGridExample/Model.cs)
 * [ViewModel.cs](./CS/DataGridExample/ViewModel.cs)
 <!-- default file list end -->
-
-# DevExpress Data Grid for .NET MAUI
 
 The DevExpress Data Grid for .NET MAUI is a data-aware control designed to present and manage data in a tabular format.
 
@@ -26,9 +60,11 @@ This example allows you to get started with the DataGridView component - bind it
 
 ![MAUI Data Grid](./img/devexpress-maui-data-grid.png)
 
-The following step-by-step instructions describe how to create the same application.
+## How to Reproduce This Application
 
-## Create a New MAUI Application and Add a Data Grid
+The following step-by-step tutorial details how to reproduce this application.
+
+### Create a New MAUI Application and Add a Data Grid
 
 Create a new .NET MAUI solution in Visual Studio 22 Preview.   
 Refer to the following Microsoft documentation for more information on how to get started with .NET MAUI: [.NET Multi-platform App UI](https://docs.microsoft.com/en-gb/dotnet/maui/).
@@ -83,7 +119,7 @@ In the *MainPage.xaml* file, use the *dxg* prefix to declare the **DevExpress.Ma
 </ContentPage>
 ```
 
-## Create a Data Source
+### Create a Data Source
 In this example, the grid is bound to a collection of *Employee* objects - *EmployeeData*. Create a *Model.cs* file with the following classes:
 
 ```cs
@@ -265,7 +301,7 @@ namespace DataGridExample {
 }
 ```
 
-## Bind the Grid to Data
+### Bind the Grid to Data
 In the *MainPage.xaml* file:
 1. Assign an **EmployeeDataViewModel** object to the **ContentPage.BindingContext** property.
 2. Bind the [DataGridView.ItemsSource](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.ItemsSource) property to the employee collection object that the **EmployeeDataViewModel.Employees** property returns.
@@ -284,7 +320,7 @@ In the *MainPage.xaml* file:
 </ContentPage>
 ```
 
-## Specify Grid Columns
+### Specify Grid Columns
 
 Do the following to specify a collection of grid columns:
 1. Create column objects and use the [FieldName](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.GridColumn.FieldName) property to bind each column to a data source field.
@@ -346,7 +382,7 @@ The grid automatically defines an editor type depending on the type of a column 
 </dxg:DataGridView>
 ```
 
-## Enable Drag-and-Drop
+### Enable Drag-and-Drop
 The DataGridView supports drag-and-drop operations and allows users to reorder rows. Users should touch and hold a data row and then drag and drop the row to another position.
 
 To enable drag-and-drop operations, set the [AllowDragDropRows](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.AllowDragDropRows) property to **True**.
