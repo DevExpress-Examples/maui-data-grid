@@ -56,8 +56,8 @@ This example allows you to get started with the DataGridView component - bind it
 
 ## How to Run This Application
 
-1. Install a [.NET MAUI development](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation) environment and open the solution in Visual Studio 22 Preview.
-2. Register the following NuGet feed in Visual Studio: https://nuget.devexpress.com/free/api.  
+1. Install a [.NET MAUI development](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation) environment and open the solution in Visual Studio 2022.
+2. Register the following NuGet feed in Visual Studio: `https://nuget.devexpress.com/free/api`.  
 	If you are an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/), this MAUI preview will be available in your personal NuGet feed automatically.
 3. Restore NuGet packages.  
 4. Run the application on an iOS or Android emulator.  
@@ -68,38 +68,27 @@ The following step-by-step tutorial details how to reproduce this application.
 
 ### Create a New MAUI Application and Add a Data Grid
 
-Create a new .NET MAUI solution in Visual Studio 22 Preview.   
-Refer to the following Microsoft documentation for more information on how to get started with .NET MAUI: [.NET Multi-platform App UI](https://docs.microsoft.com/en-gb/dotnet/maui/).
+Create a new .NET MAUI solution in Visual Studio 22 Preview. Refer to the following Microsoft documentation for more information on how to get started with .NET MAUI: [.NET Multi-platform App UI](https://docs.microsoft.com/en-gb/dotnet/maui/).
 
-Register https://nuget.devexpress.com/free/api as a package source in Visual Studio, if you are not an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have not yet registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/).
+Register `https://nuget.devexpress.com/free/api` as a package source in Visual Studio, if you are not an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have not yet registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/).
 
 Install the **DevExpress.Maui.DataGrid** package from your NuGet feed.
 
-In the *MauiProgram.cs* file, register the following handlers:
+In the *MauiProgram.cs* file, call the **UseDevExpress** method to register handlers for all DevExpress controls:
 
 ```cs
 using Microsoft.Maui;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
-using DevExpress.Maui.DataGrid;
-using DevExpress.Maui.Editors;
-using DevExpress.Maui.CollectionView;
+using DevExpress.Maui;
 
 namespace DataGridExample {
     public static class MauiProgram {
         public static MauiApp CreateMauiApp() {
             var builder = MauiApp.CreateBuilder();
             builder
-                .ConfigureMauiHandlers((handlers) => {
-                    handlers.AddHandler<DataGridView, DataGridViewHandler>();
-                    handlers.AddHandler<TextEdit, TextEditHandler>();
-                    handlers.AddHandler<MultilineEdit, MultilineEditHandler>();
-                    handlers.AddHandler<DateEdit, DateEditHandler>();
-                    handlers.AddHandler<ComboBoxEdit, ComboBoxEditHandler>();
-                    handlers.AddHandler<CheckEdit, CheckEditHandler>();
-                    handlers.AddHandler<DXCollectionView, DXCollectionViewHandler>();
-                })
                 .UseMauiApp<App>()
+                .UseDevExpress()
                 .ConfigureFonts(fonts => {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
@@ -137,17 +126,13 @@ namespace DataGridExample {
 
     public class Employee {
         string name;
-        string resourceName;
 
         public string Name {
             get { return name; }
             set {
                 name = value;
-                if (Photo == null) {
-                    resourceName = "DataGridExample.Images." + value.Replace(" ", "_") + ".jpg";
-                    if (!String.IsNullOrEmpty(resourceName))
-                        Photo = ImageSource.FromResource(resourceName);
-                }
+                if (Photo == null && !String.IsNullOrEmpty(name)) 
+                    Photo = ImageSource.FromFile(name.ToLower().Replace(" ", "_") + ".jpg");
             }
         }
 
@@ -353,7 +338,13 @@ The grid automatically defines an editor type depending on the type of a column 
 <dxg:DataGridView ItemsSource="{Binding Employees}"
                   EditorShowMode="DoubleTap">
     <dxg:DataGridView.Columns>
-        <dxg:ImageColumn FieldName="Photo" Width="100"/>
+        <dxg:TemplateColumn FieldName="Photo" Width="100">
+            <dxg:TemplateColumn.DisplayTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding Item.Photo}" Margin="3"/>
+                </DataTemplate>
+            </dxg:TemplateColumn.DisplayTemplate>
+        </dxg:TemplateColumn>
         <dxg:TemplateColumn FieldName="Name" Caption="Employee" MinWidth="200">
             <dxg:TemplateColumn.DisplayTemplate>
                 <DataTemplate>

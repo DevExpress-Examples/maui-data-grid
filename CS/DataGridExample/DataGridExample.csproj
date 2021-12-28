@@ -33,45 +33,13 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Include="Photos\*" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 	</ItemGroup>
 
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
-	  <PackageReference Include="DevExpress.Maui.DataGrid">
-	    <Version>22.1.1-pre-21314</Version>
-	  </PackageReference>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-android'">
-	  <PackageReference Include="DevExpress.Maui.DataGrid">
-	    <Version>22.1.1-pre-21314</Version>
-	  </PackageReference>
-	</ItemGroup>
-
 	<ItemGroup>
-	  <None Remove="Images\Andrew_Fuller.jpg" />
-	  <None Remove="Images\Anne_Dodsworth.jpg" />
-	  <None Remove="Images\Janet_Leverling.jpg" />
-	  <None Remove="Images\Laura_Callahan.jpg" />
-	  <None Remove="Images\Margaret_Peacock.jpg" />
-	  <None Remove="Images\Michael_Suyama.jpg" />
-	  <None Remove="Images\Nancy_Davolio.jpg" />
-	  <None Remove="Images\Robert_King.jpg" />
-	  <None Remove="Images\Steven_Buchanan.jpg" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Include="Images\Andrew_Fuller.jpg" />
-	  <EmbeddedResource Include="Images\Anne_Dodsworth.jpg" />
-	  <EmbeddedResource Include="Images\Janet_Leverling.jpg" />
-	  <EmbeddedResource Include="Images\Laura_Callahan.jpg" />
-	  <EmbeddedResource Include="Images\Margaret_Peacock.jpg" />
-	  <EmbeddedResource Include="Images\Michael_Suyama.jpg" />
-	  <EmbeddedResource Include="Images\Nancy_Davolio.jpg" />
-	  <EmbeddedResource Include="Images\Robert_King.jpg" />
-	  <EmbeddedResource Include="Images\Steven_Buchanan.jpg" />
-	</ItemGroup>
-
+		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.1.1-pre-21361" />
+	</ItemGroup>	
 </Project>

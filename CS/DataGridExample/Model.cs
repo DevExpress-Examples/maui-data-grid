@@ -10,17 +10,13 @@ namespace DataGridExample {
 
     public class Employee {
         string name;
-        string resourceName;
 
         public string Name {
             get { return name; }
             set {
                 name = value;
-                if (Photo == null) {
-                    resourceName = "DataGridExample.Images." + value.Replace(" ", "_") + ".jpg";
-                    if (!String.IsNullOrEmpty(resourceName))
-                        Photo = ImageSource.FromResource(resourceName);
-                }
+                if (Photo == null && !String.IsNullOrEmpty(name)) 
+                    Photo = ImageSource.FromFile(name.ToLower().Replace(" ", "_") + ".jpg");
             }
         }
 
