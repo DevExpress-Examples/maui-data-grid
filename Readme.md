@@ -54,7 +54,7 @@ This example allows you to get started with the DataGridView component - bind it
 ## How to Run This Application
 
 1. Install a [.NET MAUI development](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation) environment and open the solution in Visual Studio 2022.
-2. Register the following NuGet feed in Visual Studio: `https://nuget.devexpress.com/free/api`.  
+2. Register [your personal NuGet package source](https://nuget.devexpress.com/) in Visual Studio.  
 	If you are an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/), this MAUI preview will be available in your personal NuGet feed automatically.
 3. Restore NuGet packages.  
 4. Run the application on an iOS or Android emulator.  
@@ -67,7 +67,7 @@ The following step-by-step tutorial details how to reproduce this application.
 
 Create a new .NET MAUI solution in Visual Studio 22 Preview. Refer to the following Microsoft documentation for more information on how to get started with .NET MAUI: [.NET Multi-platform App UI](https://docs.microsoft.com/en-gb/dotnet/maui/).
 
-Register `https://nuget.devexpress.com/free/api` as a package source in Visual Studio, if you are not an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have not yet registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/).
+Register [your personal NuGet feed](https://nuget.devexpress.com/) as a package source in Visual Studio, if you are not an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have not yet registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/).
 
 Install the **DevExpress.Maui.DataGrid** package from your NuGet feed.
 
