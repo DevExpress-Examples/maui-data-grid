@@ -40,7 +40,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.1.1-pre-*" />
+		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.1.2-beta-22159" />
 	</ItemGroup>
 	
 	<PropertyGroup>
