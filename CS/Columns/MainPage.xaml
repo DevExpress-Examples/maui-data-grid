@@ -1,0 +1,46 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:local="clr-namespace:Columns"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
+             x:Class="Columns.MainPage">
+    <ContentPage.BindingContext>
+        <local:EmployeeDataViewModel/>
+    </ContentPage.BindingContext>
+    <dxg:DataGridView ItemsSource="{Binding Employees}" EditorShowMode="DoubleTap">
+        <dxg:DataGridView.Columns>
+            <dxg:ImageColumn FieldName="Photo"  
+                             Width="100" VerticalContentAlignment="Center"/>
+            <dxg:TemplateColumn FieldName="Name" Caption="Employee" 
+                                IsReadOnly="true" AllowSort="False" MinWidth="200">
+                <dxg:TemplateColumn.DisplayTemplate>
+                    <DataTemplate>
+                        <Grid VerticalOptions="Center" Padding="15, 0, 0, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding Item.Name}" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" />
+                            <Label Text="{Binding Item.Position, StringFormat = 'Job Title: {0}'}"
+                                   FontSize="Small" Grid.Row="1"/>
+                            <Label Text="{Binding Item.HireDate, StringFormat = 'Hire Date: {0:d}'}" 
+                                   FontSize="Small" Grid.Row="2" />
+                        </Grid>
+                    </DataTemplate>
+                </dxg:TemplateColumn.DisplayTemplate>
+            </dxg:TemplateColumn>
+            <dxg:TextColumn FieldName="Phone" 
+                            MinWidth="130" VerticalContentAlignment="Center" />
+            <dxg:TextColumn FieldName="Address" 
+                            MinWidth="150" VerticalContentAlignment="Center" />
+            <dxg:DateColumn FieldName="BirthDate" 
+                            MinWidth="120" DisplayFormat="d" VerticalContentAlignment="Center"/>
+            <dxg:PickerColumn FieldName="Access" Caption="Access Level" 
+                              MinWidth="140" VerticalContentAlignment="Center"/>
+            <dxg:CheckBoxColumn FieldName="OnVacation" 
+                                MinWidth="130" VerticalContentAlignment="Center"/>
+        </dxg:DataGridView.Columns>
+    </dxg:DataGridView>
+</ContentPage>

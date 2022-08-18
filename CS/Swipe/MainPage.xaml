@@ -1,0 +1,37 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:local="clr-namespace:Swipe"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
+             x:Class="Swipe.MainPage">
+    <ContentPage.BindingContext>
+        <local:TestOrderRepository/>
+    </ContentPage.BindingContext>
+    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Orders}" SelectionMode="None" 
+                      AllowCascadeUpdate="True">
+        <dxg:DataGridView.Columns>
+            <dxg:TextColumn FieldName="Product.Name" Caption="Product" Width="150" />
+            <dxg:NumberColumn FieldName="Product.UnitPrice" Caption="Price" 
+                              DisplayFormat="C0" MinWidth="100" HorizontalContentAlignment="Start"/>
+            <dxg:NumberColumn FieldName="Quantity" MinWidth="100" HorizontalContentAlignment="Start"/>
+            <dxg:NumberColumn FieldName="Total" HorizontalContentAlignment="Start"
+                              UnboundType="Integer" UnboundExpression="[Quantity] * [Product.UnitPrice]" 
+                              IsReadOnly="True" DisplayFormat="C0" MinWidth="100"/>
+            <dxg:DateColumn FieldName="Date" DisplayFormat="d" MinWidth="100" HorizontalContentAlignment="Start"/>
+            <dxg:CheckBoxColumn FieldName="Shipped" MinWidth="100" />
+        </dxg:DataGridView.Columns>
+        <dxg:DataGridView.StartSwipeItems>
+            <dxg:SwipeItem Caption="Customer" BackgroundColor="#797bff" Image="person.png" 
+                               Tap="Swipe_ShowCustomerInfo" />
+        </dxg:DataGridView.StartSwipeItems>
+        <dxg:DataGridView.EndSwipeItems>
+            <dxg:SwipeItem Caption="Delete" BackgroundColor="#ff3b30" Image="delete.png" 
+                               Tap="Swipe_Delete"/>
+        </dxg:DataGridView.EndSwipeItems>
+
+        <dxg:DataGridView.SwipeItemStyle>
+            <dxg:SwipeItemStyle Width="100"/>
+        </dxg:DataGridView.SwipeItemStyle>
+    </dxg:DataGridView>
+</ContentPage>

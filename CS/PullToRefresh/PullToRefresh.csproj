@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
+    	<OutputType>Exe</OutputType>
+		<UseMaui>true</UseMaui>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<SingleProject>true</SingleProject>
+		<RootNamespace>PullToRefresh</RootNamespace>
+
+		<!-- Display name -->
+		<ApplicationTitle>PullToRefresh</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.PullToRefresh</ApplicationId>
+		<ApplicationIdGuid>6C696654-F0B1-4691-8E64-38A5746D87F9</ApplicationIdGuid>
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiImage Include="Resources\appicon.svg" IsAppIcon="true" ForegroundFile="Resources\splashscreen.svg" Color="#FFFFFF" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\splashscreen.svg" Color="#5B27D9" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Resources\Images\Beverages.png" />
+	  <None Remove="Resources\Images\Condiments.png" />
+	  <None Remove="Resources\Images\Confections.png" />
+	  <None Remove="Resources\Images\DairyProducts.png" />
+	  <None Remove="Resources\Images\Grains.png" />
+	  <None Remove="Resources\Images\MeatPoultry.png" />
+	  <None Remove="Resources\Images\Produce.png" />
+	  <None Remove="Resources\Images\Seafood.png" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="DevExpress.Maui.Core" Version="22.1.*" />
+		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.1.*" />
+	</ItemGroup>
+	<PropertyGroup>
+		<UseInterpreter Condition="$(TargetFramework.Contains('-ios'))">True</UseInterpreter>	
+		<UseInterpreter Condition="$(TargetFramework.Contains('-android'))">False</UseInterpreter>
+		<RuntimeIdentifiers Condition="$(TargetFramework.Contains('-android'))">android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
+</PropertyGroup>
+</Project>

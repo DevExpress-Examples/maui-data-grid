@@ -1,0 +1,24 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:local="clr-namespace:ValidateFormEvent"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
+             x:Class="ValidateFormEvent.MainPage">
+    <ContentPage.BindingContext>
+        <local:TestOrderRepository/>
+    </ContentPage.BindingContext>
+
+    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Orders}" Tap="Grid_Tap">
+        <dxg:DataGridView.Columns>
+            <dxg:TextColumn FieldName="Product.Name" Caption="Product" />
+            <dxg:NumberColumn FieldName="Product.UnitPrice" Caption="Price" DisplayFormat="C0"/>
+            <dxg:NumberColumn FieldName="Quantity" />
+            <dxg:NumberColumn FieldName="Total" 
+                          UnboundType="Integer" UnboundExpression="[Quantity] * [Product.UnitPrice]" 
+                          IsReadOnly="True" DisplayFormat="C0" />
+            <dxg:DateColumn FieldName="Date" DisplayFormat="d" />
+            <dxg:CheckBoxColumn FieldName="Shipped" />
+        </dxg:DataGridView.Columns>
+    </dxg:DataGridView>
+</ContentPage>
