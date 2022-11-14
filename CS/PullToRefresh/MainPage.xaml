@@ -1,0 +1,35 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:local="clr-namespace:PullToRefresh"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
+             x:Class="PullToRefresh.MainPage">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+    <dxg:DataGridView ItemsSource="{Binding Products}" IsReadOnly="True"
+					  IsPullToRefreshEnabled="true" 
+                      PullToRefreshCommand="{Binding PullToRefreshCommand}" 
+                      IsRefreshing="{Binding IsRefreshing, Mode=TwoWay}"
+                      IndicatorColor="GreenYellow">
+        <dxg:DataGridView.Columns>
+            <dxg:ImageColumn FieldName="Photo" Width="170" 
+                             VerticalContentAlignment="Center" />
+            <dxg:TemplateColumn FieldName="Name"  Caption="Product Category">
+                <dxg:TemplateColumn.DisplayTemplate>
+                    <DataTemplate>
+                        <Grid BindingContext="{Binding Source}" VerticalOptions="Center" Padding="10,0,0,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding Item.Name}" FontAttributes="Bold" FontSize="Large"/>
+                            <Label Text="{Binding Item.Description}" Grid.Row="1" FontSize="Medium"/>
+                        </Grid>
+                    </DataTemplate>
+                </dxg:TemplateColumn.DisplayTemplate>
+            </dxg:TemplateColumn>
+        </dxg:DataGridView.Columns>
+    </dxg:DataGridView>
+</ContentPage>

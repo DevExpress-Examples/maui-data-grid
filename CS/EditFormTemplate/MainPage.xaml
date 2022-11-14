@@ -1,0 +1,82 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:local="clr-namespace:EditFormTemplate"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             ios:Page.UseSafeArea="true"
+             x:Class="EditFormTemplate.MainPage">
+    <ContentPage.BindingContext>
+        <local:EmployeeDataViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <DataTemplate x:Key="CustomEditFormContent">
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="{Binding Path=Item.Photo}" Grid.Row="0" Grid.Column="0"/>
+                    <StackLayout Orientation="Vertical" Padding="50, 20, 0, 0" 
+                                 Grid.Row="0" Grid.Column="1">
+                        <Label Text="{Binding Path=Item.Name}"  VerticalOptions="Start"
+                               FontSize="20" FontAttributes="Bold" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Phone:"  FontSize="14" WidthRequest="100"
+                                   HorizontalOptions="Start" VerticalOptions="Center" />
+                            <Editor Text="{Binding Path=Item.Phone, Mode=TwoWay}" 
+                                    FontSize="Small" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Address:"  FontSize="14" WidthRequest="100"
+                                   HorizontalOptions="Start" VerticalOptions="Center" />
+                            <Editor Text="{Binding Path=Item.Address, Mode=TwoWay}" 
+                                    FontSize="Small" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Employees}" 
+                      DoubleTap="DataGridView_DoubleTap">
+        <dxg:DataGridView.Columns>
+            <dxg:ImageColumn FieldName="Photo"  
+                             Width="100" VerticalContentAlignment="Center"/>
+            <dxg:TemplateColumn FieldName="Name" Caption="Employee" 
+                                IsReadOnly="true" AllowSort="False" MinWidth="200">
+                <dxg:TemplateColumn.DisplayTemplate>
+                    <DataTemplate>
+                        <Grid VerticalOptions="Center" Padding="15, 0, 0, 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Label Text="{Binding Item.Name}" FontAttributes="Bold" FontSize="Medium" Grid.Row="0" />
+                            <Label Text="{Binding Item.Position, StringFormat = 'Job Title: {0}'}"
+                                   FontSize="Small" Grid.Row="1"/>
+                            <Label Text="{Binding Item.HireDate, StringFormat = 'Hire Date: {0:d}'}" 
+                                   FontSize="Small" Grid.Row="2" />
+                        </Grid>
+                    </DataTemplate>
+                </dxg:TemplateColumn.DisplayTemplate>
+            </dxg:TemplateColumn>
+            <dxg:TextColumn FieldName="Phone" 
+                            MinWidth="130" VerticalContentAlignment="Center" />
+            <dxg:TextColumn FieldName="Address" 
+                            MinWidth="150" VerticalContentAlignment="Center" />
+            <dxg:DateColumn FieldName="BirthDate" 
+                            MinWidth="120" DisplayFormat="d" VerticalContentAlignment="Center"/>
+            <dxg:PickerColumn FieldName="Access" Caption="Access Level" 
+                              MinWidth="140" VerticalContentAlignment="Center"/>
+            <dxg:CheckBoxColumn FieldName="OnVacation" 
+                                MinWidth="130" VerticalContentAlignment="Center"/>
+        </dxg:DataGridView.Columns>
+    </dxg:DataGridView>
+</ContentPage>

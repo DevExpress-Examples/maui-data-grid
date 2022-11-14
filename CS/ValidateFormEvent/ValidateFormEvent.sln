@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateFormEvent", "ValidateFormEvent.csproj", "{C19955D5-2AA4-40F9-8D70-8FD81490D8E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C19955D5-2AA4-40F9-8D70-8FD81490D8E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19955D5-2AA4-40F9-8D70-8FD81490D8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19955D5-2AA4-40F9-8D70-8FD81490D8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19955D5-2AA4-40F9-8D70-8FD81490D8E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCC43EAA-02C5-49B6-B6AC-EE646D67AF56}
+	EndGlobalSection
+EndGlobal
