@@ -1,10 +1,3 @@
-<!-- default file list -->
-*Files to look at*:
-
-* [Model.cs](./DataGridView_PullToRefresh/Model.cs)
-* [ViewModel.cs](./DataGridView_PullToRefresh/ViewModel.cs)
-* [MainPage.xaml](./DataGridView_PullToRefresh/MainPage.xaml)
-<!-- default file list end -->
 # Implement Pull-to-Refresh
 
 This example shows how to set up the grid so that it allows users to request a content update with the pull-down gesture. To do this, follow the steps below.
@@ -19,3 +12,11 @@ To run the application:
 1. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
 2. Register the DevExpress NuGet feed as a package source.
 3. Restore all NuGet packages for the solution.
+
+<!-- default file list -->
+## Files to Review
+
+* [Model.cs](./DataGridView_PullToRefresh/Model.cs)
+* [ViewModel.cs](./DataGridView_PullToRefresh/ViewModel.cs)
+* [MainPage.xaml](./DataGridView_PullToRefresh/MainPage.xaml)
+<!-- default file list end -->
