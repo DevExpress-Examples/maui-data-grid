@@ -38,7 +38,7 @@ Please register the DevExpress NuGet Gallery in Visual Studio to restore the NuG
 
 The DevExpress Data Grid for .NET MAUI is a data-aware control designed to present and manage data in a tabular format.
 
-![MAUI Data Grid](./img/devexpress-maui-data-grid.png)
+![MAUI Data Grid](./CS/DataGridExample/img/maui-data-grid.png)
 
 The [Get Started with the DevExpress Data Grid for .NET MAUI](/CS/DataGridExample/) example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
 
