@@ -1,4 +1,4 @@
-# Implement Load-More
+# DevExpress .NET MAUI Data Grid - Implement Load-More Functionality
 
 This example shows how to implement the grid's load-more functionality - when a user scrolls to the bottom of the grid, a set of new data items is added to the end of the grid. Data items for each next load (ten new orders) are generated randomly in code. The maximum number of loads a user is allowed to perform is 3. The total summary displays the count of data items currently loaded to the grid (it is automatically updated after each load).
 
