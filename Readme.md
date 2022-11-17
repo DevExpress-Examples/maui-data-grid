@@ -40,13 +40,15 @@ The DevExpress Data Grid for .NET MAUI is a data-aware control designed to prese
 
 ![MAUI Data Grid](./img/devexpress-maui-data-grid.png)
 
-This example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
+The [Get Started with the DevExpress Data Grid for .NET MAUI](/CS/DataGridExample/) example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
+
+Refer to the following YouTube video for instruction on how to get started with the DevExpress Data Grid for .NET MAUI: [Adding Data Grid to your .NET MAUI application](https://www.youtube.com/watch?v=HVfDmzLKq-0).
 
 ### Sample Projects
 
 #### Binding to Data
 
-* [Get Started with the DevExpress Data Grid for .NET MAUI﻿](/CS/DataGridExample/)
+* [Get Started with the DevExpress Data Grid for .NET MAUI](/CS/DataGridExample/)
 * [Create Columns for Different Data Types](/CS/Columns/)
 
 #### Edit and Validate Data
