@@ -1,4 +1,4 @@
-# Define Column Header Template
+# DevExpress .NET MAUI Data Grid - Define Column Header Template
 
 This example shows how to define templates for grid column headers. To do this, assign a [DataTemplate](https://learn.microsoft.com/en-us/dotnet/api/microsoft.maui.controls.datatemplate) object to a column's [HeaderContentTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.GridColumn.HeaderContentTemplate) property.
 
