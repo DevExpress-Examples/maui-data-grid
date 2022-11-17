@@ -1,4 +1,5 @@
-# Validate a Value Once It Is Entered
+# DevExpress .NET MAUI Data Grid - Validate a Value Once It Is Entered
+
 This example shows how to validate cell values that users enter in the edit form. Use the [EditFormPage.ValidateCell](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.EditFormPage.ValidateCell) event that occurs after a user changes a cell value in the [default edit form](https://docs.devexpress.com/MAUI/403652/data-grid/edit-cell-values#edit-form) and moves focus from the editor.
 
 <img src="./img/edit-form-validation.png"/>
