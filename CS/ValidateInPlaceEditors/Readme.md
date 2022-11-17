@@ -1,4 +1,5 @@
-# Validate New Values in In-Place Cell Editors
+# DevExpress .NET MAUI Data Grid - Validate New Values in In-Place Cell Editors
+
 This example shows how to validate a new cell value when a user modified it in an [in-place cell editor](https://docs.devexpress.com/MAUI/403652/data-grid/edit-cell-values#in-place-editors) and moves focus to another cell.
 
 <img src="./img/cell-validation.png"/>
