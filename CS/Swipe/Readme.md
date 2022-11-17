@@ -1,4 +1,4 @@
-# Define Swipe Actions for Data Rows
+# DevExpress .NET MAUI Data Grid - Define Swipe Actions for Data Rows
 
 This example shows how to extend the grid’s UI with additional elements (buttons) that appear when a user swipes a data row (from left to right or from right to left) and perform custom actions on tap. It defines two swipe actions for rows of the grid bound to the collection of orders:  
 - Display information on a customer - When a user swipes a data row from left to right, the **Customer** button appears on the left side of the row.  
