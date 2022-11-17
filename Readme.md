@@ -58,11 +58,6 @@ This repository contains projects that allow you to achieve the following tasks:
 ## Documentation
 
 - [Data Grid](https://docs.devexpress.com/MAUI/403255/data-grid/data-grid)
-- [Charts](https://docs.devexpress.com/MAUI/403300/charts/charts)
-- [Data Form](https://docs.devexpress.com/MAUI/403640/data-form)
-- [Navigation](https://docs.devexpress.com/MAUI/403297/navigation/index)
-- [Data Editors](https://docs.devexpress.com/MAUI/403427/editors/index)
-- [Collection View](https://docs.devexpress.com/MAUI/403324/collection-view/index)
 
 ## More Examples
 
