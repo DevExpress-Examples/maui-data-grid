@@ -1,4 +1,4 @@
-# Implement Pull-to-Refresh
+# DevExpress .NET MAUI Data Grid - Implement Pull-to-Refresh
 
 This example shows how to set up the grid so that it allows users to request a content update with the pull-down gesture. To do this, follow the steps below.
 
