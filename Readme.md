@@ -44,17 +44,28 @@ This example allows you to get started with the DataGridView component - bind it
 
 ### Sample Projects
 
-* [AdvancedColumnLayout](/CS/AdvancedColumnLayout/)
-* [ColumnHeaderTemplate](/CS/ColumnHeaderTemplate/)
-* [Columns](/CS/Columns/)
-* [CustomAppearance](/CS/CustomAppearance/)
-* [DataGridExample](/CS/DataGridExample/)
-* [EditForm](/CS/EditForm/)
-* [EditFormTemplate](/CS/EditFormTemplate/)
-* [InPlaceEditors](/CS/InPlaceEditors/)
-* [LoadMore](/CS/LoadMore/)
-* [PullToRefresh](/CS/PullToRefresh/)
-* [Swipe](/CS/Swipe/)
-* [ValidateCellEvent](/CS/ValidateCellEvent/)
-* [ValidateFormEvent](/CS/ValidateFormEvent/)
-* [ValidateInPlaceEditors](/CS/ValidateInPlaceEditors/)
+#### Binding to Data
+
+* [Get Started with the DevExpress Data Grid for .NET MAUI﻿](/CS/DataGridExample/)
+* [Create Columns for Different Data Types](/CS/Columns/)
+
+#### Edit and Validate Data
+
+* [Display the Edit Form](/CS/EditForm/)
+* [Define the In-Place Editor's Template](/CS/InPlaceEditors/)
+* [Validate a Value Once It Is Entered](/CS/ValidateCellEvent/)
+* [Validate Values On the Edit Form Closing](/CS/ValidateFormEvent/)
+* [Validate New Values in In-Place Cell Editors](/CS/ValidateInPlaceEditors/)
+
+#### Customize Appearance 
+
+* [Customize a Data Grid Appearance](/CS/CustomAppearance/)
+* [Display the Multi-Row Column Layout](/CS/AdvancedColumnLayout/)
+* [Define a Column Header Template](/CS/ColumnHeaderTemplate/)
+* [Customize the Edit Form Template](/CS/EditFormTemplate/)
+
+#### End-User Interaction
+
+* [Implement Load-More Functionality](/CS/LoadMore/)
+* [Implement Pull-to-Refresh](/CS/PullToRefresh/)
+* [Define Swipe Actions for Data Rows](/CS/Swipe/)
