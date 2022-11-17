@@ -25,7 +25,9 @@ The [Get Started with the DevExpress Data Grid for .NET MAUI](/CS/DataGridExampl
 
 Refer to the following YouTube video for instruction on how to get started with the DevExpress Data Grid for .NET MAUI: [Adding Data Grid to your .NET MAUI application](https://www.youtube.com/watch?v=HVfDmzLKq-0).
 
-### Sample Projects
+### Task-Based Examples
+
+This repository contains projects that allow you to achieve the following tasks:
 
 #### Binding to Data
 
