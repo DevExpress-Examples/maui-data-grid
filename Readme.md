@@ -15,25 +15,6 @@ The **DevExpress Mobile UI for Xamarin.Forms and .NET MAUI** is free of charge. 
 
 Please register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for more information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
 
-## Documentation
-
-- [Data Grid](https://docs.devexpress.com/MAUI/403255/data-grid/data-grid)
-- [Charts](https://docs.devexpress.com/MAUI/403300/charts/charts)
-- [Data Form](https://docs.devexpress.com/MAUI/403640/data-form)
-- [Navigation](https://docs.devexpress.com/MAUI/403297/navigation/index)
-- [Data Editors](https://docs.devexpress.com/MAUI/403427/editors/index)
-- [Collection View](https://docs.devexpress.com/MAUI/403324/collection-view/index)
-
-## More Examples
-
-* [Stocks App](https://github.com/DevExpress-Examples/maui-stocks-mini)
-* [Data Form](https://github.com/DevExpress-Examples/maui-data-form-get-started)
-* [Data Editors](https://github.com/DevExpress-Examples/maui-editors-get-started)
-* [Pie Chart](https://github.com/DevExpress-Examples/maui-pie-chart-get-started)
-* [Scatter Chart](https://github.com/DevExpress-Examples/maui-scatter-chart-get-started)
-* [Tab View](https://github.com/DevExpress-Examples/maui-tab-view-get-started)
-* [Collection View](https://github.com/DevExpress-Examples/maui-collection-view-get-started)
-
 ## What's in This Repository
 
 The DevExpress Data Grid for .NET MAUI is a data-aware control designed to present and manage data in a tabular format.
@@ -71,3 +52,22 @@ Refer to the following YouTube video for instruction on how to get started with 
 * [Implement Load-More Functionality](/CS/LoadMore/)
 * [Implement Pull-to-Refresh](/CS/PullToRefresh/)
 * [Define Swipe Actions for Data Rows](/CS/Swipe/)
+
+## Documentation
+
+- [Data Grid](https://docs.devexpress.com/MAUI/403255/data-grid/data-grid)
+- [Charts](https://docs.devexpress.com/MAUI/403300/charts/charts)
+- [Data Form](https://docs.devexpress.com/MAUI/403640/data-form)
+- [Navigation](https://docs.devexpress.com/MAUI/403297/navigation/index)
+- [Data Editors](https://docs.devexpress.com/MAUI/403427/editors/index)
+- [Collection View](https://docs.devexpress.com/MAUI/403324/collection-view/index)
+
+## More Examples
+
+* [Stocks App](https://github.com/DevExpress-Examples/maui-stocks-mini)
+* [Data Form](https://github.com/DevExpress-Examples/maui-data-form-get-started)
+* [Data Editors](https://github.com/DevExpress-Examples/maui-editors-get-started)
+* [Pie Chart](https://github.com/DevExpress-Examples/maui-pie-chart-get-started)
+* [Scatter Chart](https://github.com/DevExpress-Examples/maui-scatter-chart-get-started)
+* [Tab View](https://github.com/DevExpress-Examples/maui-tab-view-get-started)
+* [Collection View](https://github.com/DevExpress-Examples/maui-collection-view-get-started)
