@@ -1,4 +1,5 @@
-# Validate Values When Closing the Edit Form
+# DevExpress .NET MAUI Data Grid - Validate Values When Closing the Edit Form
+
 This example shows how to validate cell values that users enter in the [edit form](https://docs.devexpress.com/MAUI/403652/data-grid/edit-cell-values#edit-form). Use the [EditFormPage.ValidateForm](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.EditFormPage.ValidateForm) event that occurs after a user changes the values and tries to close the edit form.
 
 <img src="./img/edit-form-validation.png"/>
