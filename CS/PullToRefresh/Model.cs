@@ -10,7 +10,7 @@ namespace PullToRefresh {
             set {
                 name = value;
                 if (Photo == null) {
-                    resourceName = value.ToLower() + ".png";
+                    resourceName = value.ToLower();
                     if (!String.IsNullOrEmpty(resourceName))
                         Photo = ImageSource.FromResource(resourceName);
                 }

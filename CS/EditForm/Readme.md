@@ -1,12 +1,7 @@
 # Edit Cells - Edit Form
-This example shows how to set up the grid to display the Edit Values form when a user taps a cell. For a complete description, refer to the following help topic: [Enable the Edit Form](https://docs.devexpress.com/MobileControls/400993/xamarin-forms/data-grid/examples/edit-cells#how-to-enable-the-edit-form).
+This example shows how to set up the grid to display the Edit Values form when a user taps a cell. For a complete description, refer to the following help topic: [Enable the Edit Form](https://docs.devexpress.com/MAUI/403652/data-grid/edit-cell-values#edit-form).
 
-<img src="./img/default-edit-form.png"/>
-
-To run the application:
-1. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
-2. Register the DevExpress NuGet feed as a package source.
-3. Restore all NuGet packages for the solution.
+<img src="./img/edit-form.png"/>
 
 <!-- default file list -->
 ## Files to Review

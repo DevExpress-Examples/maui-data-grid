@@ -3,7 +3,7 @@
              xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
              xmlns:local="clr-namespace:CustomAppearance"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             ios:Page.UseSafeArea="true"
+             ios:Page.UseSafeArea="false"
              x:Class="CustomAppearance.MainPage">
     <ContentPage.BindingContext>
         <local:TestOrderRepository/>

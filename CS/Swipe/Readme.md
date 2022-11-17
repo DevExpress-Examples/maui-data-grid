@@ -6,12 +6,7 @@ This example shows how to extend the grid’s UI with additional elements (butto
 - Remove an order - When a user swipes a data row from right to left, the **Delete** button appears on the right side of the row.  
   <img src="./img/grid-swipe-end.png"/>
 
-For a complete description, refer to the following help topic: [Define Swipe Actions for Data Rows](https://docs.devexpress.com/MobileControls/401053/xamarin-forms/data-grid/examples/swipe-actions).
-
-To run the application:
-1. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
-2. Register the DevExpress NuGet feed as a package source.
-3. Restore all NuGet packages for the solution.
+For a complete description, refer to the following help topic: [Swipe Actions in .NET MAUI Data Grid](https://docs.devexpress.com/MAUI/403275/data-grid/swiping).
 
 <!-- default file list -->
 ## Files to Review

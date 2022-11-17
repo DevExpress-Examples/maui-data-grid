@@ -1,13 +1,8 @@
 # Change Column Layout
 
-This example shows how to define the multi-row column layout for a grid that contains information about *employees*. For a complete description, refer to the following help topic: [Change Column Layout](https://docs.devexpress.com/MobileControls/401696/xamarin-forms/data-grid/examples/column-layout).
+This example shows how to define the multi-row column layout for a grid that contains information about *employees*.
 
-<img src="./img/column-layouts.png"/>
-
-To run the application:
-1. [Obtain your NuGet feed URL](http://docs.devexpress.com/GeneralInformation/116042/installation/install-devexpress-controls-using-nuget-packages/obtain-your-nuget-feed-url).
-2. Register the DevExpress NuGet feed as a package source.
-3. Restore all NuGet packages for the solution.
+<img src="./img/advanced-column-layouts.png"/>
 
 <!-- default file list -->
 ## Files to Review

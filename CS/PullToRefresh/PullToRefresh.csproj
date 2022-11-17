@@ -34,16 +34,6 @@
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 	</ItemGroup>
-	<ItemGroup>
-	  <None Remove="Resources\Images\Beverages.png" />
-	  <None Remove="Resources\Images\Condiments.png" />
-	  <None Remove="Resources\Images\Confections.png" />
-	  <None Remove="Resources\Images\DairyProducts.png" />
-	  <None Remove="Resources\Images\Grains.png" />
-	  <None Remove="Resources\Images\MeatPoultry.png" />
-	  <None Remove="Resources\Images\Produce.png" />
-	  <None Remove="Resources\Images\Seafood.png" />
-	</ItemGroup>
 
 
 	<ItemGroup>
