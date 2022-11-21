@@ -36,7 +36,7 @@ The following step-by-step tutorial details how to reproduce this application.
 
 Create a new .NET MAUI solution in Visual Studio 22 Preview. Refer to the following Microsoft documentation for more information on how to get started with .NET MAUI: [.NET Multi-platform App UI](https://docs.microsoft.com/en-gb/dotnet/maui/).
 
-Register [your personal NuGet feed](https://nuget.devexpress.com/) as a package source in Visual Studio, if you are not an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have not yet registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/).
+Register [your personal NuGet feed](https://nuget.devexpress.com/) as a package source in Visual Studio if you are not an active DevExpress [Universal](https://www.devexpress.com/subscriptions/universal.xml) customer or have not yet registered our [free Xamarin UI controls](https://www.devexpress.com/xamarin/).
 
 Install the **DevExpress.Maui.DataGrid** package from your NuGet feed.
 
@@ -289,9 +289,9 @@ In this example, the grid contains the following columns:
     
     The **CellData** object specifies a binding context for a cell template. Its **CellData.Value** property returns a value of a data field assigned to the column’s **FieldName** property. In this example, a column cell displays not only this field value but also the values of two more fields. Use the **CellData.Item** property to access the whole data row object (*Employee*) and bind its properties to properties of labels defined in the template.
 
-- **Phone** and **Address** ([TextColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.TextColumn)) - display phones and addresses of employees. The keyboard for text input appears when a user activates a cell to edit an employee’s phone or address.  
+- **Phone** and **Address** ([TextColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.TextColumn)) - display phone numbers and addresses of employees. The keyboard for text input appears when a user activates a cell to edit an employee’s phone number or address.  
 
-- **Birth Date** ([DateColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DateColumn)) -  displays birth days of employees and allows users to edit dates.  
+- **Birth Date** ([DateColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DateColumn)) -  displays birth dates of employees and allows users to edit dates.  
 
 - **Access Level** ([ComboBoxColumn](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.ComboBoxColumn)) - displays employee access level and allows a user to select between predefined values (*Admin* or *User*) to change a cell value.  
 
@@ -342,7 +342,7 @@ The grid automatically defines an editor type depending on the type of a column 
 ```
 
 ### Enable Drag-and-Drop
-The DataGridView supports drag-and-drop operations and allows users to reorder rows. Users should touch and hold a data row and then drag and drop the row to another position.
+The DataGridView supports drag-and-drop operations and allows users to reorder rows. Users should touch and hold a data row, and then drag and drop the row to another position.
 
 To enable drag-and-drop operations, set the [AllowDragDropRows](http://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.AllowDragDropRows) property to **True**.
 ```xaml

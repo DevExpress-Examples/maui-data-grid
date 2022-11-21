@@ -9,7 +9,8 @@
 
 ![DevExpress Mobile UI for .NET MAUI](./img/maui.png)
 
-The **DevExpress Mobile UI for Xamarin.Forms and .NET MAUI** is free of charge. To learn more about our offer and to reserve your copy, visit [Free DevExpress Mobile UI for Xamarin.Forms and .NET MAUI](https://www.devexpress.com/xamarin-free).
+The **DevExpress Mobile UI for Xamarin.Forms and .NET MAUI** is free of charge. To learn more about our offer and get your copy, visit [Free DevExpress Mobile UI for Xamarin.Forms and .NET MAUI](https://www.devexpress.com/xamarin-free).
+
 
 ## Requirements
 
@@ -25,7 +26,7 @@ The DevExpress Data Grid for .NET MAUI is a data-aware control designed to prese
 
 The [Get Started with the DevExpress Data Grid for .NET MAUI](/CS/DataGridExample/) example allows you to get started with the DataGridView component - bind it to a data source and configure its columns.
 
-Refer to the following YouTube video for instruction on how to get started with the DevExpress Data Grid for .NET MAUI: [Adding Data Grid to your .NET MAUI application](https://www.youtube.com/watch?v=HVfDmzLKq-0).
+Refer to the following YouTube video for instructions on how to get started with the DevExpress Data Grid for .NET MAUI: [Adding Data Grid to your .NET MAUI application](https://www.youtube.com/watch?v=HVfDmzLKq-0).
 
 ### Task-Based Examples
 
@@ -41,7 +42,7 @@ This repository contains projects that allow you to achieve the following tasks:
 * [Display the Edit Form](/CS/EditForm/)
 * [Define the In-Place Editor's Template](/CS/InPlaceEditors/)
 * [Validate a Value Once It Is Entered](/CS/ValidateCellEvent/)
-* [Validate Values On the Edit Form Closing](/CS/ValidateFormEvent/)
+* [Validate Values on Edit Form Closing](/CS/ValidateFormEvent/)
 * [Validate New Values in In-Place Cell Editors](/CS/ValidateInPlaceEditors/)
 
 #### Customize Appearance 
