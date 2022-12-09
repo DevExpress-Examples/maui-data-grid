@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFrameworks>net7.0-android;net7.0-ios</TargetFrameworks>
@@ -46,9 +46,9 @@
 
 
 	<ItemGroup>
-		<PackageReference Include="DevExpress.Maui.Core" Version="22.2.2-beta" />
-		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.2.2-beta" />
-		<PackageReference Include="DevExpress.Data" Version="22.2.2-beta" />
+		<PackageReference Include="DevExpress.Maui.Core" Version="22.2.*" />
+		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.2.*" />
+		  
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	</ItemGroup>
 	<PropertyGroup>
