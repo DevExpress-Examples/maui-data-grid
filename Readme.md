@@ -38,7 +38,7 @@ This repository contains projects that allow you to achieve the following tasks:
 * [Create Columns for Different Data Types](/CS/Columns/)
 * [Bind to a Local Database (SQLite)](/CS/GridDatafromSQLite/)
 * [Bind to a Custom WebAPI Server (ASP.NET Core)](/CS/ASPDataBaseServer/)
-* [Bind to Serverless DB (Firebase)](/CS/GridDatafromFireBase/)
+* [Bind to a Serverless DB (Firebase)](/CS/GridDatafromFireBase/)
 
 #### Edit and Validate Data
 
