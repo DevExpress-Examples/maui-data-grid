@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1705.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridDatafromSQLite", "GridDatafromSQLite.csproj", "{B232764E-43F2-427D-9A78-BA5B39A9A626}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{022B2809-31CD-428E-9D3E-3F5FAA1B6C9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022B2809-31CD-428E-9D3E-3F5FAA1B6C9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022B2809-31CD-428E-9D3E-3F5FAA1B6C9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022B2809-31CD-428E-9D3E-3F5FAA1B6C9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B232764E-43F2-427D-9A78-BA5B39A9A626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B232764E-43F2-427D-9A78-BA5B39A9A626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56EE3A97-D769-40ED-9789-C4E134417DCF}
+	EndGlobalSection
+EndGlobal

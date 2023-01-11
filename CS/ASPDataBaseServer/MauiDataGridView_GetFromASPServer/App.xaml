@@ -1,0 +1,31 @@
+﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:local="clr-namespace:MauiDataGridView_GetFromASPServer"
+             x:Class="MauiDataGridView_GetFromASPServer.App"
+             windows:Application.ImageDirectory="Assets">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="Primary">#512BD4</Color>
+            <Color x:Key="PrimaryLight">#deedff</Color>
+            <Color x:Key="NormalText">Black</Color>
+            <Color x:Key="NormalHeaderText">#404144</Color>
+            <Color x:Key="NormalLightText">Black</Color>
+            <Color x:Key="DrawerTitleTextColor">White</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource DrawerTitleTextColor}"/>
+            </Style>
+            <Style x:Key="PrimaryButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource Primary}"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource NormalText}, Dark={StaticResource DrawerTitleTextColor}}" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+

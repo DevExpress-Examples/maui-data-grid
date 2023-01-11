@@ -36,6 +36,9 @@ This repository contains projects that allow you to achieve the following tasks:
 
 * [Get Started with the DevExpress Data Grid for .NET MAUI](/CS/DataGridExample/)
 * [Create Columns for Different Data Types](/CS/Columns/)
+* [Bind to a Local Database (SQLite)](/CS/GridDatafromSQLite/)
+* [Bind to a custom WebAPI Server (ASP.NET Core)](/CS/ASPDataBaseServer/)
+* [Bind to Serverless DB (Firebase)](/CS/GridDatafromFireBase/)
 
 #### Edit and Validate Data
 

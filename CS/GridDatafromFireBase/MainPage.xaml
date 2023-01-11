@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GridDatafromFireBase.MainPage"
+             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             Title="Employee View">
+
+    <Grid RowDefinitions="*,Auto,Auto">
+        <Grid.Resources>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </Grid.Resources>
+        <dxg:DataGridView x:Name="datagrid" Grid.Row="0"
+                  EditorShowMode="Never" IsReadOnly="False" VerticalLineThickness="1">
+            <dxg:DataGridView.GroupCaptionTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding GroupValue}"/>
+                </DataTemplate>
+                </dxg:DataGridView.GroupCaptionTemplate>
+            <dxg:DataGridView.CellAppearance>
+                <dxg:CellAppearance BorderColor="Transparent" HorizontalLineThickness="0"/>
+            </dxg:DataGridView.CellAppearance>
+        <dxg:DataGridView.Columns>
+                <dxg:TemplateColumn MinWidth="250" Caption="Employee" FieldName="LastName">
+                    <dxg:TemplateColumn.DisplayTemplate>
+                        <DataTemplate>
+                            <Grid VerticalOptions="Center" Padding="15, 10, 0, 10" RowDefinitions="*, Auto" ColumnDefinitions="Auto, 3*, *, *">
+                                <Border Grid.RowSpan="2"
+                                    BackgroundColor="White"
+                                    WidthRequest="50"
+                                        HeightRequest="50"
+                                        Margin="0,0,15,0"
+                                        Grid.Column="0" 
+                                        VerticalOptions="Center">
+                                    <Border.Clip>
+                                        <EllipseGeometry RadiusX="25" RadiusY="25" Center="25,25"/>
+                                    </Border.Clip>
+                                    <Image Source="{Binding Item.Image}" Grid.Column="0" Grid.RowSpan="2" WidthRequest="80" HeightRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,30,0,0"/>
+                                    </Border>
+                                <HorizontalStackLayout Grid.Row="0" Grid.Column="1">
+                                    <Label Text="{Binding Item.FirstName}" Padding="0,0,4,0"/>
+                                    <Label Text="{Binding Item.LastName}" />
+                                </HorizontalStackLayout>
+                                <Label Text="{Binding Item.Phone}" FontAttributes="None" FontSize="14" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0"/>
+                            </Grid>
+                        </DataTemplate>
+                    </dxg:TemplateColumn.DisplayTemplate>
+                </dxg:TemplateColumn>
+        <dxg:DateColumn FieldName="HireDate"  
+                        DisplayFormat="d" VerticalContentAlignment="Center" HorizontalContentAlignment="End" SortOrder="Descending" />
+        <dxg:TextColumn FieldName="GroupName" 
+                        MinWidth="120" VerticalContentAlignment="Center" IsGrouped="true" />
+    </dxg:DataGridView.Columns>
+            </dxg:DataGridView>
+    </Grid>
+</ContentPage>
