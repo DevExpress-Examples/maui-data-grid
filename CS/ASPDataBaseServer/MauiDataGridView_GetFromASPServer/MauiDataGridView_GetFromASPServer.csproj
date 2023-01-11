@@ -45,8 +45,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="DevExpress.Maui.Editors" Version="22.2.3" />
-		<PackageReference Include="DevExpress.Maui.Core" Version="22.2.3" />
-		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.2.3" />
+		<PackageReference Include="DevExpress.Maui.Editors" Version="22.2.*" />
+		<PackageReference Include="DevExpress.Maui.Core" Version="22.2.*" />
+		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.2.*" />
 	</ItemGroup>
 </Project>
