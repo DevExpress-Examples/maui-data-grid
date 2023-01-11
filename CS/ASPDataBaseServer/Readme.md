@@ -2,7 +2,7 @@
 
 This example shows how to receive data from the ASP.NET Core server and display them in the DevExpress .NET MAUI Data Grid. 
 
-<img src="im/datagrid-aspnetserver-data.png" width="660px"/>
+<img src="img/datagrid-aspnetserver-data.png" width="660px"/>
 
 The example contains the following projects:
 
