@@ -2,7 +2,7 @@
 
 This example shows how to bind the DevExpress .NET MAUI DataGrid to a local db (SQLite).
 
-<img src="img/bind-datagrid-to-sqlite.png" width="660px"/>
+<img src="Images/bind-datagrid-to-sqlite.png" width="660px"/>
 
 This project uses the following NuGet packages to access data that are stored in the SQLite database:
 
