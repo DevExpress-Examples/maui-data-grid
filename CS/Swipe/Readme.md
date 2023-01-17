@@ -11,9 +11,9 @@ For a complete description, refer to the following help topic: [Swipe Actions in
 <!-- default file list -->
 ## Files to Review
 
-* [Customer.cs](./DataGridView_Swipe/DataModel/Customer.cs)
-* [Product.cs](./DataGridView_Swipe/DataModel/Product.cs)
-* [Order.cs](./DataGridView_Swipe/DataModel/Order.cs)
-* [OrderRepository.cs](./DataGridView_Swipe/DataModel/OrderRepository.cs)
-* [MainPage.xaml](./DataGridView_Swipe/MainPage.xaml)
+* [Customer.cs](DataModel/Customer.cs)
+* [Product.cs](DataModel/Product.cs)
+* [Order.cs](DataModel/Order.cs)
+* [OrderRepository.cs](DataModel/OrderRepository.cs)
+* [MainPage.xaml](MainPage.xaml)
 <!-- default file list end -->
