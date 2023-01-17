@@ -1,6 +1,6 @@
 # DevExpress .NET MAUI Data Grid - Bind to a Custom WebAPI Server
 
-This example shows how to receive data from the ASP.NET Core server and display them in the DevExpress .NET MAUI Data Grid. 
+This example shows how to receive data from the ASP.NET Core server and display it in the DevExpress .NET MAUI Data Grid
 
 <img src="img/datagrid-aspnetserver-data.png" width="660px"/>
 
