@@ -7,9 +7,9 @@ This example shows how to create a custom view for the grid's edit form and set 
 <!-- default file list -->
 ## Files to Review
 
-* [MainPage.xaml](./DataGrid_EditFormTemplate/MainPage.xaml)
-* [MainPage.xaml.cs](./DataGrid_EditFormTemplate/MainPage.xaml.cs)
-* [App.xaml.cs](./DataGrid_EditFormTemplate/App.xaml.cs)
-* [Model.cs](./DataGrid_EditFormTemplate/Model.cs)
-* [ViewModel.cs](./DataGrid_EditFormTemplate/ViewModel.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [MainPage.xaml.cs](MainPage.xaml.cs)
+* [App.xaml.cs](App.xaml.cs)
+* [Model.cs](Model.cs)
+* [ViewModel.cs](ViewModel.cs)
 <!-- default file list end -->
