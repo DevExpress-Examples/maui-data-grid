@@ -42,8 +42,12 @@
 	<ItemGroup>
 		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.2.*" />
 		  
+		<PackageReference Include="DevExpress.Maui.Controls" Version="22.2.3" />
 	</ItemGroup>
 	
+	<ItemGroup>
+	  <None Remove="DevExpress.Maui.Controls" />
+	</ItemGroup>
 	<PropertyGroup>
 		<RuntimeIdentifier Condition="$(TargetFramework.Contains('-ios'))">iossimulator-x64</RuntimeIdentifier>
 		<UseInterpreter Condition="$(TargetFramework.Contains('-android'))">False</UseInterpreter>

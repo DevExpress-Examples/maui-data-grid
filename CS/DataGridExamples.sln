@@ -31,6 +31,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PullToRefresh", "PullToRefr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swipe", "Swipe\Swipe.csproj", "{D7C64862-6E95-4C09-834B-128835E5D5A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridDatafromFireBase", "GridDatafromFireBase\GridDatafromFireBase.csproj", "{3B09D8AD-6EC1-47E9-A7B8-6B7442E01F28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridDatafromSQLite", "GridDatafromSQLite\GridDatafromSQLite.csproj", "{F9A29A23-40FD-4262-81E7-AFE8C9C13940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPDataBaseServer", "ASPDataBaseServer\ASPDataBaseServer\ASPDataBaseServer.csproj", "{9FB0055A-5769-4336-88C4-D301CE7D76B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiDataGridView_GetFromASPServer", "ASPDataBaseServer\MauiDataGridView_GetFromASPServer\MauiDataGridView_GetFromASPServer.csproj", "{3BE4671F-E7BE-4A95-9305-7B43D3707063}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +127,22 @@ Global
 		{D7C64862-6E95-4C09-834B-128835E5D5A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7C64862-6E95-4C09-834B-128835E5D5A2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D7C64862-6E95-4C09-834B-128835E5D5A2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3B09D8AD-6EC1-47E9-A7B8-6B7442E01F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B09D8AD-6EC1-47E9-A7B8-6B7442E01F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B09D8AD-6EC1-47E9-A7B8-6B7442E01F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B09D8AD-6EC1-47E9-A7B8-6B7442E01F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9A29A23-40FD-4262-81E7-AFE8C9C13940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A29A23-40FD-4262-81E7-AFE8C9C13940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A29A23-40FD-4262-81E7-AFE8C9C13940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A29A23-40FD-4262-81E7-AFE8C9C13940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FB0055A-5769-4336-88C4-D301CE7D76B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FB0055A-5769-4336-88C4-D301CE7D76B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FB0055A-5769-4336-88C4-D301CE7D76B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FB0055A-5769-4336-88C4-D301CE7D76B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE4671F-E7BE-4A95-9305-7B43D3707063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE4671F-E7BE-4A95-9305-7B43D3707063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE4671F-E7BE-4A95-9305-7B43D3707063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE4671F-E7BE-4A95-9305-7B43D3707063}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
