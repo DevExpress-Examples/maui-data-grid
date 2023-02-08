@@ -14,7 +14,7 @@ This project uses the following NuGet packages to access data stored in the SQLi
 <!-- default file list -->
 ## Files to Review
 
-* [Data.cs](./Model/Data.cs)
+* [Contacts.cs](./Model/Contacts.cs)
 * [MainPage.xaml](./MainPage.xaml)
 * [MainPage.xaml.cs](./MainPage.xaml.cs)
 
