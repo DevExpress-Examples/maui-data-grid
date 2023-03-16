@@ -6,9 +6,9 @@ This example shows how to modify the grid appearance. For a complete description
 <!-- default file list -->
 ## Files to Review
 
-* [MainPage.xaml](./DataGrid_CustomAppearance/MainPage.xaml)
-* [Product.cs](./DataGrid_CustomAppearance/DataModel/Product.cs)
-* [Order.cs](./DataGrid_CustomAppearance/DataModel/Order.cs)
-* [OrderRepository.cs](./DataGrid_CustomAppearance/DataModel/OrderRepository.cs)
-* [ModelObject.cs](./DataGrid_CustomAppearance/DataModel/ModelObject.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [Product.cs](DataModel/Product.cs)
+* [Order.cs](DataModel/Order.cs)
+* [OrderRepository.cs](DataModel/OrderRepository.cs)
+* [ModelObject.cs](DataModel/ModelObject.cs)
 <!-- default file list end -->
