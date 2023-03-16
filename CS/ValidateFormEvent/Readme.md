@@ -7,11 +7,11 @@ This example shows how to validate cell values that users enter in the [edit for
 <!-- default file list -->
 ## Files to Review
 
-* [MainPage.xaml](./DataGrid_ValidateFormEvent/MainPage.xaml)
-* [MainPage.xaml.cs](./DataGrid_ValidateFormEvent/MainPage.xaml.cs)
-* [App.xaml.cs](./DataGrid_ValidateFormEvent/App.xaml.cs)
-* [Product.cs](./DataGrid_ValidateFormEvent/DataModel/Product.cs)
-* [Order.cs](./DataGrid_ValidateFormEvent/DataModel/Order.cs)
-* [OrderRepository.cs](./DataGrid_ValidateFormEvent/DataModel/OrderRepository.cs)
-* [ModelObject.cs](./DataGrid_ValidateFormEvent/DataModel/ModelObject.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [MainPage.xaml.cs](MainPage.xaml.cs)
+* [App.xaml.cs](App.xaml.cs)
+* [Product.cs](DataModel/Product.cs)
+* [Order.cs](DataModel/Order.cs)
+* [OrderRepository.cs](DataModel/OrderRepository.cs)
+* [ModelObject.cs](DataModel/ModelObject.cs)
 <!-- default file list end -->
