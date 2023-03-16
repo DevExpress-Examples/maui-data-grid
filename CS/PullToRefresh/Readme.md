@@ -11,7 +11,7 @@ This example shows how to set up the grid so that it allows users to request a c
 <!-- default file list -->
 ## Files to Review
 
-* [Model.cs](./DataGridView_PullToRefresh/Model.cs)
-* [ViewModel.cs](./DataGridView_PullToRefresh/ViewModel.cs)
-* [MainPage.xaml](./DataGridView_PullToRefresh/MainPage.xaml)
+* [Model.cs](Model.cs)
+* [ViewModel.cs](ViewModel.cs)
+* [MainPage.xaml](MainPage.xaml)
 <!-- default file list end -->
