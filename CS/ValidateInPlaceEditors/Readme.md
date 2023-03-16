@@ -7,10 +7,10 @@ This example shows how to validate a new cell value when a user modifies it in a
 <!-- default file list -->
 ## Files to Review
 
-* [MainPage.xaml](./DataGrid_ValidateInPlaceEditors/MainPage.xaml)
-* [MainPage.xaml.cs](./DataGrid_ValidateInPlaceEditors/MainPage.xaml.cs)
-* [Product.cs](./DataGrid_ValidateInPlaceEditors/DataModel/Product.cs)
-* [Order.cs](./DataGrid_ValidateInPlaceEditors/DataModel/Order.cs)
-* [OrderRepository.cs](./DataGrid_ValidateInPlaceEditors/DataModel/OrderRepository.cs)
-* [ModelObject.cs](./DataGrid_ValidateInPlaceEditors/DataModel/ModelObject.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [MainPage.xaml.cs](MainPage.xaml.cs)
+* [Product.cs](DataModel/Product.cs)
+* [Order.cs](DataModel/Order.cs)
+* [OrderRepository.cs](DataModel/OrderRepository.cs)
+* [ModelObject.cs](DataModel/ModelObject.cs)
 <!-- default file list end -->
