@@ -11,9 +11,9 @@ This example shows how to implement the grid's load-more functionality - when a 
 <!-- default file list -->
 ## Files to Review
 
-* [Order.cs](./DataGridView_LoadMore/DataModel/Order.cs)
-* [Product.cs](./DataGridView_LoadMore/DataModel/Product.cs)
-* [OrderRepository.cs](./DataGridView_LoadMore/DataModel/OrderRepository.cs)
-* [ViewModel.cs](./DataGridView_LoadMore/DataModel/ViewModel.cs)
-* [MainPage.xaml](./DataGridView_LoadMore/MainPage.xaml)
+* [Order.cs](DataModel/Order.cs)
+* [Product.cs](DataModel/Product.cs)
+* [OrderRepository.cs](DataModel/OrderRepository.cs)
+* [ViewModel.cs](DataModel/ViewModel.cs)
+* [MainPage.xaml](MainPage.xaml)
 <!-- default file list end -->
