@@ -7,7 +7,7 @@ This example shows how to define templates for grid column headers. To do this, 
 <!-- default file list -->
 ## Files to Review
 
-* [MainPage.xaml](./DataGrid_ColumnHeaderTemplate/MainPage.xaml)
-* [Model.cs](./DataGrid_ColumnHeaderTemplate/Model.cs)
-* [ViewModel.cs](./DataGrid_ColumnHeaderTemplate/ViewModel.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [Model.cs](Model.cs)
+* [ViewModel.cs](ViewModel.cs)
 <!-- default file list end -->
