@@ -7,9 +7,9 @@ This example shows how to define the multi-row column layout for a grid that con
 <!-- default file list -->
 ## Files to Review
 
-* [MainPage.xaml](./DataGrid_AdvancedColumnLayout/MainPage.xaml)
-* [Model.cs](./DataGrid_AdvancedColumnLayout/Model.cs)
-* [ViewModel.cs](./DataGrid_AdvancedColumnLayout/ViewModel.cs)
-* [MainPage.xaml.cs](./DataGrid_AdvancedColumnLayout/MainPage.xaml.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [Model.cs](Model.cs)
+* [ViewModel.cs](ViewModel.cs)
+* [MainPage.xaml.cs](MainPage.xaml.cs)
 
 <!-- default file list end -->
