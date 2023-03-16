@@ -7,8 +7,8 @@ This example demonstrates how to set an in-place editor template for a [Template
 <!-- default file list -->
 ## Files to Review
 
-* [MainPage.xaml](./DataGrid_InPlaceEditors/MainPage.xaml)
-* [Model.cs](./DataGrid_InPlaceEditors/Model.cs)
-* [ViewModel.cs](./DataGrid_InPlaceEditors/ViewModel.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [Model.cs](Model.cs)
+* [ViewModel.cs](ViewModel.cs)
 
 <!-- default file list end -->
