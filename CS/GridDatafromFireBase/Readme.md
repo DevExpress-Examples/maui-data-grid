@@ -9,8 +9,8 @@ The project uses the [FirebaseDatabase.net](https://www.nuget.org/packages/Fireb
 <!-- default file list -->
 ## Files to Review
 
-* [Data.cs](./Model/Data.cs)
-* [MainPage.xaml](./MainPage.xaml)
-* [MainPage.xaml.cs](./MainPage.xaml.cs)
+* [Data.cs](Model/Data.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [MainPage.xaml.cs](MainPage.xaml.cs)
 
 <!-- default file list end -->
