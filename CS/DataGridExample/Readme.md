@@ -14,10 +14,10 @@ This example allows you to get started with the DataGridView component - bind it
 ### Files to Review
 
 <!-- default file list -->
-* [MauiProgram.cs](./CS/DataGridExample/MauiProgram.cs)
-* [MainPage.xaml](./CS/DataGridExample/MainPage.xaml)
-* [Model.cs](./CS/DataGridExample/Model.cs)
-* [ViewModel.cs](./CS/DataGridExample/ViewModel.cs)
+* [MauiProgram.cs](MauiProgram.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [Model.cs](Model.cs)
+* [ViewModel.cs](ViewModel.cs)
 <!-- default file list end -->
 
 ## How to Run This Application
