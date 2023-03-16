@@ -7,7 +7,7 @@ This example shows how to create columns in [DataGridView](https://docs.devexpre
 <!-- default file list -->
 ## Files to Review
 
-* [Model.cs](./DataGrid_Columns/Model.cs)
-* [ViewModel.cs](./DataGrid_Columns/ViewModel.cs)
-* [MainPage.xaml](./DataGrid_Columns/MainPage.xaml)
+* [Model.cs](Model.cs)
+* [ViewModel.cs](ViewModel.cs)
+* [MainPage.xaml](MainPage.xaml)
 <!-- default file list end -->
