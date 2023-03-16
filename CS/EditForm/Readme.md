@@ -7,10 +7,10 @@ This example shows how to set up the grid to display the Edit Values form when a
 <!-- default file list -->
 ## Files to Review
 
-* [MainPage.xaml](./DataGrid_EditForm/MainPage.xaml)
-* [App.xaml.cs](./DataGrid_EditForm/App.xaml.cs)
-* [Product.cs](./DataGrid_EditForm/DataModel/Product.cs)
-* [Order.cs](./DataGrid_EditForm/DataModel/Order.cs)
-* [OrderRepository.cs](./DataGrid_EditForm/DataModel/OrderRepository.cs)
-* [ModelObject.cs](./DataGrid_EditForm/DataModel/ModelObject.cs)
+* [MainPage.xaml](MainPage.xaml)
+* [App.xaml.cs](App.xaml.cs)
+* [Product.cs](DataModel/Product.cs)
+* [Order.cs](DataModel/Order.cs)
+* [OrderRepository.cs](DataModel/OrderRepository.cs)
+* [ModelObject.cs](DataModel/ModelObject.cs)
 <!-- default file list end -->
