@@ -60,6 +60,7 @@ This repository contains projects that allow you to achieve the following tasks:
 * [Implement Load-More Functionality](/CS/LoadMore/)
 * [Implement Pull-to-Refresh](/CS/PullToRefresh/)
 * [Define Swipe Actions for Data Rows](/CS/Swipe/)
+* [Implement a Column Chooser](/CS/ColumnChooser/)
 
 ## Documentation
 
