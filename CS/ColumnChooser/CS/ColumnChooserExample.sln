@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColumnChooserExample", "ColumnChooserExample.csproj", "{BE3FF191-4AA7-4FB0-9FC8-17AA943F3DFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE3FF191-4AA7-4FB0-9FC8-17AA943F3DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3FF191-4AA7-4FB0-9FC8-17AA943F3DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3FF191-4AA7-4FB0-9FC8-17AA943F3DFF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BE3FF191-4AA7-4FB0-9FC8-17AA943F3DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3FF191-4AA7-4FB0-9FC8-17AA943F3DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE3FF191-4AA7-4FB0-9FC8-17AA943F3DFF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2DD4574-E3E8-484E-AC36-65572A57A33E}
+	EndGlobalSection
+EndGlobal

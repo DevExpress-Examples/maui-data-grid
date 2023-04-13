@@ -1,0 +1,35 @@
+﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
+             xmlns:local="clr-namespace:ColumnChooserExample"
+             x:Class= "ColumnChooserExample.App"
+             windows:Application.ImageDirectory="Assets">
+    <Application.Resources>
+        <Color x:Key="Primary">#6750A4</Color>
+            <Color x:Key="Popup_Background_Light">#F3EDF7</Color>
+            <Color x:Key="Popup_Background_Dark">#2B2831</Color>
+        <Color x:Key="Gray50">#F2F2F7</Color>
+        <Color x:Key="Gray100">#E1E1E1</Color>
+        <Color x:Key="Gray200">#C8C8C8</Color>
+        <Color x:Key="Gray300">#ACACAC</Color>
+        <Color x:Key="Gray400">#919191</Color>
+        <Color x:Key="Gray500">#6E6E6E</Color>
+        <Color x:Key="Gray600">#404040</Color>
+        <Color x:Key="Gray900">#212121</Color>
+        <Color x:Key="Gray950">#141414</Color>
+        <Color x:Key="NormalText">#55575c</Color>
+        <Color x:Key="NormalHeaderText">#55575c</Color>
+        <Color x:Key="NormalLightText">#959aa0</Color>
+        <Color x:Key="TitleTextColor">White</Color>
+        <Color x:Key="NormalBackgroundColor">White</Color>
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+            <Setter Property="BarTextColor" Value="White" />
+        </Style>
+
+        <Style TargetType="Shell" ApplyToDerivedTypes="True">
+            <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+            <Setter Property="Shell.TitleColor" Value="White" />
+        </Style>
+    </Application.Resources>
+</Application>
