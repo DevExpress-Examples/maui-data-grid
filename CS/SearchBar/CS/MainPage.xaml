@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataGridSearchBar.MainPage"
+             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
+             xmlns:local="clr-namespace:DataGridSearchBar"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewModes="clr-namespace:DataGridSearchBar.ViewModels"
+             Title="Contacts" Shell.NavBarIsVisible="False" BackgroundColor="{StaticResource Gray50}" Background="{AppThemeBinding Light={StaticResource Gray50}, Dark=#1D1A22}">
+    <ContentPage.BindingContext>
+        <viewModes:MainViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="search"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Light={StaticResource Gray50}, Dark={StaticResource Gray950}}" StatusBarStyle="DarkContent" />
+    </ContentPage.Behaviors>
+    <Grid RowDefinitions="Auto,*">
+        <Border StrokeThickness="0" Stroke="Transparent" Background="Transparent">
+            <dxe:TextEdit EndIcon="search" PlaceholderText="Search contacts" TextFontSize="14" ClearIconColor="{StaticResource Gray300}" TextVerticalAlignment="Center" BackgroundColor="{AppThemeBinding Light=White, Dark=#322F37}" BorderThickness="1" BorderColor="{AppThemeBinding Light=#DCD8E0, Dark=#938F99}" BoxPadding="20,6,10,6" PlaceholderColor="{AppThemeBinding Light={StaticResource Gray300}, Dark=#938F99}" EndIconColor="{AppThemeBinding Light={StaticResource Gray300}, Dark=#CAC4D0}" FocusedBorderColor="Transparent" CornerRadius="16" HeightRequest="35" Margin="15,10,15,10" TextChanged="SearchTextChanged" TextColor="{AppThemeBinding Light={StaticResource Gray950}, Dark=#E6E1E5}"/>
+        </Border>
+        <dxg:DataGridView x:Name="dataGrid" ItemsSource="{Binding Contacts}" SelectionMode="None" Grid.Row="1" ShowGroupedColumns="True" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray950}}">
+            <dxg:DataGridView.GroupRowAppearance>
+                <dxg:GroupRowAppearance BackgroundColor="Transparent" BottomBorderColor="Transparent" BorderColor="Transparent"/>
+            </dxg:DataGridView.GroupRowAppearance>
+            <dxg:DataGridView.CellAppearance>
+                <dxg:CellAppearance HorizontalLineThickness="0"/>
+            </dxg:DataGridView.CellAppearance>
+            <dxg:DataGridView.Columns>
+                <dxg:TemplateColumn FieldName="FirstName" Caption="All Contacts" SortOrder="Ascending" IsGrouped="True" GroupInterval="Alphabetical" GroupCaptionDisplayFormat="{}{1}">
+                    <dxg:TemplateColumn.DisplayTemplate>
+                        <DataTemplate>
+                            <dxco:SimpleButton Padding="5" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray950}}" CornerRadius="0">
+                                <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="*,*">
+                                    <!--sometimes MAUI displayes wrong images because of this bug: https://github.com/dotnet/maui/pull/13111-->
+                                    <Image HeightRequest="40" WidthRequest="40" Source="{Binding Item.PhotoImageSource}" VerticalOptions="Center" Margin="10" Grid.RowSpan="2"/>
+                                    <HorizontalStackLayout  Grid.Column="1" VerticalOptions="End">
+                                        <Label Text="{Binding Item.FirstName}" TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark=#E6E1E5}" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Item.LastName}" Margin="5,0,0,0" TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark=#E6E1E5}" FontAttributes="Bold"/>
+                                    </HorizontalStackLayout>
+                                    <Label Text="{Binding Item.Company}" TextColor="{StaticResource Gray400}" LineBreakMode="TailTruncation" VerticalOptions="Start" Grid.Column="1" Grid.Row="1"/>
+                                </Grid>
+                            </dxco:SimpleButton>
+                        </DataTemplate>
+                    </dxg:TemplateColumn.DisplayTemplate>
+                </dxg:TemplateColumn>
+            </dxg:DataGridView.Columns>
+        </dxg:DataGridView>
+    </Grid>
+</ContentPage>
