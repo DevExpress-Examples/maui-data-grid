@@ -62,6 +62,7 @@ This repository contains projects that allow you to achieve the following tasks:
 * [Define Swipe Actions for Data Rows](/CS/Swipe/)
 * [Implement a Column Chooser](/CS/ColumnChooser/)
 * [Drag and Drop - Replicate a Single-Column Kanban View](/CS/SingleColumnKanbanView/)
+* [Implement Search Bar](/CS/SearchBar/)
 
 ## Documentation
 
