@@ -13,7 +13,6 @@ using static DataGridSearchBar.App;
 
 namespace DataGridSearchBar.ViewModels {
     public class MainViewModel : BindableBase {
-        bool isRefreshing;
         public MainViewModel() {
             LoadData();
         }
