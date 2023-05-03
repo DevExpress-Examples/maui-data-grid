@@ -35,7 +35,7 @@
                         <DataTemplate>
                             <dxco:SimpleButton Padding="5" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray950}}" CornerRadius="0">
                                 <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="*,*">
-                                    <!--sometimes MAUI displayes wrong images because of this bug: https://github.com/dotnet/maui/pull/13111-->
+                                    <!--sometimes MAUI displays wrong images because of this bug: https://github.com/dotnet/maui/pull/13111-->
                                     <Image HeightRequest="40" WidthRequest="40" Source="{Binding Item.PhotoImageSource}" VerticalOptions="Center" Margin="10" Grid.RowSpan="2"/>
                                     <HorizontalStackLayout  Grid.Column="1" VerticalOptions="End">
                                         <Label Text="{Binding Item.FirstName}" TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark=#E6E1E5}" FontAttributes="Bold"/>
