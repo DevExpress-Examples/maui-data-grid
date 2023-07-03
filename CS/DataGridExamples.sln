@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPDataBaseServer", "ASPDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiDataGridView_GetFromASPServer", "ASPDataBaseServer\MauiDataGridView_GetFromASPServer\MauiDataGridView_GetFromASPServer.csproj", "{3BE4671F-E7BE-4A95-9305-7B43D3707063}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportGridData", "ExportGridData\GridExport.csproj", "{3BE4671F-E7BE-4A95-9305-7B43D3707063}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

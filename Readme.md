@@ -63,6 +63,7 @@ This repository contains projects that allow you to achieve the following tasks:
 * [Implement a Column Chooser](/CS/ColumnChooser/)
 * [Drag and Drop - Replicate a Single-Column Kanban View](/CS/SingleColumnKanbanView/)
 * [Implement Search Bar](/CS/SearchBar/)
+* [Export DataGrid Data](/CS/ExportGridData/)
 
 ## Documentation
 
