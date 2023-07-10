@@ -2,10 +2,9 @@
 
 > NOTE
 >
-> The DevExpress .NET MAUI DataGrid Export feature requires a license to our [Office File API Suite (basic edition)](https://www.devexpress.com/products/net/office-file-api/). Without a valid license, you will not be able to use this feature within your .NET MAUI application. If you own an active DevExpress Subscription (Universal, DXperience, WinForms, WPF, ASP.NET), the basic version of the DevExpress Office File API Suite is available to you.
+> The DevExpress .NET MAUI DataGrid Export feature requires the following license: [Office File API Suite (basic edition)](https://www.devexpress.com/products/net/office-file-api/). Without a valid license, you will not be able to use this feature within your .NET MAUI application. If you own an active DevExpress Subscription (Universal, DXperience, WinForms, WPF, ASP.NET), the basic version of the DevExpress Office File API Suite is available to you.
 
-
-This example shows how to export a .NET MAUI Data Grid's data to a file in the following formats:
+This example illustrates how you can export .NET MAUI Data Grid records to the following formats:
 
 * PDF
 * XSLX
