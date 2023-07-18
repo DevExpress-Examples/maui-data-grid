@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataGridDragDrop {
     public class MainViewModel {
-        public Dictionary<string, int> StageOrder = new Dictionary<string, int>() { { "Planned", 0 }, { "Coding", 1 }, { "Testing", 2 }, { "Done", 3 } };
+        public Dictionary<string, int> StageOrder = new Dictionary<string, int>() { { "Planned", 0 }, { "Doing", 1 }, { "Testing", 2 }, { "Done", 3 } };
         public ObservableCollection<TaskToDo> Tasks { get; set; }
         public MainViewModel() {
             Tasks = DataStorage.CreateTasks();
