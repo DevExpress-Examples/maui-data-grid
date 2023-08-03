@@ -5,13 +5,5 @@ namespace EditFormTemplate {
         public MainPage() {
             InitializeComponent();
         }
-
-        private void DataGridView_DoubleTap(object sender, DataGridGestureEventArgs e) {
-            if (e.Item != null) {
-                var editForm = new EditFormPage(grid, grid.GetItem(e.RowHandle),
-                                (DataTemplate)Resources["CustomEditFormContent"]);
-                Navigation.PushAsync(editForm);
-            }
-        }
     }
 }

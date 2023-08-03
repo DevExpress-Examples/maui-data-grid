@@ -37,9 +37,23 @@
 
 
 	<ItemGroup>
-		<PackageReference Include="DevExpress.Maui.Core" Version="22.2.*" />
-		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.2.*" />
+		<PackageReference Include="DevExpress.Maui.Core" Version="23.1.*" />
+		<PackageReference Include="DevExpress.Maui.DataGrid" Version="23.1.*" />
 		  
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Compile Update="OrderEditForm.xaml.cs">
+	    <DependentUpon>%(Filename)</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <MauiXaml Update="OrderEditForm.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 	<PropertyGroup>
 		<UseInterpreter Condition="$(TargetFramework.Contains('-ios'))">True</UseInterpreter>	

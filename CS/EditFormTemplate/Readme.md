@@ -1,15 +1,24 @@
 # DevExpress .NET MAUI Data Grid - Customize the Edit Form Template
 
-This example shows how to create a custom view for the grid's edit form and set up the grid to invoke this form when a user double taps a cell. For a complete description, refer to the following help topic: [Define a Custom Template for the Edit Form](https://docs.devexpress.com/MAUI/403652/data-grid/edit-cell-values#how-to-define-a-custom-template-for-the-edit-form).
+This example invokes a custom cell edit form when a user double taps a cell.
 
 <img src="./img/grid-edit-form-template.png"/>
 
-<!-- default file list -->
+Specify the [DetailEditFormTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.DetailEditFormTemplate) property to define the custom edit form content.
+
+To invoke the edit form on a double row tap, bind the [RowDoubleTapCommand](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView.RowDoubleTapCommand) property to the [ShowDetailEditForm](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridViewCommands.ShowDetailEditForm) command.
+
 ## Files to Review
 
 * [MainPage.xaml](MainPage.xaml)
 * [MainPage.xaml.cs](MainPage.xaml.cs)
-* [App.xaml.cs](App.xaml.cs)
-* [Model.cs](Model.cs)
-* [ViewModel.cs](ViewModel.cs)
-<!-- default file list end -->
+
+## Documentation
+
+* [DataGridView - CRUD Operations](https://docs.devexpress.com/MAUI/404420/data-grid/crud/crud-overview)
+
+## More Examples
+
+* [Display the Edit Form and Validate Input Values](/CS/EditForm/)
+* [Validate Values on Edit Form Closing](/CS/ValidateFormEvent/)
+* [Define the In-Place Editor's Template](/CS/InPlaceEditors/)

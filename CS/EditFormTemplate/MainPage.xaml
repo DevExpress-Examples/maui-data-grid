@@ -42,9 +42,9 @@
             </ScrollView>
         </DataTemplate>
     </ContentPage.Resources>
-
     <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Employees}" 
-                      DoubleTap="DataGridView_DoubleTap">
+                      RowDoubleTapCommand="{Binding Source={RelativeSource Mode=Self}, Path=Commands.ShowDetailEditForm}"
+                      DetailEditFormTemplate="{x:StaticResource CustomEditFormContent}">
         <dxg:DataGridView.Columns>
             <dxg:ImageColumn FieldName="Photo"  
                              Width="100" VerticalContentAlignment="Center"/>

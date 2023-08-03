@@ -42,9 +42,8 @@ This repository contains projects that allow you to achieve the following tasks:
 
 #### Edit and Validate Data
 
-* [Display the Edit Form](/CS/EditForm/)
+* [Display the Edit Form and Validate Input Values](/CS/EditForm/)
 * [Define the In-Place Editor's Template](/CS/InPlaceEditors/)
-* [Validate a Value Once It Is Entered](/CS/ValidateCellEvent/)
 * [Validate Values on Edit Form Closing](/CS/ValidateFormEvent/)
 * [Validate New Values in In-Place Cell Editors](/CS/ValidateInPlaceEditors/)
 

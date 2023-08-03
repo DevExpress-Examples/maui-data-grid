@@ -8,7 +8,9 @@
     <ContentPage.BindingContext>
         <local:TestOrderRepository/>
     </ContentPage.BindingContext>
-    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Orders}" Tap="Grid_Tap">
+    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Orders}" 
+                      RowTapCommand="{Binding Source={RelativeSource Mode=Self}, Path=Commands.ShowDetailEditForm}"
+                      DetailEditFormTemplate="{DataTemplate local:OrderEditForm}" >
         <dxg:DataGridView.Columns>
             <dxg:TextColumn FieldName="Product.Name" Caption="Product" />
             <dxg:NumberColumn FieldName="Product.UnitPrice" Caption="Price" DisplayFormat="C0"/>

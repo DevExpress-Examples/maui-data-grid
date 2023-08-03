@@ -17,29 +17,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditForm", "EditForm\EditFo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EditFormTemplate", "EditFormTemplate\EditFormTemplate.csproj", "{56BD2B87-8041-498E-BDE9-704DCAFFEED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InPlaceEditors", "InPlaceEditors\InPlaceEditors.csproj", "{4DEE378D-5C86-417A-AE89-FA0DF2BBA25D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InPlaceEditors", "InPlaceEditors\InPlaceEditors.csproj", "{4DEE378D-5C86-417A-AE89-FA0DF2BBA25D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateCellEvent", "ValidateCellEvent\ValidateCellEvent.csproj", "{13437A0E-FA47-41DF-9718-604BB8DFA395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidateFormEvent", "ValidateFormEvent\ValidateFormEvent.csproj", "{256E872E-6565-4B12-BCD3-22216D870977}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateFormEvent", "ValidateFormEvent\ValidateFormEvent.csproj", "{256E872E-6565-4B12-BCD3-22216D870977}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidateInPlaceEditors", "ValidateInPlaceEditors\ValidateInPlaceEditors.csproj", "{C1CFA27D-77EB-49EE-BC3E-F0B9CFF9DFC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidateInPlaceEditors", "ValidateInPlaceEditors\ValidateInPlaceEditors.csproj", "{C1CFA27D-77EB-49EE-BC3E-F0B9CFF9DFC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadMore", "LoadMore\LoadMore.csproj", "{D37BA96E-C971-42C8-992E-FFAFC83068C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadMore", "LoadMore\LoadMore.csproj", "{D37BA96E-C971-42C8-992E-FFAFC83068C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PullToRefresh", "PullToRefresh\PullToRefresh.csproj", "{92E63404-56B6-4E44-A226-46EFDC1BEA27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PullToRefresh", "PullToRefresh\PullToRefresh.csproj", "{92E63404-56B6-4E44-A226-46EFDC1BEA27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swipe", "Swipe\Swipe.csproj", "{D7C64862-6E95-4C09-834B-128835E5D5A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swipe", "Swipe\Swipe.csproj", "{D7C64862-6E95-4C09-834B-128835E5D5A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GridDatafromFireBase", "GridDatafromFireBase\GridDatafromFireBase.csproj", "{3B09D8AD-6EC1-47E9-A7B8-6B7442E01F28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridDatafromFireBase", "GridDatafromFireBase\GridDatafromFireBase.csproj", "{3B09D8AD-6EC1-47E9-A7B8-6B7442E01F28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GridDatafromSQLite", "GridDatafromSQLite\GridDatafromSQLite.csproj", "{F9A29A23-40FD-4262-81E7-AFE8C9C13940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridDatafromSQLite", "GridDatafromSQLite\GridDatafromSQLite.csproj", "{F9A29A23-40FD-4262-81E7-AFE8C9C13940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASPDataBaseServer", "ASPDataBaseServer\ASPDataBaseServer\ASPDataBaseServer.csproj", "{9FB0055A-5769-4336-88C4-D301CE7D76B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASPDataBaseServer", "ASPDataBaseServer\ASPDataBaseServer\ASPDataBaseServer.csproj", "{9FB0055A-5769-4336-88C4-D301CE7D76B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiDataGridView_GetFromASPServer", "ASPDataBaseServer\MauiDataGridView_GetFromASPServer\MauiDataGridView_GetFromASPServer.csproj", "{3BE4671F-E7BE-4A95-9305-7B43D3707063}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiDataGridView_GetFromASPServer", "ASPDataBaseServer\MauiDataGridView_GetFromASPServer\MauiDataGridView_GetFromASPServer.csproj", "{3BE4671F-E7BE-4A95-9305-7B43D3707063}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportGridData", "ExportGridData\GridExport.csproj", "{3BE4671F-E7BE-4A95-9305-7B43D3707063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GridExport", "ExportGridData\GridExport.csproj", "{9B6C3EA4-4073-4AC8-8329-50858FA72232}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,12 +91,6 @@ Global
 		{4DEE378D-5C86-417A-AE89-FA0DF2BBA25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DEE378D-5C86-417A-AE89-FA0DF2BBA25D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4DEE378D-5C86-417A-AE89-FA0DF2BBA25D}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{13437A0E-FA47-41DF-9718-604BB8DFA395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13437A0E-FA47-41DF-9718-604BB8DFA395}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13437A0E-FA47-41DF-9718-604BB8DFA395}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{13437A0E-FA47-41DF-9718-604BB8DFA395}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13437A0E-FA47-41DF-9718-604BB8DFA395}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13437A0E-FA47-41DF-9718-604BB8DFA395}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{256E872E-6565-4B12-BCD3-22216D870977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{256E872E-6565-4B12-BCD3-22216D870977}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{256E872E-6565-4B12-BCD3-22216D870977}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -145,6 +137,10 @@ Global
 		{3BE4671F-E7BE-4A95-9305-7B43D3707063}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BE4671F-E7BE-4A95-9305-7B43D3707063}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BE4671F-E7BE-4A95-9305-7B43D3707063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B6C3EA4-4073-4AC8-8329-50858FA72232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6C3EA4-4073-4AC8-8329-50858FA72232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6C3EA4-4073-4AC8-8329-50858FA72232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6C3EA4-4073-4AC8-8329-50858FA72232}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

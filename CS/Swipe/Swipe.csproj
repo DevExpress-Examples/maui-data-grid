@@ -37,8 +37,8 @@
 
 
 	<ItemGroup>
-		<PackageReference Include="DevExpress.Maui.Core" Version="22.2.*" />
-		<PackageReference Include="DevExpress.Maui.DataGrid" Version="22.2.*" />
+		<PackageReference Include="DevExpress.Maui.Core" Version="23.1.*" />
+		<PackageReference Include="DevExpress.Maui.DataGrid" Version="23.1.*" />
 		  
 	</ItemGroup>
 	<PropertyGroup>
