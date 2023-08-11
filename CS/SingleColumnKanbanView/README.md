@@ -83,7 +83,7 @@ This example demonstrates how to implement a Kanban-like view based on our [Data
 
 ## Documentation
 
-* [Featured Scenario: Data Grid - Replicate Kanban View](https://docs.devexpress.com/MAUI/404358)
+* [Featured Scenario: Data Grid - Replicate Kanban View](https://docs.devexpress.com/MAUI/404374)
 * [Featured Scenarios](https://docs.devexpress.com/MAUI/404291)
 * [Data Grid](https://docs.devexpress.com/MAUI/403255/data-grid/data-grid)
 
