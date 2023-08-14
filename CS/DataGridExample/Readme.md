@@ -64,7 +64,7 @@ namespace DataGridExample {
 }
 ```
 
-In the *MainPage.xaml* file, use the *dxg* prefix to declare the **DevExpress.Maui.DataGrid** namespace and add a [DataGridView](http://docs.devexpress.devx/MAUI/DevExpress.Maui.DataGrid.DataGridView) object to the ContentPage:
+In the *MainPage.xaml* file, use the *dxg* prefix to declare the **DevExpress.Maui.DataGrid** namespace and add a [DataGridView](https://docs.devexpress.com/MAUI/DevExpress.Maui.DataGrid.DataGridView) object to the ContentPage:
 
 ```xaml
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
