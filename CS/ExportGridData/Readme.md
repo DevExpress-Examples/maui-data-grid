@@ -17,5 +17,5 @@ This example illustrates how you can export .NET MAUI Data Grid records to the f
 
 * [Exporter.cs](Models/Exporter.cs)
 * [ExportViewModel.cs](ViewModels/ExportViewModel.cs)
-* [MainPage.xaml](MainPage.xaml)
+* [MainPage.xaml](Views/MainPage.xaml)
 <!-- default file list end -->
