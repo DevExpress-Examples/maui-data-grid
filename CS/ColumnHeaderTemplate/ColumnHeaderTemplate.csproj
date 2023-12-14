@@ -1,52 +1,44 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-	<PropertyGroup>
-		<TargetFrameworks>net7.0-android;net7.0-ios</TargetFrameworks>
-    	<OutputType>Exe</OutputType>
-		<UseMaui>true</UseMaui>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<SingleProject>true</SingleProject>
-		<RootNamespace>ColumnHeaderTemplate</RootNamespace>
-
-		<!-- Display name -->
-		<ApplicationTitle>ColumnHeaderTemplate</ApplicationTitle>
-
-		<!-- App Identifier -->
-		<ApplicationId>com.companyname.ColumnHeaderTemplate</ApplicationId>
-		<ApplicationIdGuid>5B0A911A-6884-4F2F-BF78-D27FD64E8897</ApplicationIdGuid>
-		<!-- Versions -->
-		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-		<ApplicationVersion>1</ApplicationVersion>
-
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
-	</PropertyGroup>
-	<ItemGroup>
-		<!-- App Icon -->
-		<MauiImage Include="Resources\appicon.svg" IsAppIcon="true" ForegroundFile="Resources\splashscreen.svg" Color="#FFFFFF" />
-
-		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\splashscreen.svg" Color="#5B27D9" />
-
-		<!-- Images -->
-		<MauiImage Include="Resources\Images\*" />
-
-		<!-- Custom Fonts -->
-		<MauiFont Include="Resources\Fonts\*" />
-	</ItemGroup>
-
-
-	<ItemGroup>
-		<PackageReference Include="DevExpress.Maui.Core" Version="23.1.*" />
-		<PackageReference Include="DevExpress.Maui.DataGrid" Version="23.1.*" />
-		  
-	</ItemGroup>
-	<PropertyGroup>
-		<UseInterpreter Condition="$(TargetFramework.Contains('-ios'))">True</UseInterpreter>	
-		<UseInterpreter Condition="$(TargetFramework.Contains('-android'))">False</UseInterpreter>
-		<RuntimeIdentifiers Condition="$(TargetFramework.Contains('-android'))">android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
-</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
-	  <CreatePackage>false</CreatePackage>
-	</PropertyGroup>
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+    <UseMaui>true</UseMaui>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SingleProject>true</SingleProject>
+    <RootNamespace>ColumnHeaderTemplate</RootNamespace>
+    <!-- Display name -->
+    <ApplicationTitle>ColumnHeaderTemplate</ApplicationTitle>
+    <!-- App Identifier -->
+    <ApplicationId>com.companyname.ColumnHeaderTemplate</ApplicationId>
+    <ApplicationIdGuid>5B0A911A-6884-4F2F-BF78-D27FD64E8897</ApplicationIdGuid>
+    <!-- Versions -->
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- App Icon -->
+    <MauiImage Include="Resources\appicon.svg" IsAppIcon="true" ForegroundFile="Resources\splashscreen.svg" Color="#FFFFFF" />
+    <!-- Splash Screen -->
+    <MauiSplashScreen Include="Resources\splashscreen.svg" Color="#5B27D9" />
+    <!-- Images -->
+    <MauiImage Include="Resources\Images\*" />
+    <!-- Custom Fonts -->
+    <MauiFont Include="Resources\Fonts\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+    <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <PackageReference Include="DevExpress.Maui.Core" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Maui.DataGrid" Version="23.2.*" />
+  </ItemGroup>
+  <PropertyGroup>
+    <UseInterpreter Condition="$(TargetFramework.Contains('-ios'))">True</UseInterpreter>
+    <UseInterpreter Condition="$(TargetFramework.Contains('-android'))">False</UseInterpreter>
+    <RuntimeIdentifiers Condition="$(TargetFramework.Contains('-android'))">android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-ios|AnyCPU'">
+    <CreatePackage>false</CreatePackage>
+  </PropertyGroup>
 </Project>
