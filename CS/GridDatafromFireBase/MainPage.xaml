@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GridDatafromFireBase.MainPage"
              xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              Title="Employee View">
 
     <Grid RowDefinitions="*,Auto,Auto">
@@ -37,12 +38,12 @@
                                     <Border.Clip>
                                         <EllipseGeometry RadiusX="25" RadiusY="25" Center="25,25"/>
                                     </Border.Clip>
-                                    <Image Source="{Binding Item.Image}" Grid.Column="0" Grid.RowSpan="2" WidthRequest="80" HeightRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,30,0,0"/>
-                                    </Border>
-                                <HorizontalStackLayout Grid.Row="0" Grid.Column="1">
+                                    <dx:DXImage Source="{Binding Item.Image}" Grid.Column="0" Grid.RowSpan="2" WidthRequest="80" HeightRequest="80" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,30,0,0"/>
+                                </Border>
+                                <dx:DXStackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
                                     <Label Text="{Binding Item.FirstName}" Padding="0,0,4,0"/>
                                     <Label Text="{Binding Item.LastName}" />
-                                </HorizontalStackLayout>
+                                </dx:DXStackLayout>
                                 <Label Text="{Binding Item.Phone}" FontAttributes="None" FontSize="14" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0"/>
                             </Grid>
                         </DataTemplate>

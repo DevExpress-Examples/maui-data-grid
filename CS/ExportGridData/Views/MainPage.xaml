@@ -14,7 +14,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="{AppThemeBinding Light=export_button_light, Dark=export_button_light}" Clicked="ExportButton_Clicked"/>
     </ContentPage.ToolbarItems>
-    <StackLayout>
+    <dx:DXStackLayout>
         <dxc:BottomSheet x:Name="bottomSheet" State="{Binding BottomSheetState}" AllowedState="HalfExpanded">
             <dxc:BottomSheet.HalfExpandedRatio>
                 <OnPlatform x:TypeArguments="x:Double">
@@ -58,52 +58,51 @@
                             <Setter Property="CheckBoxIndent" Value="15"/>
                         </Style>
                     </controls:DockLayout.Resources>
-                    <HorizontalStackLayout RadioButtonGroup.GroupName="format" RadioButtonGroup.SelectedValue="{Binding SelectedFormat, Mode=TwoWay}" Spacing="38" controls:DockLayout.Dock="Top">
+                    <dx:DXStackLayout Orientation="Horizontal" RadioButtonGroup.GroupName="format" RadioButtonGroup.SelectedValue="{Binding SelectedFormat, Mode=TwoWay}" ItemSpacing="38" controls:DockLayout.Dock="Top">
                         <RadioButton Value="{x:Static vm:ExportFormat.Pdf}">
                             <RadioButton.ControlTemplate>
                                 <ControlTemplate>
-                                    <VerticalStackLayout BindingContext="{Binding Source={RelativeSource TemplatedParent}}">
+                                    <dx:DXStackLayout Orientation="Vertical" BindingContext="{Binding Source={RelativeSource TemplatedParent}}">
                                         <Border>
-                                            <Image Source="pdf"/>
+                                            <dx:DXImage Source="pdf"/>
                                         </Border>
 
                                         <Label Text="PDF" />
-                                    </VerticalStackLayout>
+                                    </dx:DXStackLayout>
                                 </ControlTemplate>
                             </RadioButton.ControlTemplate>
                         </RadioButton>
                         <RadioButton Value="{x:Static vm:ExportFormat.Xlsx}">
                             <RadioButton.ControlTemplate>
                                 <ControlTemplate>
-                                    <VerticalStackLayout BindingContext="{Binding Source={RelativeSource TemplatedParent}}">
+                                    <dx:DXStackLayout Orientation="Vertical" BindingContext="{Binding Source={RelativeSource TemplatedParent}}">
                                         <Border>
-                                            <Image Source="xlsx"/>
+                                            <dx:DXImage Source="xlsx"/>
                                         </Border>
-
                                         <Label Text="XLSX"/>
-                                    </VerticalStackLayout>
+                                    </dx:DXStackLayout>
                                 </ControlTemplate>
                             </RadioButton.ControlTemplate>
                         </RadioButton>
                         <RadioButton Value="{x:Static vm:ExportFormat.Docx}">
                             <RadioButton.ControlTemplate>
                                 <ControlTemplate>
-                                    <VerticalStackLayout BindingContext="{Binding Source={RelativeSource TemplatedParent}}">
+                                    <dx:DXStackLayout Orientation="Vertical" BindingContext="{Binding Source={RelativeSource TemplatedParent}}">
                                         <Border>
-                                            <Image Source="docx"/>
+                                            <dx:DXImage Source="docx"/>
                                         </Border>
 
                                         <Label Text="DOCX"/>
-                                    </VerticalStackLayout>
+                                    </dx:DXStackLayout>
                                 </ControlTemplate>
                             </RadioButton.ControlTemplate>
                         </RadioButton>
-                    </HorizontalStackLayout>
+                    </dx:DXStackLayout>
 
-                    <VerticalStackLayout Spacing="25" Margin="5,10,0,0" controls:DockLayout.Dock="Top">
+                    <dx:DXStackLayout Orientation="Vertical" ItemSpacing="25" Margin="5,10,0,0" controls:DockLayout.Dock="Top">
                         <dxe:CheckEdit Label="Landscape" IsChecked="{Binding LandscapeSelected}"/>
                         <dxe:CheckEdit Label="Portrait" IsChecked="{Binding PortraitSelected}"/>
-                    </VerticalStackLayout>
+                    </dx:DXStackLayout>
 
                     <dxe:ChoiceChipGroup controls:DockLayout.Dock="Top" Padding="0,25" ChipSelectedBackgroundColor="{AppThemeBinding Light={StaticResource SelectedPaperSizeColor_Light}, Dark={StaticResource SelectedPaperSizeColor_Dark}}" ItemsSource="{local:EnumToItemsSource EnumType={x:Type vm:PaperSize}}" SelectedItem="{Binding SelectedPaperSize}"/>
 
@@ -124,11 +123,11 @@
                     <dxg:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <Grid ColumnDefinitions="Auto,*" Padding="16,8" ColumnSpacing="16" IgnoreSafeArea="True">
-                                <Image Source="{Binding Item.Image}" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="40" HeightRequest="40">
-                                    <Image.Clip>
+                                <dx:DXImage Source="{Binding Item.Image}" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="40" HeightRequest="40">
+                                    <dx:DXImage.Clip>
                                         <EllipseGeometry RadiusX="20" RadiusY="20" Center="20, 20" />
-                                    </Image.Clip>
-                                </Image>
+                                    </dx:DXImage.Clip>
+                                </dx:DXImage>
                                 <Label Text="{Binding Item.FullName}" TextColor="{Binding Source={RelativeSource AncestorType={x:Type dxg:DataGridView}}, Path=ActualAppearance.GroupRowFontColor}" VerticalOptions="Center" Grid.Column="1" FontFamily="{Binding Source={RelativeSource AncestorType={x:Type dxg:DataGridView}}, Path=ActualAppearance.GroupRowFontFamily}" FontSize="16"/>
                             </Grid>
                         </DataTemplate>
@@ -140,5 +139,5 @@
                 <dxg:DateColumn FieldName="HireDate" MinWidth="120" Width="*" />
             </dxg:DataGridView.Columns>
         </dxg:DataGridView>
-    </StackLayout>
+    </dx:DXStackLayout>
 </ContentPage>

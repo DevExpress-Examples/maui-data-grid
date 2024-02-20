@@ -2,6 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
              xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="False"
              x:Class="MauiDataGridView_GetFromASPServer.MainPage">
@@ -29,23 +30,23 @@
                                         <Border.Clip>
                                             <EllipseGeometry RadiusX="30" RadiusY="30" Center="30,30"/>
                                         </Border.Clip>
-                                    <Image Source="{Binding Item.Image}" Grid.Column="0" WidthRequest="92" HeightRequest="92" Margin="0,0,5,0" HorizontalOptions="Center" VerticalOptions="Start"/>
+                                    <dx:DXImage Source="{Binding Item.Image}" Grid.Column="0" WidthRequest="92" HeightRequest="92" Margin="0,0,5,0" HorizontalOptions="Center" VerticalOptions="Start"/>
                                 </Border>
-                                <VerticalStackLayout Grid.Row="0" Grid.Column="1" Padding="0" Margin="0" Opacity="0.7">
+                                <dx:DXStackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" Padding="0" Margin="0" Opacity="0.7">
                                     <Label Text="{Binding Item.Name}" FontSize="16" FontAttributes="Bold"/>
-                                    <HorizontalStackLayout Margin="0,4,0,0" >
+                                    <dx:DXStackLayout Orientation="Horizontal" Margin="0,4,0,0" >
                                         <Label Text="📞" Padding="0,0,5,0" FontSize="10" VerticalTextAlignment="Center" />
                                         <Label Text="{Binding Item.Phone}" FontSize="14"/>
-                                    </HorizontalStackLayout>
-                                    <HorizontalStackLayout>
+                                    </dx:DXStackLayout>
+                                    <dx:DXStackLayout Orientation="Horizontal">
                                         <Label Text="📆" Padding="0,0,5,0" FontSize="10" VerticalTextAlignment="Center" />
                                         <Label Text="{Binding Item.BirthDate, StringFormat='{0:MMMM dd, yyyy}'}" FontSize="14" Margin="0,0,0,0"/>
-                                    </HorizontalStackLayout>
-                                    <HorizontalStackLayout>
+                                    </dx:DXStackLayout>
+                                    <dx:DXStackLayout Orientation="Horizontal">
                                         <Label Text="🏢" Padding="0,0,5,0" FontSize="10" VerticalTextAlignment="Center" />
                                         <Label Text="{Binding Item.FavoriteStore}" FontSize="12" Margin="0,0,0,0"/>
-                                    </HorizontalStackLayout>
-                                </VerticalStackLayout>
+                                    </dx:DXStackLayout>
+                                </dx:DXStackLayout>
                             </Grid>
                         </DataTemplate>
                     </dxg:TemplateColumn.DisplayTemplate>
@@ -53,6 +54,4 @@
             </dxg:DataGridView.Columns>
         </dxg:DataGridView>
     </Grid>
-
-
 </ContentPage>
