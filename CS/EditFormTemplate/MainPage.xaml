@@ -1,6 +1,7 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              xmlns:local="clr-namespace:EditFormTemplate"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true"
@@ -21,23 +22,23 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Image Source="{Binding Path=Item.Photo}" Grid.Row="0" Grid.Column="0"/>
-                    <StackLayout Orientation="Vertical" Padding="50, 20, 0, 0" 
+                    <dx:DXStackLayout Orientation="Vertical" Padding="50, 20, 0, 0" 
                                  Grid.Row="0" Grid.Column="1">
                         <Label Text="{Binding Path=Item.Name}"  VerticalOptions="Start"
                                FontSize="20" FontAttributes="Bold" />
-                        <StackLayout Orientation="Horizontal">
+                        <dx:DXStackLayout Orientation="Horizontal">
                             <Label Text="Phone:"  FontSize="14" WidthRequest="100"
                                    HorizontalOptions="Start" VerticalOptions="Center" />
                             <Editor Text="{Binding Path=Item.Phone, Mode=TwoWay}" 
                                     FontSize="Small" HorizontalOptions="FillAndExpand"/>
-                        </StackLayout>
-                        <StackLayout Orientation="Horizontal">
+                        </dx:DXStackLayout>
+                        <dx:DXStackLayout Orientation="Horizontal">
                             <Label Text="Address:"  FontSize="14" WidthRequest="100"
                                    HorizontalOptions="Start" VerticalOptions="Center" />
                             <Editor Text="{Binding Path=Item.Address, Mode=TwoWay}" 
                                     FontSize="Small" HorizontalOptions="FillAndExpand"/>
-                        </StackLayout>
-                    </StackLayout>
+                        </dx:DXStackLayout>
+                    </dx:DXStackLayout>
                 </Grid>
             </ScrollView>
         </DataTemplate>

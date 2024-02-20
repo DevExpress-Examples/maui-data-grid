@@ -1,6 +1,7 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              xmlns:local="clr-namespace:ColumnHeaderTemplate"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true"
@@ -13,50 +14,50 @@
             <dxg:ImageColumn FieldName="Photo">
                 <dxg:ImageColumn.HeaderContentTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                            <Image Source="photo.png" VerticalOptions="Center"/>
+                        <dx:DXStackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <dx:DXImage Source="photo.png" VerticalOptions="Center"/>
                             <Label Text="{Binding FieldName}" VerticalOptions="Center"/>
-                        </StackLayout>
+                        </dx:DXStackLayout>
                     </DataTemplate>
                 </dxg:ImageColumn.HeaderContentTemplate>
             </dxg:ImageColumn>
             <dxg:TextColumn FieldName="Name">
                 <dxg:TextColumn.HeaderContentTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="full_name.png" VerticalOptions="Center"/>
+                        <dx:DXStackLayout Orientation="Horizontal">
+                            <dx:DXImage Source="full_name.png" VerticalOptions="Center"/>
                             <Label Text="Full Name" VerticalOptions="Center"/>
-                        </StackLayout>
+                        </dx:DXStackLayout>
                     </DataTemplate>
                 </dxg:TextColumn.HeaderContentTemplate>
             </dxg:TextColumn>
             <dxg:TextColumn FieldName="Position">
                 <dxg:TextColumn.HeaderContentTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="job_title.png" VerticalOptions="Center"/>
+                        <dx:DXStackLayout Orientation="Horizontal">
+                            <dx:DXImage Source="job_title.png" VerticalOptions="Center"/>
                             <Label Text="Job Title" VerticalOptions="Center"/>
-                        </StackLayout>
+                        </dx:DXStackLayout>
                     </DataTemplate>
                 </dxg:TextColumn.HeaderContentTemplate>
             </dxg:TextColumn>
             <dxg:TextColumn FieldName="Phone">
                 <dxg:TextColumn.HeaderContentTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="phone.png" VerticalOptions="Center"/>
+                        <dx:DXStackLayout Orientation="Horizontal">
+                            <dx:DXImage Source="phone.png" VerticalOptions="Center"/>
                             <Label Text="{Binding FieldName}" VerticalOptions="Center"/>
-                        </StackLayout>
+                        </dx:DXStackLayout>
                     </DataTemplate>
                 </dxg:TextColumn.HeaderContentTemplate>
             </dxg:TextColumn>
             <dxg:DateColumn FieldName="HireDate">
                 <dxg:DateColumn.HeaderContentTemplate>
                     <DataTemplate>
-                        <StackLayout Orientation="Horizontal">
-                            <Image Source="hire_date.png" VerticalOptions="Center"/>
+                        <dx:DXStackLayout Orientation="Horizontal">
+                            <dx:DXImage Source="hire_date.png" VerticalOptions="Center"/>
                             <Label Text="Hire Date" VerticalOptions="Center"/>
-                        </StackLayout>
+                        </dx:DXStackLayout>
                     </DataTemplate>
                 </dxg:DateColumn.HeaderContentTemplate>
             </dxg:DateColumn>

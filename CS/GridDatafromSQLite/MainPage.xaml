@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GridDatafromSQLite.MainPage"
              xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              Title="Contacts">
         <Grid>
             <dxg:DataGridView x:Name="dataGrid" ItemsSource="{Binding GridDataCollection}" EditorShowMode="Never" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
@@ -11,22 +12,22 @@
                     <dxg:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <Grid RowDefinitions="Auto,*,*" Margin="12,16,0,16" RowSpacing="4">
-                                <HorizontalStackLayout Grid.Row="0" Padding="0,0,0,6">
+                                <dx:DXStackLayout Orientation="Horizontal" Grid.Row="0" Padding="0,0,0,6">
                                     <Label Text="{Binding Item.FirstName}" Padding="0,0,5,0" FontSize="18" FontAttributes="Bold"/>
                                     <Label Text="{Binding Item.LastName}" FontSize="18" FontAttributes="Bold"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout Grid.Row="1" Opacity="0.7">
+                                </dx:DXStackLayout>
+                                <dx:DXStackLayout Orientation="Horizontal" Grid.Row="1" Opacity="0.7">
                                     <Label Text="☎️" Padding="0,0,5,0" />
                                     <Label Text="{Binding Item.HomePhone}" Padding="0,0,12,0" />
                                     <Label Text="📍" Padding="0,0,5,0" />
                                     <Label Text="{Binding Item.Address}"/>
                                     <Label Text=", " Padding="0,0,4,0"/>
                                     <Label Text="{Binding Item.City}"/>
-                                </HorizontalStackLayout>
-                                <HorizontalStackLayout Grid.Row="2" Opacity="0.7" >
+                                </dx:DXStackLayout>
+                                <dx:DXStackLayout Orientation="Horizontal" Grid.Row="2" Opacity="0.7" >
                                     <Label Text="🏢" Padding="0,0,5,0" FontSize="14"/>
                                     <Label Text="{Binding Item.Company}" FontSize="14"/>
-                                </HorizontalStackLayout>
+                                </dx:DXStackLayout>
                             </Grid>
                         </DataTemplate>
                     </dxg:TemplateColumn.DisplayTemplate>

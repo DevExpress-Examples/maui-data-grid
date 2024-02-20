@@ -5,6 +5,7 @@
              xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
              xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
              xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
+             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
              xmlns:local="clr-namespace:DataGridSearchBar"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:viewModes="clr-namespace:DataGridSearchBar.ViewModels"
@@ -33,17 +34,17 @@
                 <dxg:TemplateColumn FieldName="FirstName" Caption="All Contacts" SortOrder="Ascending" IsGrouped="True" GroupInterval="Alphabetical" GroupCaptionDisplayFormat="{}{1}">
                     <dxg:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
-                            <dxco:SimpleButton Padding="5" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray950}}" CornerRadius="0">
+                            <dx:DXButton Padding="5" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray950}}" CornerRadius="0">
                                 <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="*,*">
                                     <!--sometimes MAUI displays wrong images because of this bug: https://github.com/dotnet/maui/pull/13111-->
-                                    <Image HeightRequest="40" WidthRequest="40" Source="{Binding Item.PhotoImageSource}" VerticalOptions="Center" Margin="10" Grid.RowSpan="2"/>
-                                    <HorizontalStackLayout  Grid.Column="1" VerticalOptions="End">
+                                    <dx:DXImage HeightRequest="40" WidthRequest="40" Source="{Binding Item.PhotoImageSource}" VerticalOptions="Center" Margin="10" Grid.RowSpan="2"/>
+                                    <dx:DXStackLayout Orientation="Horizontal"  Grid.Column="1" VerticalOptions="End">
                                         <Label Text="{Binding Item.FirstName}" TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark=#E6E1E5}" FontAttributes="Bold"/>
                                         <Label Text="{Binding Item.LastName}" Margin="5,0,0,0" TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark=#E6E1E5}" FontAttributes="Bold"/>
-                                    </HorizontalStackLayout>
+                                    </dx:DXStackLayout>
                                     <Label Text="{Binding Item.Company}" TextColor="{StaticResource Gray400}" LineBreakMode="TailTruncation" VerticalOptions="Start" Grid.Column="1" Grid.Row="1"/>
                                 </Grid>
-                            </dxco:SimpleButton>
+                            </dx:DXButton>
                         </DataTemplate>
                     </dxg:TemplateColumn.DisplayTemplate>
                 </dxg:TemplateColumn>
