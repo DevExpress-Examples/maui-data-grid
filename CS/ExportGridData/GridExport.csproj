@@ -32,14 +32,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
-    <PackageReference Include="DevExpress.Data" Version="23.2.*" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+    <PackageReference Include="DevExpress.Data" Version="24.1.*" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="DevExpress.Maui.Controls" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.Core" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.Editors" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.DataGrid" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.DataGrid.Export" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Maui.Controls" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.Core" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.Editors" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.DataGrid.Export" Version="24.1.*" />
   </ItemGroup>
 </Project>

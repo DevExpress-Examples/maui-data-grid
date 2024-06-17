@@ -1,8 +1,6 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-             xmlns:dxc="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="True"
              xmlns:local="clr-namespace:DataGridExample"
@@ -10,19 +8,19 @@
     <ContentPage.BindingContext>
         <local:EmployeeDataViewModel/>
     </ContentPage.BindingContext>
-     <dxg:DataGridView ItemsSource="{Binding Employees}"
+     <dx:DataGridView ItemsSource="{Binding Employees}"
                   EditorShowMode="DoubleTap"
                   AllowDragDropRows="True">
-    <dxg:DataGridView.Columns>
-        <dxg:TemplateColumn FieldName="Photo" Width="100">
-            <dxg:TemplateColumn.DisplayTemplate>
+    <dx:DataGridView.Columns>
+        <dx:TemplateColumn FieldName="Photo" Width="100">
+            <dx:TemplateColumn.DisplayTemplate>
                 <DataTemplate>
                     <Image Source="{Binding Item.Photo}" Margin="3"/>
                 </DataTemplate>
-            </dxg:TemplateColumn.DisplayTemplate>
-        </dxg:TemplateColumn>
-        <dxg:TemplateColumn FieldName="Name" Caption="Employee" MinWidth="200">
-            <dxg:TemplateColumn.DisplayTemplate>
+            </dx:TemplateColumn.DisplayTemplate>
+        </dx:TemplateColumn>
+        <dx:TemplateColumn FieldName="Name" Caption="Employee" MinWidth="200">
+            <dx:TemplateColumn.DisplayTemplate>
                 <DataTemplate>
                     <Grid VerticalOptions="Center" Padding="15, 0, 0, 0" RowDefinitions="Auto, Auto, Auto">
                     
@@ -36,18 +34,18 @@
                         Grid.Row="2" />
                     </Grid>
                 </DataTemplate>
-            </dxg:TemplateColumn.DisplayTemplate>
-        </dxg:TemplateColumn>
-        <dxg:TextColumn FieldName="Phone" 
+            </dx:TemplateColumn.DisplayTemplate>
+        </dx:TemplateColumn>
+        <dx:TextColumn FieldName="Phone" 
                         MinWidth="130" VerticalContentAlignment="Center" />
-        <dxg:TextColumn FieldName="Address" 
+        <dx:TextColumn FieldName="Address" 
                         MinWidth="150" VerticalContentAlignment="Center" />
-        <dxg:DateColumn FieldName="BirthDate" 
+        <dx:DateColumn FieldName="BirthDate" 
                         MinWidth="120" DisplayFormat="d" VerticalContentAlignment="Center"/>
-        <dxg:ComboBoxColumn FieldName="Access" Caption="Access Level" 
+        <dx:ComboBoxColumn FieldName="Access" Caption="Access Level" 
                             MinWidth="140" VerticalContentAlignment="Center"/>
-        <dxg:CheckBoxColumn FieldName="OnVacation" 
+        <dx:CheckBoxColumn FieldName="OnVacation" 
                             MinWidth="130" VerticalContentAlignment="Center"/>
-        </dxg:DataGridView.Columns>
-    </dxg:DataGridView>
+        </dx:DataGridView.Columns>
+    </dx:DataGridView>
 </ContentPage>

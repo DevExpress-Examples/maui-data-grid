@@ -38,13 +38,13 @@
     <MauiAsset Include="Resources\database\contacts.db" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
     <PackageReference Include="CommunityToolkit.Maui" Version="4.0.0" />
-    <PackageReference Include="DevExpress.Maui.CollectionView" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.Controls" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.DataGrid" Version="23.2.*" />
-    <PackageReference Include="DevExpress.Maui.Editors" Version="23.2.*" />
+    <PackageReference Include="DevExpress.Maui.CollectionView" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.Controls" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.Editors" Version="24.1.*" />
     <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
     <PackageReference Include="SQLite" Version="3.13.0" />
     <PackageReference Include="SQLitePCLRaw.core" Version="2.1.3" />

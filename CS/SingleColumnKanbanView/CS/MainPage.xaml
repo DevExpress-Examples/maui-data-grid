@@ -1,40 +1,38 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxcv="clr-namespace:DevExpress.Maui.CollectionView;assembly=DevExpress.Maui.CollectionView"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-             xmlns:dxc="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:local="clr-namespace:DataGridDragDrop"
              ios:Page.UseSafeArea="true"
              x:Class= "DataGridDragDrop.MainPage">
     <ContentPage.Resources>
         <local:ImportanceToColorConverter x:Key="importanceToColorConverter"/>
     </ContentPage.Resources>
-    <dxg:DataGridView ItemsSource="{Binding Tasks}" IsColumnHeaderVisible="False" SelectionMode="None" BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark=#141414}" 
+    <dx:DataGridView ItemsSource="{Binding Tasks}" IsColumnHeaderVisible="False" SelectionMode="None" BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark=#141414}" 
                       AllowDragDropRows="True" AllowDragDropSortedRows="True" AllowGroupCollapse="False" 
                       CustomSort="DataGridView_CustomSort" CustomGroup="DataGridView_CustomGroup" 
                       CompleteRowDragDrop="DataGridView_CompleteRowDragDrop"
                       DragRow="DataGridView_DragRow" x:Name="dataGrid">
-        <dxg:DataGridView.GroupRowAppearance>
-            <dxg:GroupRowAppearance HorizontalLineThickness="0" BackgroundColor="{AppThemeBinding Light=#F1F1F1, Dark=#141414}" />
-        </dxg:DataGridView.GroupRowAppearance>
-        <dxg:DataGridView.CellAppearance>
-            <dxg:CellAppearance BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark=#141414}" HorizontalLineThickness="0"/>
-        </dxg:DataGridView.CellAppearance>
-        <dxg:DataGridView.GroupRowTemplate>
+        <dx:DataGridView.GroupRowAppearance>
+            <dx:GroupRowAppearance HorizontalLineThickness="0" BackgroundColor="{AppThemeBinding Light=#F1F1F1, Dark=#141414}" />
+        </dx:DataGridView.GroupRowAppearance>
+        <dx:DataGridView.CellAppearance>
+            <dx:CellAppearance BackgroundColor="{AppThemeBinding Light={StaticResource Gray50}, Dark=#141414}" HorizontalLineThickness="0"/>
+        </dx:DataGridView.CellAppearance>
+        <dx:DataGridView.GroupRowTemplate>
             <DataTemplate>
                 <Label Text="{Binding Value}" Margin="20,15,0,0"  FontSize="14" TextColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray300}}" FontAttributes="Bold"/>
             </DataTemplate>
-        </dxg:DataGridView.GroupRowTemplate>
-        <dxg:TextColumn FieldName="Stage" IsGrouped="True" SortMode="Custom"/>
-        <dxg:TemplateColumn FieldName="Title">
-            <dxg:TemplateColumn.DisplayTemplate>
+        </dx:DataGridView.GroupRowTemplate>
+        <dx:TextColumn FieldName="Stage" IsGrouped="True" SortMode="Custom"/>
+        <dx:TemplateColumn FieldName="Title">
+            <dx:TemplateColumn.DisplayTemplate>
                 <DataTemplate>
                     <Grid>
                         <Border IsVisible="False" StrokeShape="RoundRectangle 8,8,8,8" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray900}}" Margin="10,5,10,5" StrokeThickness="0">
                             <Grid RowDefinitions="Auto,Auto, Auto" ColumnDefinitions="*,Auto">
                                 <Border StrokeShape="RoundRectangle 6,6,6,6" BackgroundColor="{Binding Item.Priority, Converter={StaticResource importanceToColorConverter}}" HeightRequest="8" WidthRequest="60" Margin="10,4,10,0" HorizontalOptions="Start"/>
-                                <dxc:SimpleButton Icon="verticaldots" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray900}}" IconColor="{StaticResource Gray300}" Clicked="SimpleButton_Clicked" Padding="0,10,0,0" WidthRequest="30" VerticalOptions="End" Grid.Column="1"/>
+                                <dx:SimpleButton Icon="verticaldots" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray900}}" IconColor="{StaticResource Gray300}" Clicked="SimpleButton_Clicked" Padding="0,10,0,0" WidthRequest="30" VerticalOptions="End" Grid.Column="1"/>
                                 <Label Text="{Binding Item.Title}" TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray200}}" FontSize="14" Margin="10,0,10,0" Grid.Row="1"/>
                                 <Border StrokeShape="RoundRectangle 5,5,5,5" BackgroundColor="{AppThemeBinding Light=#eceff1, Dark=#919191}}" HorizontalOptions="Start" VerticalOptions="End" Margin="10,14,10,14" Grid.Row="2">
                                     <Label FontSize="12" Text="{Binding Item.DueDate, StringFormat='&#x1F552; {0:m}'}" Margin="6,0,10,0" HeightRequest="22" VerticalTextAlignment="Center" VerticalOptions="Center"/>
@@ -61,7 +59,7 @@
                         </Border>
                     </Grid>
                 </DataTemplate>
-            </dxg:TemplateColumn.DisplayTemplate>
-        </dxg:TemplateColumn>
-    </dxg:DataGridView>
+            </dx:TemplateColumn.DisplayTemplate>
+        </dx:TemplateColumn>
+    </dx:DataGridView>
 </ContentPage>

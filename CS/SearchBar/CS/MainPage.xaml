@@ -1,11 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DataGridSearchBar.MainPage"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-             xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
-             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:local="clr-namespace:DataGridSearchBar"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:viewModes="clr-namespace:DataGridSearchBar.ViewModels"
@@ -21,18 +17,18 @@
     </ContentPage.Behaviors>
     <Grid RowDefinitions="Auto,*">
         <Border StrokeThickness="0" Stroke="Transparent" Background="Transparent">
-            <dxe:TextEdit EndIcon="search" PlaceholderText="Search contacts" TextFontSize="14" ClearIconColor="{StaticResource Gray300}" TextVerticalAlignment="Center" BackgroundColor="{AppThemeBinding Light=White, Dark=#322F37}" BorderThickness="1" BorderColor="{AppThemeBinding Light=#DCD8E0, Dark=#938F99}" BoxPadding="20,6,10,6" PlaceholderColor="{AppThemeBinding Light={StaticResource Gray300}, Dark=#938F99}" EndIconColor="{AppThemeBinding Light={StaticResource Gray300}, Dark=#CAC4D0}" FocusedBorderColor="Transparent" CornerRadius="16" HeightRequest="35" Margin="15,10,15,10" TextChanged="SearchTextChanged" TextColor="{AppThemeBinding Light={StaticResource Gray950}, Dark=#E6E1E5}"/>
+            <dx:TextEdit EndIcon="search" PlaceholderText="Search contacts" TextFontSize="14" ClearIconColor="{StaticResource Gray300}" TextVerticalAlignment="Center" BackgroundColor="{AppThemeBinding Light=White, Dark=#322F37}" BorderThickness="1" BorderColor="{AppThemeBinding Light=#DCD8E0, Dark=#938F99}" BoxPadding="20,6,10,6" PlaceholderColor="{AppThemeBinding Light={StaticResource Gray300}, Dark=#938F99}" EndIconColor="{AppThemeBinding Light={StaticResource Gray300}, Dark=#CAC4D0}" FocusedBorderColor="Transparent" CornerRadius="16" HeightRequest="35" Margin="15,10,15,10" TextChanged="SearchTextChanged" TextColor="{AppThemeBinding Light={StaticResource Gray950}, Dark=#E6E1E5}"/>
         </Border>
-        <dxg:DataGridView x:Name="dataGrid" ItemsSource="{Binding Contacts}" SelectionMode="None" Grid.Row="1" ShowGroupedColumns="True" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray950}}">
-            <dxg:DataGridView.GroupRowAppearance>
-                <dxg:GroupRowAppearance BackgroundColor="Transparent" BottomBorderColor="Transparent" BorderColor="Transparent"/>
-            </dxg:DataGridView.GroupRowAppearance>
-            <dxg:DataGridView.CellAppearance>
-                <dxg:CellAppearance HorizontalLineThickness="0"/>
-            </dxg:DataGridView.CellAppearance>
-            <dxg:DataGridView.Columns>
-                <dxg:TemplateColumn FieldName="FirstName" Caption="All Contacts" SortOrder="Ascending" IsGrouped="True" GroupInterval="Alphabetical" GroupCaptionDisplayFormat="{}{1}">
-                    <dxg:TemplateColumn.DisplayTemplate>
+        <dx:DataGridView x:Name="dataGrid" ItemsSource="{Binding Contacts}" SelectionMode="None" Grid.Row="1" ShowGroupedColumns="True" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray950}}">
+            <dx:DataGridView.GroupRowAppearance>
+                <dx:GroupRowAppearance BackgroundColor="Transparent" BottomBorderColor="Transparent" BorderColor="Transparent"/>
+            </dx:DataGridView.GroupRowAppearance>
+            <dx:DataGridView.CellAppearance>
+                <dx:CellAppearance HorizontalLineThickness="0"/>
+            </dx:DataGridView.CellAppearance>
+            <dx:DataGridView.Columns>
+                <dx:TemplateColumn FieldName="FirstName" Caption="All Contacts" SortOrder="Ascending" IsGrouped="True" GroupInterval="Alphabetical" GroupCaptionDisplayFormat="{}{1}">
+                    <dx:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <dx:DXButton Padding="5" BackgroundColor="{AppThemeBinding Light=White, Dark={StaticResource Gray950}}" CornerRadius="0">
                                 <Grid ColumnDefinitions="Auto,*,Auto" RowDefinitions="*,*">
@@ -46,9 +42,9 @@
                                 </Grid>
                             </dx:DXButton>
                         </DataTemplate>
-                    </dxg:TemplateColumn.DisplayTemplate>
-                </dxg:TemplateColumn>
-            </dxg:DataGridView.Columns>
-        </dxg:DataGridView>
+                    </dx:TemplateColumn.DisplayTemplate>
+                </dx:TemplateColumn>
+            </dx:DataGridView.Columns>
+        </dx:DataGridView>
     </Grid>
 </ContentPage>

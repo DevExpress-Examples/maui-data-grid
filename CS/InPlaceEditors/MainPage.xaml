@@ -1,6 +1,6 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:local="clr-namespace:InPlaceEditors"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true"
@@ -8,11 +8,11 @@
     <ContentPage.BindingContext>
         <local:EmployeeDataViewModel/>
     </ContentPage.BindingContext>
-    <dxg:DataGridView x:Name = "grid" ItemsSource ="{Binding Employees}" EditorShowMode="Tap">
-        <dxg:DataGridView.Columns>
-            <dxg:ImageColumn FieldName="Photo" Width="100"/>
-            <dxg:TemplateColumn FieldName="Name" Caption="Employee" MinWidth="250">
-                <dxg:TemplateColumn.DisplayTemplate>
+    <dx:DataGridView x:Name = "grid" ItemsSource ="{Binding Employees}" EditorShowMode="Tap">
+        <dx:DataGridView.Columns>
+            <dx:ImageColumn FieldName="Photo" Width="100"/>
+            <dx:TemplateColumn FieldName="Name" Caption="Employee" MinWidth="250">
+                <dx:TemplateColumn.DisplayTemplate>
                     <DataTemplate>
                         <Grid VerticalOptions="Center" Padding="10, 0, 0, 0">
                             <Grid.RowDefinitions>
@@ -27,8 +27,8 @@
                                 FontSize="Small" Grid.Row="2" />
                         </Grid>
                     </DataTemplate>
-                </dxg:TemplateColumn.DisplayTemplate>
-                <dxg:TemplateColumn.EditTemplate>
+                </dx:TemplateColumn.DisplayTemplate>
+                <dx:TemplateColumn.EditTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.RowDefinitions>
@@ -41,11 +41,11 @@
                                 FontSize="Small" Grid.Row="1" />
                         </Grid>
                     </DataTemplate>
-                </dxg:TemplateColumn.EditTemplate>
-            </dxg:TemplateColumn>
-            <dxg:TextColumn FieldName="Position"  MinWidth="200"/>
-            <dxg:PickerColumn FieldName="Access" Caption = "Access Level" MinWidth="100"/>
-            <dxg:CheckBoxColumn FieldName="OnVacation" MinWidth="100"/>
-        </dxg:DataGridView.Columns>
-    </dxg:DataGridView>
+                </dx:TemplateColumn.EditTemplate>
+            </dx:TemplateColumn>
+            <dx:TextColumn FieldName="Position"  MinWidth="200"/>
+            <dx:PickerColumn FieldName="Access" Caption = "Access Level" MinWidth="100"/>
+            <dx:CheckBoxColumn FieldName="OnVacation" MinWidth="100"/>
+        </dx:DataGridView.Columns>
+    </dx:DataGridView>
 </ContentPage>

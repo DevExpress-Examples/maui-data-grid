@@ -11,6 +11,10 @@ public static class MauiProgram {
 			.UseMauiApp<App>()
             .UseMauiCommunityToolkit()
             .UseDevExpress()
+			.UseDevExpressCollectionView()
+			.UseDevExpressControls()
+			.UseDevExpressDataGrid()
+			.UseDevExpressEditors()
             .ConfigureFonts(fonts => {
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");

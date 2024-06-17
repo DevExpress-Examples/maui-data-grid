@@ -12,6 +12,10 @@ namespace EditForm {
             builder
                 .UseMauiApp<App>()
                 .UseDevExpress()
+                .UseDevExpressCollectionView()
+                .UseDevExpressControls()
+                .UseDevExpressDataGrid()
+                .UseDevExpressEditors()
                 .ConfigureFonts(fonts => {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("univia-pro-regular.ttf", "Univia-Pro");

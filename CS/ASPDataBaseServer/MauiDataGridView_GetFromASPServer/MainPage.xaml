@@ -1,23 +1,21 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="False"
              x:Class="MauiDataGridView_GetFromASPServer.MainPage">
     <Grid>
-        <dxg:DataGridView x:Name="datagrid"
+        <dx:DataGridView x:Name="datagrid"
                   EditorShowMode="Never" IsReadOnly="False" VerticalLineThickness="1" ShowGroupedColumns="True">
-            <dxg:DataGridView.CellAppearance>
-                <dxg:CellAppearance BorderColor="Transparent" HorizontalLineThickness="0"/>
-            </dxg:DataGridView.CellAppearance>
-            <dxg:DataGridView.GroupRowAppearance>
-                <dxg:GroupRowAppearance BackgroundColor="Transparent"/>
-            </dxg:DataGridView.GroupRowAppearance>
-            <dxg:DataGridView.Columns>
-                <dxg:TemplateColumn MinWidth="310" Caption="Customers" FieldName="Name" IsGrouped="true" GroupInterval="Alphabetical" SortOrder="Ascending">
-                    <dxg:TemplateColumn.DisplayTemplate>
+            <dx:DataGridView.CellAppearance>
+                <dx:CellAppearance BorderColor="Transparent" HorizontalLineThickness="0"/>
+            </dx:DataGridView.CellAppearance>
+            <dx:DataGridView.GroupRowAppearance>
+                <dx:GroupRowAppearance BackgroundColor="Transparent"/>
+            </dx:DataGridView.GroupRowAppearance>
+            <dx:DataGridView.Columns>
+                <dx:TemplateColumn MinWidth="310" Caption="Customers" FieldName="Name" IsGrouped="true" GroupInterval="Alphabetical" SortOrder="Ascending">
+                    <dx:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <Grid VerticalOptions="Center" Padding="15, 5, 0, 10" RowDefinitions="*" ColumnDefinitions="Auto, 3*, *">
                                 <Border 
@@ -49,9 +47,9 @@
                                 </dx:DXStackLayout>
                             </Grid>
                         </DataTemplate>
-                    </dxg:TemplateColumn.DisplayTemplate>
-                </dxg:TemplateColumn>
-            </dxg:DataGridView.Columns>
-        </dxg:DataGridView>
+                    </dx:TemplateColumn.DisplayTemplate>
+                </dx:TemplateColumn>
+            </dx:DataGridView.Columns>
+        </dx:DataGridView>
     </Grid>
 </ContentPage>

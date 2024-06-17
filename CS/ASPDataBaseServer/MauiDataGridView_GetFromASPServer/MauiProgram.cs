@@ -13,6 +13,10 @@ public static class MauiProgram {
         builder
             .UseMauiApp<App>()
             .UseDevExpress(true)
+            .UseDevExpressCollectionView()
+            .UseDevExpressControls()
+            .UseDevExpressDataGrid()
+            .UseDevExpressEditors()
             .ConfigureFonts(fonts => {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("univia-pro-regular.ttf", "Univia-Pro");

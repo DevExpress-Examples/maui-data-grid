@@ -1,18 +1,17 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxdf="clr-namespace:DevExpress.Maui.DataForm;assembly=DevExpress.Maui.Editors"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              x:Class="ValidateFormEvent.OrderEditForm"
              Title="Edit order">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Save" Clicked="ToolbarItem_Clicked" />
     </ContentPage.ToolbarItems>
-    <dxdf:DataFormView DataObject="{Binding Item}" x:Name="dataFormView" 
+    <dx:DataFormView DataObject="{Binding Item}" x:Name="dataFormView" 
                        ValidateForm="dataFormView_ValidateForm" ValidationMode="LostFocus">
-        <dxdf:DataFormTextItem FieldName="Product.Name" LabelText="Product"/>
-        <dxdf:DataFormNumericItem FieldName="Product.UnitPrice" LabelText="Price"/>
-        <dxdf:DataFormNumericItem FieldName="Quantity"/>
-        <dxdf:DataFormDateItem FieldName="Date"/>
-        <dxdf:DataFormCheckBoxItem FieldName="Shipped"/>
-    </dxdf:DataFormView>
+        <dx:DataFormTextItem FieldName="Product.Name" LabelText="Product"/>
+        <dx:DataFormNumericItem FieldName="Product.UnitPrice" LabelText="Price"/>
+        <dx:DataFormNumericItem FieldName="Quantity"/>
+        <dx:DataFormDateItem FieldName="Date"/>
+        <dx:DataFormCheckBoxItem FieldName="Shipped"/>
+    </dx:DataFormView>
 </ContentPage>

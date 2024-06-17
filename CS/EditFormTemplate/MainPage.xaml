@@ -1,7 +1,6 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:local="clr-namespace:EditFormTemplate"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true"
@@ -43,15 +42,15 @@
             </ScrollView>
         </DataTemplate>
     </ContentPage.Resources>
-    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Employees}" 
+    <dx:DataGridView x:Name="grid" ItemsSource="{Binding Employees}" 
                       RowDoubleTapCommand="{Binding Source={RelativeSource Mode=Self}, Path=Commands.ShowDetailEditForm}"
                       DetailEditFormTemplate="{x:StaticResource CustomEditFormContent}">
-        <dxg:DataGridView.Columns>
-            <dxg:ImageColumn FieldName="Photo"  
+        <dx:DataGridView.Columns>
+            <dx:ImageColumn FieldName="Photo"  
                              Width="100" VerticalContentAlignment="Center"/>
-            <dxg:TemplateColumn FieldName="Name" Caption="Employee" 
+            <dx:TemplateColumn FieldName="Name" Caption="Employee" 
                                 IsReadOnly="true" AllowSort="False" MinWidth="200">
-                <dxg:TemplateColumn.DisplayTemplate>
+                <dx:TemplateColumn.DisplayTemplate>
                     <DataTemplate>
                         <Grid VerticalOptions="Center" Padding="15, 0, 0, 0">
                             <Grid.RowDefinitions>
@@ -66,18 +65,18 @@
                                    FontSize="Small" Grid.Row="2" />
                         </Grid>
                     </DataTemplate>
-                </dxg:TemplateColumn.DisplayTemplate>
-            </dxg:TemplateColumn>
-            <dxg:TextColumn FieldName="Phone" 
+                </dx:TemplateColumn.DisplayTemplate>
+            </dx:TemplateColumn>
+            <dx:TextColumn FieldName="Phone" 
                             MinWidth="130" VerticalContentAlignment="Center" />
-            <dxg:TextColumn FieldName="Address" 
+            <dx:TextColumn FieldName="Address" 
                             MinWidth="150" VerticalContentAlignment="Center" />
-            <dxg:DateColumn FieldName="BirthDate" 
+            <dx:DateColumn FieldName="BirthDate" 
                             MinWidth="120" DisplayFormat="d" VerticalContentAlignment="Center"/>
-            <dxg:PickerColumn FieldName="Access" Caption="Access Level" 
+            <dx:PickerColumn FieldName="Access" Caption="Access Level" 
                               MinWidth="140" VerticalContentAlignment="Center"/>
-            <dxg:CheckBoxColumn FieldName="OnVacation" 
+            <dx:CheckBoxColumn FieldName="OnVacation" 
                                 MinWidth="130" VerticalContentAlignment="Center"/>
-        </dxg:DataGridView.Columns>
-    </dxg:DataGridView>
+        </dx:DataGridView.Columns>
+    </dx:DataGridView>
 </ContentPage>

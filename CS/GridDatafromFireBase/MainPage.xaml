@@ -1,10 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GridDatafromFireBase.MainPage"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
-             Title="Employee View">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GridDatafromFireBase.MainPage"
+    xmlns:dx="http://schemas.devexpress.com/maui" Title="Employee View">
 
     <Grid RowDefinitions="*,Auto,Auto">
         <Grid.Resources>
@@ -13,28 +9,21 @@
                 <Setter Property="FontAttributes" Value="Bold"/>
             </Style>
         </Grid.Resources>
-        <dxg:DataGridView x:Name="datagrid" Grid.Row="0"
-                  EditorShowMode="Never" IsReadOnly="False" VerticalLineThickness="1">
-            <dxg:DataGridView.GroupCaptionTemplate>
+        <dx:DataGridView x:Name="datagrid" Grid.Row="0" EditorShowMode="Never" IsReadOnly="False" VerticalLineThickness="1">
+            <dx:DataGridView.GroupCaptionTemplate>
                 <DataTemplate>
                     <Label Text="{Binding GroupValue}"/>
                 </DataTemplate>
-                </dxg:DataGridView.GroupCaptionTemplate>
-            <dxg:DataGridView.CellAppearance>
-                <dxg:CellAppearance BorderColor="Transparent" HorizontalLineThickness="0"/>
-            </dxg:DataGridView.CellAppearance>
-        <dxg:DataGridView.Columns>
-                <dxg:TemplateColumn MinWidth="250" Caption="Employee" FieldName="LastName">
-                    <dxg:TemplateColumn.DisplayTemplate>
+            </dx:DataGridView.GroupCaptionTemplate>
+            <dx:DataGridView.CellAppearance>
+                <dx:CellAppearance BorderColor="Transparent" HorizontalLineThickness="0"/>
+            </dx:DataGridView.CellAppearance>
+            <dx:DataGridView.Columns>
+                <dx:TemplateColumn MinWidth="250" Caption="Employee" FieldName="LastName">
+                    <dx:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <Grid VerticalOptions="Center" Padding="15, 10, 0, 10" RowDefinitions="*, Auto" ColumnDefinitions="Auto, 3*, *, *">
-                                <Border Grid.RowSpan="2"
-                                    BackgroundColor="White"
-                                    WidthRequest="50"
-                                        HeightRequest="50"
-                                        Margin="0,0,15,0"
-                                        Grid.Column="0" 
-                                        VerticalOptions="Center">
+                                <Border Grid.RowSpan="2" BackgroundColor="White" WidthRequest="50" HeightRequest="50" Margin="0,0,15,0" Grid.Column="0" VerticalOptions="Center">
                                     <Border.Clip>
                                         <EllipseGeometry RadiusX="25" RadiusY="25" Center="25,25"/>
                                     </Border.Clip>
@@ -47,13 +36,11 @@
                                 <Label Text="{Binding Item.Phone}" FontAttributes="None" FontSize="14" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0"/>
                             </Grid>
                         </DataTemplate>
-                    </dxg:TemplateColumn.DisplayTemplate>
-                </dxg:TemplateColumn>
-        <dxg:DateColumn FieldName="HireDate"  
-                        DisplayFormat="d" VerticalContentAlignment="Center" HorizontalContentAlignment="End" SortOrder="Descending" />
-        <dxg:TextColumn FieldName="GroupName" 
-                        MinWidth="120" VerticalContentAlignment="Center" IsGrouped="true" />
-    </dxg:DataGridView.Columns>
-            </dxg:DataGridView>
+                    </dx:TemplateColumn.DisplayTemplate>
+                </dx:TemplateColumn>
+                <dx:DateColumn FieldName="HireDate" DisplayFormat="d" VerticalContentAlignment="Center" HorizontalContentAlignment="End" SortOrder="Descending" />
+                <dx:TextColumn FieldName="GroupName" MinWidth="120" VerticalContentAlignment="Center" IsGrouped="true" />
+            </dx:DataGridView.Columns>
+        </dx:DataGridView>
     </Grid>
 </ContentPage>

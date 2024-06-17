@@ -1,33 +1,33 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true"
              x:Class="AdvancedColumnLayout.MainPage">
-    <dxg:DataGridView ItemsSource="{Binding Employees}">
-        <!--<dxg:DataGridView.AdvancedColumnLayout>
-            <dxg:AdvancedColumnLayout>
-                <dxg:AdvancedColumnLayout.ColumnDefinitions>
+    <dx:DataGridView ItemsSource="{Binding Employees}">
+        <dx:DataGridView.AdvancedColumnLayout>
+            <dx:AdvancedColumnLayout>
+                <dx:AdvancedColumnLayout.ColumnDefinitions>
                     <ColumnDefinition Width="80"/>
                     <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="8*"/>
                     <ColumnDefinition Width="8*"/>
                     <ColumnDefinition Width="9*"/>
-                </dxg:AdvancedColumnLayout.ColumnDefinitions>
-                <dxg:AdvancedColumnLayout.RowDefinitions>
+                </dx:AdvancedColumnLayout.ColumnDefinitions>
+                <dx:AdvancedColumnLayout.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-                </dxg:AdvancedColumnLayout.RowDefinitions>
-            </dxg:AdvancedColumnLayout>
-        </dxg:DataGridView.AdvancedColumnLayout>-->
+                </dx:AdvancedColumnLayout.RowDefinitions>
+            </dx:AdvancedColumnLayout>
+        </dx:DataGridView.AdvancedColumnLayout>
 
-        <dxg:ImageColumn FieldName="Image" Caption="Photo" Column="0" />
+        <dx:ImageColumn FieldName="Image" Caption="Photo" Column="0" />
 
-        <dxg:TextColumn FieldName="FullName" Column="1"/>
+        <dx:TextColumn FieldName="FullName" Column="1"/>
 
-        <dxg:TextColumn FieldName="JobTitle" Column="2" />
+        <dx:TextColumn FieldName="JobTitle" Column="2" />
 
-    </dxg:DataGridView>
+    </dx:DataGridView>
 </ContentPage>

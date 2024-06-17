@@ -1,9 +1,6 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-             xmlns:dxcv="clr-namespace:DevExpress.Maui.CollectionView;assembly=DevExpress.Maui.CollectionView"
-             xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              xmlns:local="clr-namespace:ColumnChooserExample"
              ios:Page.UseSafeArea="true"
@@ -15,9 +12,9 @@
         <ToolbarItem IconImageSource="columnchooser" Clicked="ShowColumnChooserClick"/>
     </ContentPage.ToolbarItems>
     <Grid>
-        <dxg:DataGridView x:Name="dataGrid" ItemsSource="{Binding ActiveUsers}" AutoGenerateColumnsMode="None" VerticalLineThickness="0">
-            <dxg:TemplateColumn FieldName="Country" MinWidth="150">
-                <dxg:TemplateColumn.DisplayTemplate>
+        <dx:DataGridView x:Name="dataGrid" ItemsSource="{Binding ActiveUsers}" AutoGenerateColumnsMode="None" VerticalLineThickness="0">
+            <dx:TemplateColumn FieldName="Country" MinWidth="150">
+                <dx:TemplateColumn.DisplayTemplate>
                     <DataTemplate>
                         <Grid ColumnDefinitions="Auto, *" RowDefinitions="*,*" Padding="10">
                             <Image Source="{Binding Item.ImagePath}" Margin="0,0,10,0" Grid.RowSpan="2" HeightRequest="18"/>
@@ -25,29 +22,29 @@
                             <Label Text="{Binding Item.City}" TextColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray300}}" Grid.Column="1" Grid.Row="1"/>
                         </Grid>
                     </DataTemplate>
-                </dxg:TemplateColumn.DisplayTemplate>
-            </dxg:TemplateColumn>
-            <dxg:TextColumn FieldName="CameFrom" Caption="Souce" MinWidth="120" FontSize="12"/>
-            <dxg:TextColumn FieldName="TimeOnSite" Caption="Duration" MinWidth="120" FontSize="12" IsVisible="False"/>
-            <dxg:TextColumn FieldName="LastPage" MinWidth="130" FontSize="12" IsVisible="False"/>
-            <dxg:TextColumn FieldName="IsReturningUser" Caption="Returning" FontSize="12" MinWidth="130"/>
-        </dxg:DataGridView>
-        <dxco:DXPopup x:Name="columnChooserPopup" BackgroundColor="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}"  HorizontalOptions="Fill" Margin="30,0,30,0" CornerRadius="6">
-            <dxcv:DXCollectionView Margin="20"
+                </dx:TemplateColumn.DisplayTemplate>
+            </dx:TemplateColumn>
+            <dx:TextColumn FieldName="CameFrom" Caption="Souce" MinWidth="120" FontSize="12"/>
+            <dx:TextColumn FieldName="TimeOnSite" Caption="Duration" MinWidth="120" FontSize="12" IsVisible="False"/>
+            <dx:TextColumn FieldName="LastPage" MinWidth="130" FontSize="12" IsVisible="False"/>
+            <dx:TextColumn FieldName="IsReturningUser" Caption="Returning" FontSize="12" MinWidth="130"/>
+        </dx:DataGridView>
+        <dx:DXPopup x:Name="columnChooserPopup" BackgroundColor="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}"  HorizontalOptions="Fill" Margin="30,0,30,0" CornerRadius="6">
+            <dx:DXCollectionView Margin="20"
                     ItemSpacing="4"
                     ItemsSource="{Binding Source={Reference dataGrid}, Path=Columns}"
                     HorizontalOptions="Fill"
                     ReduceSizeToContent="true">
-                <dxcv:DXCollectionView.ItemTemplate>
+                <dx:DXCollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid ColumnDefinitions="*,Auto">
                             <Border Background="{AppThemeBinding Light={StaticResource Popup_Background_Light}, Dark={StaticResource Popup_Background_Dark}}" HeightRequest="56">
-                                <dxe:CheckEdit IsChecked="{Binding IsVisible}" Label="{Binding ActualCaption}" CheckBoxPosition="End" Margin="16,8,10,8"/>
+                                <dx:CheckEdit IsChecked="{Binding IsVisible}" Label="{Binding ActualCaption}" CheckBoxPosition="End" Margin="16,8,10,8"/>
                             </Border>
                         </Grid>
                     </DataTemplate>
-                </dxcv:DXCollectionView.ItemTemplate>
-            </dxcv:DXCollectionView>
-        </dxco:DXPopup>
+                </dx:DXCollectionView.ItemTemplate>
+            </dx:DXCollectionView>
+        </dx:DXPopup>
     </Grid>
 </ContentPage>

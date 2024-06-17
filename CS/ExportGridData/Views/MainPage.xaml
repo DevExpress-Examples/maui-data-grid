@@ -1,27 +1,23 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage x:Class="GridExport.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-    xmlns:dxc="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
-    xmlns:dxe="clr-namespace:DevExpress.Maui.Editors;assembly=DevExpress.Maui.Editors"
-    xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+    xmlns:dx="http://schemas.devexpress.com/maui"
     xmlns:local="clr-namespace:GridExport"
     xmlns:vm="clr-namespace:GridExport.ViewModels"
     xmlns:controls="clr-namespace:GridExport.Controls" 
-    BindingContext="{vm:ExportViewModel}" x:DataType="vm:ExportViewModel">
+    BindingContext="{vm:ExportViewModel}" >
 
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="{AppThemeBinding Light=export_button_light, Dark=export_button_light}" Clicked="ExportButton_Clicked"/>
     </ContentPage.ToolbarItems>
     <dx:DXStackLayout>
-        <dxc:BottomSheet x:Name="bottomSheet" State="{Binding BottomSheetState}" AllowedState="HalfExpanded">
-            <dxc:BottomSheet.HalfExpandedRatio>
+        <dx:BottomSheet x:Name="bottomSheet" State="{Binding BottomSheetState}" AllowedState="HalfExpanded">
+            <dx:BottomSheet.HalfExpandedRatio>
                 <OnPlatform x:TypeArguments="x:Double">
                     <On Platform="iOS" Value="{dx:OnScreenHeight ExtraLarge=0.37, Large=0.44, Medium=0.51, Small=0.58, ExtraSmall=0.65}"/>
                     <On Platform="Android" Value="{dx:OnScreenHeight ExtraLarge=0.43, Large=0.5, Medium=0.57, Small=0.64, ExtraSmall=0.71}"/>
                 </OnPlatform>
-            </dxc:BottomSheet.HalfExpandedRatio>
+            </dx:BottomSheet.HalfExpandedRatio>
             <Grid>
                 <controls:DockLayout Margin="30,20" IsVisible="{Binding IsInExport, Converter={local:InverseBoolConverter}}">
                     <controls:DockLayout.Resources>
@@ -50,7 +46,7 @@
                             <Setter Property="Margin" Value="5"/>
                         </Style>
 
-                        <Style TargetType="dxe:CheckEdit">
+                        <Style TargetType="dx:CheckEdit">
                             <Setter Property="CheckedCheckBoxImage" Value="radiobuttonchecked"/>
                             <Setter Property="UncheckedCheckBoxImage" Value="radiobuttonunchecked"/>
                             <Setter Property="LabelFontSize" Value="14"/>
@@ -100,27 +96,27 @@
                     </dx:DXStackLayout>
 
                     <dx:DXStackLayout Orientation="Vertical" ItemSpacing="25" Margin="5,10,0,0" controls:DockLayout.Dock="Top">
-                        <dxe:CheckEdit Label="Landscape" IsChecked="{Binding LandscapeSelected}"/>
-                        <dxe:CheckEdit Label="Portrait" IsChecked="{Binding PortraitSelected}"/>
+                        <dx:CheckEdit Label="Landscape" IsChecked="{Binding LandscapeSelected}"/>
+                        <dx:CheckEdit Label="Portrait" IsChecked="{Binding PortraitSelected}"/>
                     </dx:DXStackLayout>
 
-                    <dxe:ChoiceChipGroup controls:DockLayout.Dock="Top" Padding="0,25" ChipSelectedBackgroundColor="{AppThemeBinding Light={StaticResource SelectedPaperSizeColor_Light}, Dark={StaticResource SelectedPaperSizeColor_Dark}}" ItemsSource="{local:EnumToItemsSource EnumType={x:Type vm:PaperSize}}" SelectedItem="{Binding SelectedPaperSize}"/>
+                    <dx:ChoiceChipGroup controls:DockLayout.Dock="Top" Padding="0,25" ChipSelectedBackgroundColor="{AppThemeBinding Light={StaticResource SelectedPaperSizeColor_Light}, Dark={StaticResource SelectedPaperSizeColor_Dark}}" ItemsSource="{local:EnumToItemsSource EnumType={x:Type vm:PaperSize}}" SelectedItem="{Binding SelectedPaperSize}"/>
 
-                    <dxc:SimpleButton HorizontalOptions="Fill" controls:DockLayout.Dock="Bottom" VerticalOptions="End" Margin="50,0,50,0" Text="Export" Icon="export_button" Command="{Binding ExportCommand}" CommandParameter="{x:Reference grid}"/>
+                    <dx:SimpleButton HorizontalOptions="Fill" controls:DockLayout.Dock="Bottom" VerticalOptions="End" Margin="50,0,50,0" Text="Export" Icon="export_button" Command="{Binding ExportCommand}" CommandParameter="{x:Reference grid}"/>
                 </controls:DockLayout>
 
                 <controls:DockLayout Margin="30,20" IsVisible="{Binding IsInExport}">
                     <ActivityIndicator IsRunning="True" Color="{AppThemeBinding Light={StaticResource AccentColor_Light}, Dark={StaticResource AccentColor_Dark}}" controls:DockLayout.Dock="Top" Margin="30,80" WidthRequest="50"/>
-                    <dxc:SimpleButton HorizontalOptions="Fill" controls:DockLayout.Dock="Bottom" VerticalOptions="End" Margin="50,0,50,0" Text="Cancel Exporting" Command="{Binding CancelExportCommand}"/>
+                    <dx:SimpleButton HorizontalOptions="Fill" controls:DockLayout.Dock="Bottom" VerticalOptions="End" Margin="50,0,50,0" Text="Cancel Exporting" Command="{Binding CancelExportCommand}"/>
                 </controls:DockLayout>
             </Grid>
-        </dxc:BottomSheet>
+        </dx:BottomSheet>
 
-        <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Path=Employees}">
-            <dxg:DataGridView.Columns>
-            <dxg:ImageColumn FieldName="Image" AllowExport="true" IsVisible="false"/>
-                <dxg:TemplateColumn Width="{OnIdiom Phone='180', Tablet='240'}" FixedStyle="Start" IsReadOnly="true" Caption="Employee" FieldName="FullName">
-                    <dxg:TemplateColumn.DisplayTemplate>
+        <dx:DataGridView x:Name="grid" ItemsSource="{Binding Path=Employees}">
+            <dx:DataGridView.Columns>
+            <dx:ImageColumn FieldName="Image" AllowExport="true" IsVisible="false"/>
+                <dx:TemplateColumn Width="{OnIdiom Phone='180', Tablet='240'}" FixedStyle="Start" IsReadOnly="true" Caption="Employee" FieldName="FullName">
+                    <dx:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <Grid ColumnDefinitions="Auto,*" Padding="16,8" ColumnSpacing="16" IgnoreSafeArea="True">
                                 <dx:DXImage Source="{Binding Item.Image}" VerticalOptions="Center" HorizontalOptions="Center" WidthRequest="40" HeightRequest="40">
@@ -128,16 +124,16 @@
                                         <EllipseGeometry RadiusX="20" RadiusY="20" Center="20, 20" />
                                     </dx:DXImage.Clip>
                                 </dx:DXImage>
-                                <Label Text="{Binding Item.FullName}" TextColor="{Binding Source={RelativeSource AncestorType={x:Type dxg:DataGridView}}, Path=ActualAppearance.GroupRowFontColor}" VerticalOptions="Center" Grid.Column="1" FontFamily="{Binding Source={RelativeSource AncestorType={x:Type dxg:DataGridView}}, Path=ActualAppearance.GroupRowFontFamily}" FontSize="16"/>
+                                <Label Text="{Binding Item.FullName}" TextColor="{Binding Source={RelativeSource AncestorType={x:Type dx:DataGridView}}, Path=ActualAppearance.GroupRowFontColor}" VerticalOptions="Center" Grid.Column="1" FontFamily="{Binding Source={RelativeSource AncestorType={x:Type dx:DataGridView}}, Path=ActualAppearance.GroupRowFontFamily}" FontSize="16"/>
                             </Grid>
                         </DataTemplate>
-                    </dxg:TemplateColumn.DisplayTemplate>
-                </dxg:TemplateColumn>
-                <dxg:TextColumn FieldName="GroupName" GroupCaptionDisplayFormat="{}{1}" IsGrouped="true"/>
-                <dxg:TextColumn FieldName="JobTitle" MinWidth="150" Width="1.5*" />
-                <dxg:TextColumn FieldName="Phone" MinWidth="150" Width="*" />
-                <dxg:DateColumn FieldName="HireDate" MinWidth="120" Width="*" />
-            </dxg:DataGridView.Columns>
-        </dxg:DataGridView>
+                    </dx:TemplateColumn.DisplayTemplate>
+                </dx:TemplateColumn>
+                <dx:TextColumn FieldName="GroupName" GroupCaptionDisplayFormat="{}{1}" IsGrouped="true"/>
+                <dx:TextColumn FieldName="JobTitle" MinWidth="150" Width="1.5*" />
+                <dx:TextColumn FieldName="Phone" MinWidth="150" Width="*" />
+                <dx:DateColumn FieldName="HireDate" MinWidth="120" Width="*" />
+            </dx:DataGridView.Columns>
+        </dx:DataGridView>
     </dx:DXStackLayout>
 </ContentPage>

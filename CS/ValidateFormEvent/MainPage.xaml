@@ -1,6 +1,6 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:local="clr-namespace:ValidateFormEvent"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="true"
@@ -9,18 +9,18 @@
         <local:TestOrderRepository/>
     </ContentPage.BindingContext>
 
-    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Orders}" 
+    <dx:DataGridView x:Name="grid" ItemsSource="{Binding Orders}" 
                       RowTapCommand="{Binding Source={RelativeSource Mode=Self}, Path=Commands.ShowDetailEditForm}"
                       DetailEditFormTemplate="{DataTemplate local:OrderEditForm}">
-        <dxg:DataGridView.Columns>
-            <dxg:TextColumn FieldName="Product.Name" Caption="Product" />
-            <dxg:NumberColumn FieldName="Product.UnitPrice" Caption="Price" DisplayFormat="C0"/>
-            <dxg:NumberColumn FieldName="Quantity" />
-            <dxg:NumberColumn FieldName="Total" 
+        <dx:DataGridView.Columns>
+            <dx:TextColumn FieldName="Product.Name" Caption="Product" />
+            <dx:NumberColumn FieldName="Product.UnitPrice" Caption="Price" DisplayFormat="C0"/>
+            <dx:NumberColumn FieldName="Quantity" />
+            <dx:NumberColumn FieldName="Total" 
                           UnboundType="Integer" UnboundExpression="[Quantity] * [Product.UnitPrice]" 
                           IsReadOnly="True" DisplayFormat="C0" />
-            <dxg:DateColumn FieldName="Date" DisplayFormat="d" />
-            <dxg:CheckBoxColumn FieldName="Shipped" />
-        </dxg:DataGridView.Columns>
-    </dxg:DataGridView>
+            <dx:DateColumn FieldName="Date" DisplayFormat="d" />
+            <dx:CheckBoxColumn FieldName="Shipped" />
+        </dx:DataGridView.Columns>
+    </dx:DataGridView>
 </ContentPage>

@@ -1,6 +1,6 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              xmlns:local="clr-namespace:CustomAppearance"
              xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
              ios:Page.UseSafeArea="false"
@@ -8,40 +8,40 @@
     <ContentPage.BindingContext>
         <local:TestOrderRepository/>
     </ContentPage.BindingContext>
-    <dxg:DataGridView x:Name="grid" ItemsSource="{Binding Orders}"
+    <dx:DataGridView x:Name="grid" ItemsSource="{Binding Orders}"
                       RowHeight="40" TotalSummaryHeight="40">
-        <dxg:DataGridView.Columns>
-            <dxg:TextColumn FieldName="Product.Name" Caption="Product" Width="150" />
-            <dxg:NumberColumn FieldName="Product.UnitPrice" Caption="Price" 
+        <dx:DataGridView.Columns>
+            <dx:TextColumn FieldName="Product.Name" Caption="Product" Width="150" />
+            <dx:NumberColumn FieldName="Product.UnitPrice" Caption="Price" 
                           DisplayFormat="C0" MinWidth="100"/>
-            <dxg:NumberColumn FieldName="Quantity" MinWidth="100"/>
-            <dxg:NumberColumn FieldName="Total" 
+            <dx:NumberColumn FieldName="Quantity" MinWidth="100"/>
+            <dx:NumberColumn FieldName="Total" 
                           UnboundType="Integer" UnboundExpression="[Quantity] * [Product.UnitPrice]" 
                           IsReadOnly="True" DisplayFormat="C0" MinWidth="100"/>
-            <dxg:DateColumn FieldName="Date" DisplayFormat="d" MinWidth="100"/>
-        </dxg:DataGridView.Columns>
-        <dxg:DataGridView.TotalSummaries>
-            <dxg:GridColumnSummary FieldName="Total" Type="Sum"/>
-        </dxg:DataGridView.TotalSummaries>
+            <dx:DateColumn FieldName="Date" DisplayFormat="d" MinWidth="100"/>
+        </dx:DataGridView.Columns>
+        <dx:DataGridView.TotalSummaries>
+            <dx:GridColumnSummary FieldName="Total" Type="Sum"/>
+        </dx:DataGridView.TotalSummaries>
 
         <!--Customize the appearance of grid cells.-->
-        <dxg:DataGridView.CellAppearance>
-            <dxg:CellAppearance Padding="5" BackgroundColor="#333333" BorderColor="#515151"
+        <dx:DataGridView.CellAppearance>
+            <dx:CellAppearance Padding="5" BackgroundColor="#333333" BorderColor="#515151"
                        FontSize="14" FontColor="White" 
                        SelectionColor="#f78a09" SelectionFontColor="Black"/>
-        </dxg:DataGridView.CellAppearance>
+        </dx:DataGridView.CellAppearance>
 
         <!--Customize the appearance of column headers.-->
-        <dxg:DataGridView.ColumnHeaderAppearance>
-            <dxg:ColumnHeaderAppearance BackgroundColor="#333333" BorderColor="#515151" 
+        <dx:DataGridView.ColumnHeaderAppearance>
+            <dx:ColumnHeaderAppearance BackgroundColor="#333333" BorderColor="#515151" 
                                FontSize="16" FontColor="#929292" FontAttributes="Bold" 
                                HorizontalLineThickness="2"/>
-        </dxg:DataGridView.ColumnHeaderAppearance>
+        </dx:DataGridView.ColumnHeaderAppearance>
 
         <!--Customize the appearance of the total summary panel.-->
-        <dxg:DataGridView.TotalSummaryAppearance>
-            <dxg:TotalSummaryAppearance Padding="2, 10" BackgroundColor="#666666" BorderColor="#515151"
+        <dx:DataGridView.TotalSummaryAppearance>
+            <dx:TotalSummaryAppearance Padding="2, 10" BackgroundColor="#666666" BorderColor="#515151"
                                FontSize="14" FontColor="#f78a09"/>
-        </dxg:DataGridView.TotalSummaryAppearance>
-    </dxg:DataGridView>
+        </dx:DataGridView.TotalSummaryAppearance>
+    </dx:DataGridView>
 </ContentPage>

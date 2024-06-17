@@ -1,15 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GridDatafromSQLite.MainPage"
-             xmlns:dxg="clr-namespace:DevExpress.Maui.DataGrid;assembly=DevExpress.Maui.DataGrid"
-             xmlns:dx="clr-namespace:DevExpress.Maui.Core;assembly=DevExpress.Maui.Core"
+             xmlns:dx="http://schemas.devexpress.com/maui"
              Title="Contacts">
         <Grid>
-            <dxg:DataGridView x:Name="dataGrid" ItemsSource="{Binding GridDataCollection}" EditorShowMode="Never" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
-                <dxg:DataGridView.Columns>
-                <dxg:TemplateColumn FieldName="LastName" Caption="Contact" SortOrder="Ascending">
-                    <dxg:TemplateColumn.DisplayTemplate>
+            <dx:DataGridView x:Name="dataGrid" ItemsSource="{Binding GridDataCollection}" EditorShowMode="Never" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+                <dx:DataGridView.Columns>
+                <dx:TemplateColumn FieldName="LastName" Caption="Contact" SortOrder="Ascending">
+                    <dx:TemplateColumn.DisplayTemplate>
                         <DataTemplate>
                             <Grid RowDefinitions="Auto,*,*" Margin="12,16,0,16" RowSpacing="4">
                                 <dx:DXStackLayout Orientation="Horizontal" Grid.Row="0" Padding="0,0,0,6">
@@ -30,9 +28,9 @@
                                 </dx:DXStackLayout>
                             </Grid>
                         </DataTemplate>
-                    </dxg:TemplateColumn.DisplayTemplate>
-                </dxg:TemplateColumn>
-                </dxg:DataGridView.Columns>
-            </dxg:DataGridView>
+                    </dx:TemplateColumn.DisplayTemplate>
+                </dx:TemplateColumn>
+                </dx:DataGridView.Columns>
+            </dx:DataGridView>
         </Grid>
 </ContentPage>
