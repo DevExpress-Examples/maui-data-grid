@@ -64,6 +64,7 @@ This repository contains projects that allow you to achieve the following tasks:
 * [Drag and Drop - Replicate a Single-Column Kanban View](/CS/SingleColumnKanbanView/)
 * [Implement Search Bar](/CS/SearchBar/)
 * [Export DataGrid Data](/CS/ExportGridData/)
+* [Import Excel Data](/CS/ImportExcelData/)
 
 ## Documentation
 
