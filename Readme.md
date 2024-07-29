@@ -12,7 +12,6 @@
 
 The **DevExpress Mobile UI for Xamarin.Forms and .NET MAUI** is free of charge. To learn more about our offer and get your copy, visit [Free DevExpress Mobile UI for Xamarin.Forms and .NET MAUI](https://www.devexpress.com/xamarin-free).
 
-
 ## Requirements
 
 Please register the DevExpress NuGet Gallery in Visual Studio to restore the NuGet packages used in this solution. See the following topic for more information: [Get Started with DevExpress Mobile UI for .NET MAUI](https://docs.devexpress.com/MAUI/403249/get-started).
@@ -64,6 +63,7 @@ This repository contains projects that allow you to achieve the following tasks:
 * [Drag and Drop - Replicate a Single-Column Kanban View](/CS/SingleColumnKanbanView/)
 * [Implement Search Bar](/CS/SearchBar/)
 * [Export DataGrid Data](/CS/ExportGridData/)
+* [Import Excel Data](/CS/ImportExcelData/)
 
 ## Documentation
 

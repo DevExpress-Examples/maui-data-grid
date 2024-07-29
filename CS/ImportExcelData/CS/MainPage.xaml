@@ -1,0 +1,27 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dx="http://schemas.devexpress.com/maui"
+    xmlns:local="clr-namespace:ImportExcelData"
+    BackgroundColor="{dx:ThemeColor Surface}"
+    Title="Import from Excel"
+    x:DataType="local:ViewModel"
+    x:Class="ImportExcelData.ImportCustomersPage">
+    <ContentPage.BindingContext>
+        <local:ViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="*, Auto, Auto, Auto">
+        <dx:DataGridView Grid.Row="0" ItemsSource="{Binding Customers}">
+            <dx:DataGridView.Columns>
+                <dx:TextColumn FieldName="FirstName"/>
+                <dx:TextColumn FieldName="LastName"/>
+                <dx:TextColumn FieldName="Company"/>
+            </dx:DataGridView.Columns>
+        </dx:DataGridView>
+
+        <dx:CheckEdit IsChecked="{Binding UseDefaultFile}" Label="Use Sample File" Grid.Row="1" HorizontalOptions="Center" LabelFontSize="13" CheckBoxPosition="End"/>
+        <dx:DXButton Command="{Binding UploadCommand}" Content="Upload File" Grid.Row="2" Icon="upload" HorizontalOptions="Fill" Margin="16,12" Padding="16,12"/>
+        <Label Text="Expected table columns: First Name, Last Name, Company" TextColor="{dx:ThemeColor OnSurfaceVariant}" Grid.Row="3" FontSize="12" HorizontalOptions="Center" HorizontalTextAlignment="Center" MaximumWidthRequest="200"/>
+    </Grid>
+    
+</ContentPage>
