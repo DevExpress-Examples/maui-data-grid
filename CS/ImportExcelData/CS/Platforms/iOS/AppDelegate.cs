@@ -1,7 +1,7 @@
 ﻿using Foundation;
 using ImportExcelData;
 
-namespace maui_import_excel_data;
+namespace ImportExcelData;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

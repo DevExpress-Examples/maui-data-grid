@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace maui_import_excel_data;
+namespace ImportExcelData;
 
 public class Program
 {
