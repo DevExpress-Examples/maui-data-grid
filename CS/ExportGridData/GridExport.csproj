@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0-ios;net8.0-android</TargetFrameworks>
+    <TargetFrameworks>net9.0-ios;net9.0-android</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <UseMaui>true</UseMaui>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -17,6 +17,7 @@
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
     <UseInterpreter Condition="$(TargetFramework.Contains('-ios')) AND '$(Configuration)' == 'Release'">True</UseInterpreter>
+    <MauiVersion>9.0.10</MauiVersion>
   </PropertyGroup>
   <ItemGroup>
     <!-- App Icon -->
@@ -34,12 +35,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-    <PackageReference Include="DevExpress.Data" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Data" Version="24.2.*" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="DevExpress.Maui.Controls" Version="24.1.*" />
-    <PackageReference Include="DevExpress.Maui.Core" Version="24.1.*" />
-    <PackageReference Include="DevExpress.Maui.Editors" Version="24.1.*" />
-    <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.1.*" />
-    <PackageReference Include="DevExpress.Maui.DataGrid.Export" Version="24.1.*" />
+    <PackageReference Include="DevExpress.Maui.Controls" Version="24.2.*" />
+    <PackageReference Include="DevExpress.Maui.Core" Version="24.2.*" />
+    <PackageReference Include="DevExpress.Maui.Editors" Version="24.2.*" />
+    <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.2.*" />
+    <PackageReference Include="DevExpress.Maui.DataGrid.Export" Version="24.2.*" />
   </ItemGroup>
 </Project>

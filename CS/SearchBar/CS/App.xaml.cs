@@ -7,10 +7,11 @@ public partial class App : Application {
 		InitializeComponent();
         DBContactService.Instance = new DBContactService(Path.Combine(FileSystem.CacheDirectory, "contacts.db"));
         DBContactService.Instance.InitCache();
-        MainPage = new AppShell();
     }
 
-
+    protected override Window CreateWindow(IActivationState activationState) {
+        return new Window(new AppShell());
+    }
 
     public class DBContactService 
     {

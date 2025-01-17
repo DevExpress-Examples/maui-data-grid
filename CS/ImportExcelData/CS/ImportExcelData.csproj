@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+    <TargetFrameworks>net9.0-android;net9.0-ios</TargetFrameworks>
     <OutputType>Exe</OutputType>
     <UseMaui>true</UseMaui>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -17,6 +17,7 @@
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
     <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
     <UseInterpreter Condition="$(TargetFramework.Contains('-ios')) AND '$(Configuration)' == 'Release'">True</UseInterpreter>
+    <MauiVersion>9.0.10</MauiVersion>
   </PropertyGroup>
   <ItemGroup>
     <!-- App Icon -->
@@ -35,10 +36,10 @@
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.1.*" />
-    <PackageReference Include="DevExpress.Reporting.Core" Version="24.1.*" />
-    <PackageReference Include="DevExpress.Document.Processor" Version="24.1.*" />
-    <PackageReference Include="DevExpress.Drawing.Skia" Version="24.1.*" />
-    <TrimmableAssembly Include="DevExpress.Data.v24.1" />
+    <PackageReference Include="DevExpress.Maui.DataGrid" Version="24.2.*" />
+    <PackageReference Include="DevExpress.Reporting.Core" Version="24.2.*" />
+    <PackageReference Include="DevExpress.Document.Processor" Version="24.2.*" />
+    <PackageReference Include="DevExpress.Drawing.Skia" Version="24.2.*" />
+    <TrimmableAssembly Include="DevExpress.Data.v24.2" />
   </ItemGroup>
 </Project>

@@ -9,7 +9,7 @@ static void GenerateEmployees() {
     var context = new CustomersContext();
     List<Customer> result = new List<Customer>();
 
-    string fileName = "Data/customers.json";
+    string fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data/customers.json");
     string jsonString = File.ReadAllText(fileName);
     result = JsonSerializer.Deserialize<List<Customer>>(jsonString);
     context.Customers.AddRange(result);
