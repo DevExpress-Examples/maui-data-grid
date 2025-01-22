@@ -54,7 +54,7 @@
                             <Setter Property="CheckBoxIndent" Value="15"/>
                         </Style>
                     </controls:DockLayout.Resources>
-                    <dx:DXStackLayout Orientation="Horizontal" RadioButtonGroup.GroupName="format" RadioButtonGroup.SelectedValue="{Binding SelectedFormat, Mode=TwoWay}" ItemSpacing="38" controls:DockLayout.Dock="Top">
+                    <StackLayout Orientation="Horizontal" RadioButtonGroup.GroupName="format" RadioButtonGroup.SelectedValue="{Binding SelectedFormat, Mode=TwoWay}" Spacing="38" controls:DockLayout.Dock="Top">
                         <RadioButton Value="{x:Static vm:ExportFormat.Pdf}">
                             <RadioButton.ControlTemplate>
                                 <ControlTemplate>
@@ -93,7 +93,7 @@
                                 </ControlTemplate>
                             </RadioButton.ControlTemplate>
                         </RadioButton>
-                    </dx:DXStackLayout>
+                    </StackLayout>
 
                     <dx:DXStackLayout Orientation="Vertical" ItemSpacing="25" Margin="5,10,0,0" controls:DockLayout.Dock="Top">
                         <dx:CheckEdit Label="Landscape" IsChecked="{Binding LandscapeSelected}"/>
