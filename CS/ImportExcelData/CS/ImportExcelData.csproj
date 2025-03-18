@@ -40,6 +40,6 @@
     <PackageReference Include="DevExpress.Reporting.Core" Version="24.2.*" />
     <PackageReference Include="DevExpress.Document.Processor" Version="24.2.*" />
     <PackageReference Include="DevExpress.Drawing.Skia" Version="24.2.*" />
-    <TrimmableAssembly Include="DevExpress.Data.v24.2" />
+    <TrimmableAssembly Include="DevExpress.Data.v24.2.*" />
   </ItemGroup>
 </Project>
